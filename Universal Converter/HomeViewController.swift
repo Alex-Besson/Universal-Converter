@@ -34,12 +34,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+     // TABLE VIEW FUNCTIONS
+    
+    var cell = CategoryCell()
+    
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
+//        var cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
+        
+        cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
         
         cell.lblCategory.text = categories[indexPath.row]
         cell.vwButtonBackground.backgroundColor = colors[indexPath.row]
@@ -51,7 +57,49 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.view.frame.height / 8
     }
+    
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        animateSelectedCell(tableView, indexPath: indexPath)
+    }
+    
+    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        animateSelectedCell(tableView, indexPath: indexPath)
+    }
+    
+    // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
 
+    func animateSelectedCell(tableView: UITableView, indexPath: NSIndexPath) {
+        let selectedCell: CategoryCell = tableView.cellForRowAtIndexPath(indexPath) as! CategoryCell
+        
+        if selectedCell.highlighted {
+            
+            UIView.animateWithDuration(0.1) { () -> Void in
+                // BUTTON DEPRESS ANIMATION
+                selectedCell.center.x = selectedCell.center.x + 2
+                selectedCell.center.y = selectedCell.center.y + 2
+                
+                // HIDE SHADOWS ANIMATION
+                selectedCell.vwButtonBackground.layer.shadowRadius = 0
+                selectedCell.vwButtonBackground.layer.shadowOffset = CGSizeMake(2, 2)
+                
+            }
+            
+        } else {
+            
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                // BUTTON RAISE ANIMATION
+                selectedCell.center.x = selectedCell.center.x - 2
+                selectedCell.center.y = selectedCell.center.y - 2
+                
+                // SHOW SHADOWS ANIMATION
+                selectedCell.vwButtonBackground.layer.shadowOffset = CGSizeMake(2, 2)
+                selectedCell.vwButtonBackground.layer.shadowRadius = 4
+                
+            })
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
