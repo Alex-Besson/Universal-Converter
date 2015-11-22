@@ -22,7 +22,12 @@ class CategoryCell: UITableViewCell {
     
     func configureCellElements() {
         vwButtonBackground.layer.cornerRadius = 4
-        vwButtonBackground.clipsToBounds = true
+//        vwButtonBackground.clipsToBounds = true
+        
+        vwButtonBackground.layer.shadowColor = UIColor.blackColor().CGColor
+        vwButtonBackground.layer.shadowRadius = 4
+        vwButtonBackground.layer.shadowOffset = CGSizeMake(2, 2)
+        vwButtonBackground.layer.shadowOpacity = 1
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
