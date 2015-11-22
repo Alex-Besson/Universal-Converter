@@ -15,6 +15,8 @@
 		FA52FF231C01640000EACD26 /* Universal_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF221C01640000EACD26 /* Universal_ConverterUITests.swift */; };
 		FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF301C01647800EACD26 /* HomeViewController.swift */; };
 		FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF321C016EDA00EACD26 /* CategoryCell.swift */; };
+		FA52FF351C01978600EACD26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF341C01978600EACD26 /* Constants.swift */; };
+		FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF361C01987500EACD26 /* ConverterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FA52FF241C01640000EACD26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA52FF301C01647800EACD26 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA52FF321C016EDA00EACD26 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		FA52FF341C01978600EACD26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA52FF361C01987500EACD26 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				FA52FF021C01640000EACD26 /* AppDelegate.swift */,
+				FA52FF341C01978600EACD26 /* Constants.swift */,
 				FA52FF301C01647800EACD26 /* HomeViewController.swift */,
+				FA52FF361C01987500EACD26 /* ConverterViewController.swift */,
 				FA52FF321C016EDA00EACD26 /* CategoryCell.swift */,
 				FA52FF061C01640000EACD26 /* Main.storyboard */,
 				FA52FF091C01640000EACD26 /* Assets.xcassets */,
@@ -262,6 +268,8 @@
 				FA52FF031C01640000EACD26 /* AppDelegate.swift in Sources */,
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
+				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,
+				FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

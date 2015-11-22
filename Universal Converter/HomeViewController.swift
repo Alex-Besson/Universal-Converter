@@ -10,6 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var categorySelected: CategorySwitch?
+    var categorySelectedArray: [CategorySwitch] = [.Weight, .Temperature, .Time, .Currency, .Speed, .Area, .Volume, .Length, .Data, .Fuel, .Pressure, .Force, .Power]
+    
+    // ARRAYS TO LABEL AND COLOR THE BUTTONS
+    
     var categories = ["Weight", "Temperature", "Time", "Currency", "Speed", "Area", "Volume", "Length/Distance", "Data", "Fuel", "Pressure", "Force", "Power/Electricity"]
     var colors = [
         UIColor(red: 124/255, green: 27/255, blue: 166/255, alpha: 1),
@@ -27,6 +32,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         UIColor(red: 200/255, green: 249/255, blue: 148/255, alpha: 1)
     ]
     var icons = [UIImage(named: "Weight.png"), UIImage(named: "Temperature.png"), UIImage(named: "Time.png"), UIImage(named: "Currency.png"), UIImage(named: "Speed.png"), UIImage(named: "Area.png"), UIImage(named: "Volume.png"), UIImage(named: "Length.png"), UIImage(named: "Data.png"), UIImage(named: "Fuel.png"), UIImage(named: "Pressure.png"), UIImage(named: "Force.png"), UIImage(named: "Power.png")]
+    
+    // VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +41,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
-     // TABLE VIEW FUNCTIONS
+    // TABLE VIEW FUNCTIONS
     
     var cell = CategoryCell()
     
@@ -64,6 +71,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
         animateSelectedCell(tableView, indexPath: indexPath)
+        categorySelected = categorySelectedArray[indexPath.row]
+        performSegueWithIdentifier("toConverterFromHome", sender: nil)
+        
     }
     
     // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
@@ -73,7 +83,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if selectedCell.highlighted {
             
-            UIView.animateWithDuration(0.1) { () -> Void in
+            UIView.animateWithDuration(0.01) { () -> Void in
                 // BUTTON DEPRESS ANIMATION
                 selectedCell.center.x = selectedCell.center.x + 2
                 selectedCell.center.y = selectedCell.center.y + 2
@@ -106,14 +116,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toConverterFromHome" {
+            if let destViewController: ConverterViewController = segue.destinationViewController as? ConverterViewController {
+                destViewController.catSwitch = categorySelected
+                destViewController.catArray = categories
+
+            }
+        }
     }
-    */
+    
 
 }
