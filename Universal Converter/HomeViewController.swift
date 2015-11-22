@@ -72,8 +72,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
         animateSelectedCell(tableView, indexPath: indexPath)
         categorySelected = categorySelectedArray[indexPath.row]
-        performSegueWithIdentifier("toConverterFromHome", sender: nil)
         
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toConverterFromHome", sender: nil)
     }
     
     // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
