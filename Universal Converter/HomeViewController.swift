@@ -71,11 +71,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
         animateSelectedCell(tableView, indexPath: indexPath)
-        categorySelected = categorySelectedArray[indexPath.row]
+        
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        categorySelected = categorySelectedArray[indexPath.row]
         performSegueWithIdentifier("toConverterFromHome", sender: nil)
     }
     

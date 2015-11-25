@@ -10,6 +10,12 @@ import UIKit
 
 class ConverterViewController: UIViewController {
     
+    let btn1 = KeyboardButton(), btn2 = UIButton(), btn3 = UIButton(), btn4 = UIButton(), btn5 = UIButton(), btn6 = UIButton(), btn7 = UIButton(), btn8 = UIButton(), btn9 = UIButton(), btnClear = UIButton(), btnDone = UIButton()
+
+    @IBOutlet weak var vwKeyboardView: UIView!
+    
+    @IBOutlet weak var constBottomOfKeyboard: NSLayoutConstraint!
+    
     var catSwitch: CategorySwitch?
     var catArray: [String]?
 
@@ -17,6 +23,12 @@ class ConverterViewController: UIViewController {
         super.viewDidLoad()
 
         print(catSwitch.debugDescription)
+        
+    }
+    
+    @IBAction func btnTest(sender: AnyObject) {
+        
+        hideAndShowKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +36,25 @@ class ConverterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var keyboardToggle = false
+    
+    func hideAndShowKeyboard() {
+        if keyboardToggle == false {
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.constBottomOfKeyboard.constant = 0
+                self.view.layoutIfNeeded()
+                self.keyboardToggle = true
+            }
 
+        } else {
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.constBottomOfKeyboard.constant = -self.vwKeyboardView.bounds.height
+                self.view.layoutIfNeeded()
+                self.keyboardToggle = false
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
