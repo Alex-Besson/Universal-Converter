@@ -9,8 +9,6 @@
 import UIKit
 
 class ConverterViewController: UIViewController {
-    
-    let btn1 = KeyboardButton(), btn2 = UIButton(), btn3 = UIButton(), btn4 = UIButton(), btn5 = UIButton(), btn6 = UIButton(), btn7 = UIButton(), btn8 = UIButton(), btn9 = UIButton(), btnClear = UIButton(), btnDone = UIButton()
 
     @IBOutlet weak var vwKeyboardView: UIView!
     
@@ -29,7 +27,10 @@ class ConverterViewController: UIViewController {
     @IBAction func btnTest(sender: AnyObject) {
         
         hideAndShowKeyboard()
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

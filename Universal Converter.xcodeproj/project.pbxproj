@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51E5A31C0577ED005460B0 /* CategoryModel.swift */; };
 		FA52FF031C01640000EACD26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF021C01640000EACD26 /* AppDelegate.swift */; };
 		FA52FF081C01640000EACD26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA52FF061C01640000EACD26 /* Main.storyboard */; };
 		FA52FF0A1C01640000EACD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA52FF091C01640000EACD26 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA51E5A31C0577ED005460B0 /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		FA52FEFF1C01640000EACD26 /* Universal Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA52FF021C01640000EACD26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA52FF071C01640000EACD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,11 +107,11 @@
 		FA52FF011C01640000EACD26 /* Universal Converter */ = {
 			isa = PBXGroup;
 			children = (
-				FAEEBF9A1C0531FD001EA57A /* View */,
 				FA52FF021C01640000EACD26 /* AppDelegate.swift */,
+				FAEEBF9E1C054B4B001EA57A /* Model */,
+				FAEEBF9A1C0531FD001EA57A /* View */,
+				FAEEBF9D1C054B22001EA57A /* Controller */,
 				FA52FF341C01978600EACD26 /* Constants.swift */,
-				FA52FF301C01647800EACD26 /* HomeViewController.swift */,
-				FA52FF361C01987500EACD26 /* ConverterViewController.swift */,
 				FA52FF061C01640000EACD26 /* Main.storyboard */,
 				FA52FF091C01640000EACD26 /* Assets.xcassets */,
 				FA52FF0B1C01640000EACD26 /* LaunchScreen.storyboard */,
@@ -143,6 +145,23 @@
 				FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FAEEBF9D1C054B22001EA57A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA52FF301C01647800EACD26 /* HomeViewController.swift */,
+				FA52FF361C01987500EACD26 /* ConverterViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FAEEBF9E1C054B4B001EA57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA51E5A31C0577ED005460B0 /* CategoryModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +299,7 @@
 				FA52FF031C01640000EACD26 /* AppDelegate.swift in Sources */,
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
+				FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */,
 				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,
 				FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */,
 			);
