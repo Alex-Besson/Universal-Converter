@@ -18,6 +18,9 @@
 		FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF321C016EDA00EACD26 /* CategoryCell.swift */; };
 		FA52FF351C01978600EACD26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF341C01978600EACD26 /* Constants.swift */; };
 		FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF361C01987500EACD26 /* ConverterViewController.swift */; };
+		FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */; };
+		FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E51C069BD300CAD232 /* FloatingView.swift */; };
+		FA9AF4E91C069F1800CAD232 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E81C069F1800CAD232 /* Weight.swift */; };
 		FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		FA52FF321C016EDA00EACD26 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FA52FF341C01978600EACD26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA52FF361C01987500EACD26 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterResultsCell.swift; sourceTree = "<group>"; };
+		FA9AF4E51C069BD300CAD232 /* FloatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
+		FA9AF4E81C069F1800CAD232 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,11 +144,21 @@
 			path = "Universal ConverterUITests";
 			sourceTree = "<group>";
 		};
+		FA9AF4E71C069EF400CAD232 /* ConverterModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA9AF4E81C069F1800CAD232 /* Weight.swift */,
+			);
+			name = ConverterModels;
+			sourceTree = "<group>";
+		};
 		FAEEBF9A1C0531FD001EA57A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FA52FF321C016EDA00EACD26 /* CategoryCell.swift */,
 				FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */,
+				FA9AF4E51C069BD300CAD232 /* FloatingView.swift */,
+				FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FA51E5A31C0577ED005460B0 /* CategoryModel.swift */,
+				FA9AF4E71C069EF400CAD232 /* ConverterModels */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -300,8 +317,11 @@
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
 				FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */,
+				FA9AF4E91C069F1800CAD232 /* Weight.swift in Sources */,
 				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,
 				FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */,
+				FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */,
+				FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

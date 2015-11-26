@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConverterViewController: UIViewController {
+class ConverterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var vwKeyboardView: UIView!
     
@@ -24,13 +24,15 @@ class ConverterViewController: UIViewController {
         
     }
     
-    @IBAction func btnTest(sender: AnyObject) {
-        
-        hideAndShowKeyboard()
-        
+    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
     }
     
     
+    
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
