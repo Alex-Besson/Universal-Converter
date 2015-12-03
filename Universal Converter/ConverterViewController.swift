@@ -31,8 +31,11 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = categoryGiven.name
+        
         setUpPickers()
+        setUpLabelTapGestrue()
         
     }
     
@@ -47,10 +50,10 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! ConverterResultsCell
         
-        cell.textLabel?.text = categoryGiven.categories[indexPath.row]
-        cell.textLabel?.backgroundColor = UIColor.clearColor()
+        cell.lblCategory.text = categoryGiven.categories[indexPath.row]
+        cell.lblResults.text = "coming soon"
         
         return cell
         
@@ -98,6 +101,13 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     // KEYBOARD FUNCTIONS
     
+    func setUpLabelTapGestrue() {
+        lblConvertFrom.userInteractionEnabled = true
+        
+        let gesture = UITapGestureRecognizer(target: self, action: "hideAndShowKeyboard")
+        lblConvertFrom.addGestureRecognizer(gesture)
+    }
+    
     var keyboardToggle = false
     
     func hideAndShowKeyboard() {
@@ -116,6 +126,12 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
+    
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        
+        hideAndShowKeyboard()
+    }
+    
     
     /*
     // MARK: - Navigation

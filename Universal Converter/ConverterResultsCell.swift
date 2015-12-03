@@ -9,7 +9,11 @@
 import UIKit
 
 class ConverterResultsCell: UITableViewCell {
-
+    
+    @IBOutlet weak var imgFlag: UIImageView!
+    @IBOutlet weak var lblCategory: UILabel!
+    @IBOutlet weak var lblResults: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
