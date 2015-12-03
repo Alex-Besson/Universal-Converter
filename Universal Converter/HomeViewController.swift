@@ -33,12 +33,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     ]
     var icons = [UIImage(named: "Weight.png"), UIImage(named: "Temperature.png"), UIImage(named: "Time.png"), UIImage(named: "Currency.png"), UIImage(named: "Speed.png"), UIImage(named: "Area.png"), UIImage(named: "Volume.png"), UIImage(named: "Length.png"), UIImage(named: "Data.png"), UIImage(named: "Fuel.png"), UIImage(named: "Pressure.png"), UIImage(named: "Force.png"), UIImage(named: "Power.png")]
     
+    func setCategories() {
+        categoryInfo = [weight]
+    }
+    
+    let weight = CategoryModel(nameString: "Weight", categoryItems: weightCategories, catSelected: .Weight, colorRelated: weightColor, iconImage: weightIcon!, convertingFrom: WeightToKilos.FromKilograms, convertingTo: WeightFromKilos.ToKilograms)
+    
+    var categoryInfo: [CategoryModel] = [
+        
+    ]
+    
     // VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setCategories()
     }
     
     // TABLE VIEW FUNCTIONS
@@ -46,7 +56,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var cell = CategoryCell()
     
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+//        return categories.count
+        return categoryInfo.count
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -54,9 +65,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
         
-        cell.lblCategory.text = categories[indexPath.row]
-        cell.vwButtonBackground.backgroundColor = colors[indexPath.row]
-        cell.imgIcon.image = icons[indexPath.row]
+//        cell.lblCategory.text = categories[indexPath.row]
+        cell.lblCategory.text = weight.name
+//        cell.vwButtonBackground.backgroundColor = colors[indexPath.row]
+        cell.vwButtonBackground.backgroundColor = weight.color
+//        cell.imgIcon.image = icons[indexPath.row]
+        cell.imgIcon.image = weight.icon
         
         return cell
     }
@@ -77,6 +91,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         categorySelected = categorySelectedArray[indexPath.row]
+        
         performSegueWithIdentifier("toConverterFromHome", sender: nil)
     }
     
@@ -129,7 +144,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let destViewController: ConverterViewController = segue.destinationViewController as? ConverterViewController {
                 destViewController.catSwitch = categorySelected
                 destViewController.catArray = categories
-
+                destViewController.categoryGiven = weight
             }
         }
     }

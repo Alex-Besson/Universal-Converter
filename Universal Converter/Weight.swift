@@ -36,7 +36,7 @@ class Weight {
     
     static func handleWeightEquation(weightValue: String, convertFrom: WeightToKilos, convertTo: WeightFromKilos) -> String {
         
-        let valueToKilos = Double(weightValue)
+        let valueToKilos = NSNumberFormatter().numberFromString(weightValue)?.doubleValue
         let valueInKilos: Double
         
         switch convertFrom {

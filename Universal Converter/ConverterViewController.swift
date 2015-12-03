@@ -8,36 +8,95 @@
 
 import UIKit
 
-class ConverterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ConverterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDelegate {
+    
+    @IBOutlet weak var lblConvertFrom: UILabel!
+    @IBOutlet weak var lblConvertTo: UILabel!
 
     @IBOutlet weak var vwKeyboardView: UIView!
-    
     @IBOutlet weak var constBottomOfKeyboard: NSLayoutConstraint!
+    
+    @IBOutlet weak var pickerLeft: UIPickerView!
+    @IBOutlet weak var pickerRight: UIPickerView!
+    
+    var leftCategory: Any?
+    var rightCategory: Any?
     
     var catSwitch: CategorySwitch?
     var catArray: [String]?
+    
+    var categoryGiven: CategoryModel!
+    
+    // VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(catSwitch.debugDescription)
+        setUpPickers()
         
     }
     
-    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+    override func viewDidAppear(animated: Bool) {
+        hideAndShowKeyboard()
     }
     
+    // TABLE VIEW FUNCTIONS
     
+    internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryGiven.categories.count
+    }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = UITableViewCell()
+        
+        cell.textLabel?.text = categoryGiven.categories[indexPath.row]
+        cell.textLabel?.backgroundColor = UIColor.clearColor()
+        
+        return cell
+        
     }
-
+    
+    // PICKER VIEW FUNCTIONS
+    
+    internal func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    internal func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoryGiven.categories.count
+    }
+    
+    internal func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categoryGiven.categories[row]
+    }
+    
+    internal func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+        let attributedTitle = NSAttributedString(string: categoryGiven.categories[row], attributes: [NSForegroundColorAttributeName: UIColor(red: 250, green: 250, blue: 250, alpha: 1)])
+        return attributedTitle
+    }
+    
+    internal func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == pickerLeft {
+            
+        } else {
+            
+        }
+    }
+    
+    func setUpPickers() {
+        
+        leftCategory = WeightFromKilos.ToKilograms
+        rightCategory = WeightToKilos.FromKilograms
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // KEYBOARD FUNCTIONS
     
     var keyboardToggle = false
     

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// ENUM FOR CATEGORY OF CONVERSION
+
 enum CategorySwitch: Int {
     case Weight = 1
     case Temperature = 2
@@ -40,3 +42,9 @@ let fuelColor = UIColor(red: 215/255, green: 172/255, blue: 131/255, alpha: 1)
 let pressureColor = UIColor(red: 140/255, green: 10/255, blue: 39/255, alpha: 1)
 let forceColor = UIColor(red: 244/255, green: 123/255, blue: 128/255, alpha: 1)
 let powerColor = UIColor(red: 200/255, green: 249/255, blue: 148/255, alpha: 1)
+
+// WEIGHT CATEGORIES
+
+let weightCategories = ["kilograms", "grams", "milligrams", "pounds", "ounces", "tons (metric)", "tons long (UK)", "tons short (US)", "stones"]
+let weightIcon = UIImage(named: "Weight")
+

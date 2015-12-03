@@ -131,7 +131,7 @@
                                 <rect key="frame" x="8" y="8" width="584" height="520"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yP4-Hj-fsy">
-                                        <rect key="frame" x="0.0" y="90" width="584" height="430"/>
+                                        <rect key="frame" x="0.0" y="120" width="584" height="400"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -153,42 +153,115 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zW-yU-YVf" userLabel="ConverterView">
-                                        <rect key="frame" x="0.0" y="0.0" width="584" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="584" height="120"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-Cu-hcA">
-                                                <rect key="frame" x="10" y="10" width="97" height="30"/>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzY-It-yUw">
+                                                <rect key="frame" x="292" y="45" width="292" height="75"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="hJQ-pQ-Epb"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="hJQ-pQ-Epb"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xUt-4e-jqu" id="TWE-gW-0an"/>
+                                                </connections>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLQ-Ix-XxM">
+                                                <rect key="frame" x="279" y="10" width="26.5" height="23.5"/>
                                                 <animations/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="2FA-qF-FYn"/>
-                                                    <constraint firstAttribute="width" constant="97" id="lm0-sN-Avj"/>
+                                                    <constraint firstAttribute="width" constant="26.5" id="f8R-vL-KRF"/>
+                                                    <constraint firstAttribute="height" constant="23.5" id="jI6-3o-p7W"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXq-Fj-lbV">
-                                                <rect key="frame" x="477" y="10" width="97" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-hn-aER">
+                                                <rect key="frame" x="8" y="8" width="263" height="29"/>
                                                 <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="DAW-Dl-bEs"/>
-                                                    <constraint firstAttribute="width" constant="97" id="mID-IB-Lgr"/>
+                                                    <constraint firstAttribute="height" constant="29" id="ZYr-D3-6aI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-aF-E1G">
+                                                <rect key="frame" x="313" y="8" width="262.5" height="29"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="dBU-ua-pG2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEy-VR-eaS">
+                                                <rect key="frame" x="0.0" y="45" width="292" height="75"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="bCL-fI-QwJ"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="bCL-fI-QwJ"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xUt-4e-jqu" id="DEk-vM-aG9"/>
+                                                </connections>
+                                            </pickerView>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="cXq-Fj-lbV" secondAttribute="trailing" constant="10" id="KJh-qU-KTa"/>
-                                            <constraint firstItem="EcR-Cu-hcA" firstAttribute="top" secondItem="8zW-yU-YVf" secondAttribute="top" constant="10" id="LAn-NU-ir0"/>
-                                            <constraint firstItem="EcR-Cu-hcA" firstAttribute="leading" secondItem="8zW-yU-YVf" secondAttribute="leading" constant="10" id="ehy-cy-pmH"/>
-                                            <constraint firstItem="cXq-Fj-lbV" firstAttribute="top" secondItem="8zW-yU-YVf" secondAttribute="top" constant="10" id="fIA-sC-pQb"/>
+                                            <constraint firstAttribute="bottom" secondItem="CEy-VR-eaS" secondAttribute="bottom" id="4T2-o7-8ov"/>
+                                            <constraint firstAttribute="bottom" secondItem="c5o-aF-E1G" secondAttribute="bottom" constant="32" id="7fa-7d-9RP"/>
+                                            <constraint firstItem="CEy-VR-eaS" firstAttribute="top" secondItem="c5o-aF-E1G" secondAttribute="bottom" constant="8" id="8eL-RK-0XF"/>
+                                            <constraint firstItem="bzY-It-yUw" firstAttribute="top" secondItem="c5o-aF-E1G" secondAttribute="bottom" constant="8" id="8xL-bi-0Fn"/>
+                                            <constraint firstItem="nLQ-Ix-XxM" firstAttribute="leading" secondItem="7bq-hn-aER" secondAttribute="trailing" constant="8" id="J2v-NM-VUr"/>
+                                            <constraint firstItem="c5o-aF-E1G" firstAttribute="leading" secondItem="nLQ-Ix-XxM" secondAttribute="trailing" constant="8" id="M2A-09-5vp"/>
+                                            <constraint firstItem="c5o-aF-E1G" firstAttribute="top" secondItem="8zW-yU-YVf" secondAttribute="top" constant="30" id="SWh-YC-Tcf"/>
+                                            <constraint firstItem="c5o-aF-E1G" firstAttribute="top" secondItem="8zW-yU-YVf" secondAttribute="top" constant="8" id="ZXj-9A-2Yz"/>
+                                            <constraint firstItem="7bq-hn-aER" firstAttribute="top" secondItem="8zW-yU-YVf" secondAttribute="top" constant="8" id="gog-r4-nbf"/>
+                                            <constraint firstItem="nLQ-Ix-XxM" firstAttribute="centerY" secondItem="7bq-hn-aER" secondAttribute="centerY" id="hIF-Jo-Afd"/>
                                             <constraint firstAttribute="height" constant="90" id="kCV-qc-vUl"/>
+                                            <constraint firstItem="CEy-VR-eaS" firstAttribute="leading" secondItem="8zW-yU-YVf" secondAttribute="leading" id="kTt-ev-5SV"/>
+                                            <constraint firstItem="nLQ-Ix-XxM" firstAttribute="centerY" secondItem="8zW-yU-YVf" secondAttribute="centerY" id="kYp-4z-S6m"/>
+                                            <constraint firstAttribute="height" constant="120" id="pMf-fG-cgz"/>
+                                            <constraint firstAttribute="bottom" secondItem="bzY-It-yUw" secondAttribute="bottom" id="sxU-8R-gra"/>
+                                            <constraint firstItem="7bq-hn-aER" firstAttribute="leading" secondItem="8zW-yU-YVf" secondAttribute="leading" constant="8" id="tUs-18-1En"/>
+                                            <constraint firstItem="CEy-VR-eaS" firstAttribute="width" secondItem="bzY-It-yUw" secondAttribute="width" id="u9v-Xz-P5j"/>
+                                            <constraint firstAttribute="trailing" secondItem="bzY-It-yUw" secondAttribute="trailing" id="uAh-5R-fiE"/>
+                                            <constraint firstItem="bzY-It-yUw" firstAttribute="leading" secondItem="CEy-VR-eaS" secondAttribute="trailing" id="v1d-Il-gye"/>
+                                            <constraint firstAttribute="trailing" secondItem="c5o-aF-E1G" secondAttribute="trailing" constant="8" id="xD9-Tb-wxw"/>
+                                            <constraint firstItem="nLQ-Ix-XxM" firstAttribute="centerX" secondItem="8zW-yU-YVf" secondAttribute="centerX" id="yev-PR-wE3"/>
+                                            <constraint firstItem="CEy-VR-eaS" firstAttribute="width" secondItem="bzY-It-yUw" secondAttribute="width" id="yl3-Mm-0Uz"/>
+                                            <constraint firstItem="CEy-VR-eaS" firstAttribute="leading" secondItem="8zW-yU-YVf" secondAttribute="leading" id="zR3-5l-VpR"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="kCV-qc-vUl"/>
+                                                <exclude reference="u9v-Xz-P5j"/>
+                                                <exclude reference="zR3-5l-VpR"/>
+                                                <exclude reference="kYp-4z-S6m"/>
+                                                <exclude reference="7fa-7d-9RP"/>
+                                                <exclude reference="SWh-YC-Tcf"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="8zW-yU-YVf" firstAttribute="top" secondItem="s6f-vk-e7E" secondAttribute="top" id="7Fk-a5-avg"/>
                                     <constraint firstAttribute="trailing" secondItem="8zW-yU-YVf" secondAttribute="trailing" id="Hss-Qk-eqk"/>
@@ -202,18 +275,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-7j-Bv1" userLabel="KeyboardView">
                                 <rect key="frame" x="0.0" y="536" width="600" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="7">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-JO-ebV" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-JO-ebV" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="153" y="4" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="8">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -221,23 +294,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-m9-NAF" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="451" y="4" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="x">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-j6-2sZ" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-j6-2sZ" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="153" y="53" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="5">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qv-hU-D37" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qv-hU-D37" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="302" y="53" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="6">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -245,23 +318,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxa-il-OcN" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="451" y="53" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="clear">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maA-qc-eDm" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maA-qc-eDm" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="153" y="102" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="2">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-ps-o71" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-ps-o71" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="302" y="102" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="3">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -269,7 +342,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67W-2d-J9H" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="451" y="102" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="?">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -277,7 +350,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-5m-YJf" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="153" y="151" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title=".">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -285,7 +358,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-0d-EJo" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="302" y="151" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -293,15 +366,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-ID-jkW" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="451" y="151" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtN-V8-4kQ" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtN-V8-4kQ" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="53" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="4">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -309,30 +382,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-gf-rCm" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="151" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-vU-Lx8" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-vU-Lx8" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="102" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="1">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYe-q2-QZV" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYe-q2-QZV" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="302" y="4" width="145" height="45"/>
                                         <animations/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="9">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="MDT-gf-rCm" firstAttribute="leading" secondItem="QCO-7j-Bv1" secondAttribute="leading" constant="4" id="0ar-NF-Si9"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="top" secondItem="ID0-m9-NAF" secondAttribute="bottom" constant="4" id="13B-ec-ESy"/>
@@ -450,6 +523,10 @@
                     </view>
                     <connections>
                         <outlet property="constBottomOfKeyboard" destination="y1s-CR-y4n" id="jna-qg-tZB"/>
+                        <outlet property="lblConvertFrom" destination="7bq-hn-aER" id="a9o-Nd-H0R"/>
+                        <outlet property="lblConvertTo" destination="c5o-aF-E1G" id="EVU-y5-ubx"/>
+                        <outlet property="pickerLeft" destination="CEy-VR-eaS" id="m4t-Pg-yZd"/>
+                        <outlet property="pickerRight" destination="bzY-It-yUw" id="yRQ-B7-zgQ"/>
                         <outlet property="vwKeyboardView" destination="QCO-7j-Bv1" id="VFG-5x-xdk"/>
                     </connections>
                 </viewController>
