@@ -126,6 +126,54 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    // KEYBOARD BUTTON FUNCTIONS
+    
+    var wasPeriodPressed = false
+    
+    @IBAction func numberButtonPressed(btn: UIButton!) {
+        
+        if lblConvertFrom.text == "0" {
+            wasPeriodPressed = false
+            
+            if btn.tag == 10 {
+                lblConvertFrom.text = "0"
+            } else {
+                lblConvertFrom.text = ""
+                lblConvertFrom.text? += "\(btn.tag)"
+            }
+            
+        } else {
+            if btn.tag == 10 {
+                if wasPeriodPressed == true {
+                    
+                } else {
+                    lblConvertFrom.text? += "."
+                    wasPeriodPressed = true
+                }
+                
+            } else {
+                lblConvertFrom.text? += "\(btn.tag)"
+            }
+        }
+        
+    }
+    
+    @IBAction func clearButtonPressed(sender: AnyObject) {
+        lblConvertFrom.text = "0"
+    }
+    
+    
+    @IBAction func correctButtonPressed(sender: AnyObject) {
+        
+        if lblConvertFrom.text?.characters.count <= 1 {
+            lblConvertFrom.text = "0"
+        } else {
+            lblConvertFrom.text?.removeAtIndex((lblConvertFrom.text?.endIndex.predecessor())!)
+        }
+        
+    }
+    
+    
     @IBAction func doneButtonPressed(sender: AnyObject) {
         
         hideAndShowKeyboard()
