@@ -19,8 +19,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var pickerLeft: UIPickerView!
     @IBOutlet weak var pickerRight: UIPickerView!
     
-    var leftCategory: Any?
-    var rightCategory: Any?
+    var leftPickerIndex = 0
+    var rightPickerIndex = 0
     
     var catSwitch: CategorySwitch?
     
@@ -33,7 +33,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.title = catSelected.name
         
-        setUpPickers()
         setUpLabelTapGestrue()
         
     }
@@ -80,17 +79,12 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     internal func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerLeft {
-            
+            leftPickerIndex = row
+            manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: leftPickerIndex, rightPick: rightPickerIndex)
         } else {
-            
+            rightPickerIndex = row
+            manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: leftPickerIndex, rightPick: rightPickerIndex)
         }
-    }
-    
-    func setUpPickers() {
-        
-        leftCategory = WeightFromKilos.ToKilograms
-        rightCategory = WeightToKilos.FromKilograms
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,7 +92,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    // KEYBOARD FUNCTIONS
+    // KEYBOARD SHOW AND HIDE FUNCTIONS
     
     func setUpLabelTapGestrue() {
         lblConvertFrom.userInteractionEnabled = true
@@ -128,12 +122,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     // KEYBOARD BUTTON FUNCTIONS
     
-    var wasPeriodPressed = false
-    
     @IBAction func numberButtonPressed(btn: UIButton!) {
         
         if lblConvertFrom.text == "0" {
-            wasPeriodPressed = false
             
             if btn.tag == 10 {
                 lblConvertFrom.text = "0"
@@ -144,22 +135,25 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             
         } else {
             if btn.tag == 10 {
-                if wasPeriodPressed == true {
-                    
-                } else {
+                
+                if lblConvertFrom.text?.rangeOfString(".") == nil {
                     lblConvertFrom.text? += "."
-                    wasPeriodPressed = true
                 }
                 
             } else {
                 lblConvertFrom.text? += "\(btn.tag)"
             }
+
         }
+        
+        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
         
     }
     
     @IBAction func clearButtonPressed(sender: AnyObject) {
         lblConvertFrom.text = "0"
+        
+        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
     }
     
     
@@ -171,12 +165,20 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             lblConvertFrom.text?.removeAtIndex((lblConvertFrom.text?.endIndex.predecessor())!)
         }
         
+        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
+        
     }
-    
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
         
         hideAndShowKeyboard()
+    }
+    
+    // EQUATION FUNCTION
+    
+    func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) -> String {
+        lblConvertTo.text = Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
+        return Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
     }
     
     
