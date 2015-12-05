@@ -146,14 +146,14 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
 
         }
         
-        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
+        manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
         
     }
     
     @IBAction func clearButtonPressed(sender: AnyObject) {
         lblConvertFrom.text = "0"
         
-        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
+        manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
     }
     
     
@@ -165,7 +165,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             lblConvertFrom.text?.removeAtIndex((lblConvertFrom.text?.endIndex.predecessor())!)
         }
         
-        lblConvertTo.text = manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
+        
+        manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
         
     }
     
@@ -176,9 +177,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     // EQUATION FUNCTION
     
-    func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) -> String {
+    func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
         lblConvertTo.text = Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
-        return Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
+//        return Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
     }
     
     
