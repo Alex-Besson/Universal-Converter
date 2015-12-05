@@ -114,10 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				FA52FF021C01640000EACD26 /* AppDelegate.swift */,
+				FA77F8A61C10ACCF009C60B5 /* Utilities */,
 				FAEEBF9E1C054B4B001EA57A /* Model */,
 				FAEEBF9A1C0531FD001EA57A /* View */,
 				FAEEBF9D1C054B22001EA57A /* Controller */,
-				FA52FF341C01978600EACD26 /* Constants.swift */,
 				FA52FF061C01640000EACD26 /* Main.storyboard */,
 				FA52FF091C01640000EACD26 /* Assets.xcassets */,
 				FA52FF0B1C01640000EACD26 /* LaunchScreen.storyboard */,
@@ -142,6 +142,14 @@
 				FA52FF241C01640000EACD26 /* Info.plist */,
 			);
 			path = "Universal ConverterUITests";
+			sourceTree = "<group>";
+		};
+		FA77F8A61C10ACCF009C60B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA52FF341C01978600EACD26 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		FA9AF4E71C069EF400CAD232 /* ConverterModels */ = {

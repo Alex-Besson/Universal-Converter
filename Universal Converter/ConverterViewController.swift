@@ -23,16 +23,15 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     var rightCategory: Any?
     
     var catSwitch: CategorySwitch?
-    var catArray: [String]?
     
-    var categoryGiven: CategoryModel!
+    var catSelected: CategoryModel!
     
     // VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = categoryGiven.name
+        self.title = catSelected.name
         
         setUpPickers()
         setUpLabelTapGestrue()
@@ -46,13 +45,13 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     // TABLE VIEW FUNCTIONS
     
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryGiven.categories.count
+        return catSelected.categories.count
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! ConverterResultsCell
         
-        cell.lblCategory.text = categoryGiven.categories[indexPath.row]
+        cell.lblCategory.text = catSelected.categories[indexPath.row]
         cell.lblResults.text = "coming soon"
         
         return cell
@@ -66,16 +65,16 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     internal func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryGiven.categories.count
+        return catSelected.categories.count
     }
     
     internal func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categoryGiven.categories[row]
+        return catSelected.categories[row]
     }
     
     internal func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         
-        let attributedTitle = NSAttributedString(string: categoryGiven.categories[row], attributes: [NSForegroundColorAttributeName: UIColor(red: 250, green: 250, blue: 250, alpha: 1)])
+        let attributedTitle = NSAttributedString(string: catSelected.categories[row], attributes: [NSForegroundColorAttributeName: UIColor(red: 250, green: 250, blue: 250, alpha: 1)])
         return attributedTitle
     }
     
