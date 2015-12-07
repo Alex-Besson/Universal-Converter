@@ -25,23 +25,33 @@ enum CategorySwitch: Int {
     case Pressure = 11
     case Force = 12
     case Power = 13
+    case Density = 14
+    case Viscosity = 15
+    case Torque = 16
+    case Astronomy = 17
+    case Angle = 18
 }
 
 // CATEGORY MODEL ITEMS
 
 let weight = CategoryModel(name: "Weight", categories: weightCategories, categorySelected: .Weight, color: weightColor, icon: weightIcon!)
-let temperature = CategoryModel(name: "Temperature", categories: [], categorySelected: .Temperature, color: temperatureColor, icon: UIImage(named: "Temperature")!)
-let time = CategoryModel(name: "Time", categories: [], categorySelected: .Time, color: timeColor, icon: UIImage(named: "Time")!)
+let temperature = CategoryModel(name: "Temperature", categories: tempCategories, categorySelected: .Temperature, color: temperatureColor, icon: UIImage(named: "Temperature")!)
+let time = CategoryModel(name: "Time", categories: timeCategories, categorySelected: .Time, color: timeColor, icon: UIImage(named: "Time")!)
 let currency = CategoryModel(name: "Currency", categories: [], categorySelected: .Currency, color: currencyColor, icon: UIImage(named: "Currency")!)
-let speed = CategoryModel(name: "Speed", categories: [], categorySelected: .Speed, color: speedColor, icon: UIImage(named: "Speed")!)
-let area = CategoryModel(name: "Area", categories: [], categorySelected: .Area, color: areaColor, icon: UIImage(named: "Area")!)
-let volume = CategoryModel(name: "Volume", categories: [], categorySelected: .Volume, color: volumeColor, icon: UIImage(named: "Volume")!)
-let length = CategoryModel(name: "Length/Distance", categories: [], categorySelected: .Length, color: lengthColor, icon: UIImage(named: "Length")!)
+let speed = CategoryModel(name: "Speed", categories: speedCategories, categorySelected: .Speed, color: speedColor, icon: UIImage(named: "Speed")!)
+let area = CategoryModel(name: "Area", categories: areaCategories, categorySelected: .Area, color: areaColor, icon: UIImage(named: "Area")!)
+let volume = CategoryModel(name: "Volume", categories: volumeCategories, categorySelected: .Volume, color: volumeColor, icon: UIImage(named: "Volume")!)
+let length = CategoryModel(name: "Length/Distance", categories: lengthCategories, categorySelected: .Length, color: lengthColor, icon: UIImage(named: "Length")!)
 let data = CategoryModel(name: "Data", categories: [], categorySelected: .Data, color: dataColor, icon: UIImage(named: "Data")!)
 let fuel = CategoryModel(name: "Fuel", categories: [], categorySelected: .Fuel, color: fuelColor, icon: UIImage(named: "Fuel")!)
-let pressure = CategoryModel(name: "Pressure", categories: [], categorySelected: .Pressure, color: pressureColor, icon: UIImage(named: "Pressure")!)
-let force = CategoryModel(name: "Force", categories: [], categorySelected: .Force, color: forceColor, icon: UIImage(named: "Force")!)
-let power = CategoryModel(name: "Power", categories: [], categorySelected: .Power, color: powerColor, icon: UIImage(named: "Power")!)
+let pressure = CategoryModel(name: "Pressure", categories: pressureCategories, categorySelected: .Pressure, color: pressureColor, icon: UIImage(named: "Pressure")!)
+let force = CategoryModel(name: "Force", categories: forceCategories, categorySelected: .Force, color: forceColor, icon: UIImage(named: "Force")!)
+let power = CategoryModel(name: "Power", categories: powerCategories, categorySelected: .Power, color: powerColor, icon: UIImage(named: "Power")!)
+let density = CategoryModel(name: "Density", categories: densityCategories, categorySelected: .Density, color: densityColor, icon: UIImage(named: "Weight")!)
+let viscosity = CategoryModel(name: "Viscosity", categories: viscosityCategories, categorySelected: .Viscosity, color: viscosityColor, icon: UIImage(named: "Weight")!)
+let torque = CategoryModel(name: "Torque", categories: torqueCategories, categorySelected: .Torque, color: torqueColor, icon: UIImage(named: "Weight")!)
+let astronomy = CategoryModel(name: "Astronomy", categories: astronomyCategories, categorySelected: .Astronomy, color: astronomyColor, icon: UIImage(named: "Weight")!)
+let angle = CategoryModel(name: "Angle", categories: angleCategories, categorySelected: .Angle, color: angleColor, icon: UIImage(named: "Weight")!)
 
 // CATEGORY COLORS
 
@@ -58,6 +68,13 @@ let fuelColor = UIColor(red: 215/255, green: 172/255, blue: 131/255, alpha: 1)
 let pressureColor = UIColor(red: 140/255, green: 10/255, blue: 39/255, alpha: 1)
 let forceColor = UIColor(red: 244/255, green: 123/255, blue: 128/255, alpha: 1)
 let powerColor = UIColor(red: 200/255, green: 249/255, blue: 148/255, alpha: 1)
+let densityColor = UIColor.redColor()
+let viscosityColor = UIColor.redColor()
+let torqueColor = UIColor.redColor()
+let astronomyColor = UIColor.redColor()
+let angleColor = UIColor.redColor()
+
+
 
 // CATEGORY ICONS
 
@@ -65,6 +82,21 @@ let powerColor = UIColor(red: 200/255, green: 249/255, blue: 148/255, alpha: 1)
 
 // WEIGHT CATEGORIES
 
-let weightCategories = ["kilograms", "grams", "milligrams", "pounds", "ounces", "tons (metric)", "tons long (UK)", "tons short (US)", "stones"]
+let weightCategories = FormulaModel.weightConstants.allKeys as! [String]
+let tempCategories = FormulaModel.temperatureConstants.allKeys as! [String]
+let pressureCategories = FormulaModel.pressureConstants.allKeys as! [String]
+let timeCategories = FormulaModel.timeConstants.allKeys as! [String]
+let speedCategories = FormulaModel.speedConstants.allKeys as! [String]
+let areaCategories = FormulaModel.areaConstants.allKeys as! [String]
+let volumeCategories = FormulaModel.volumeConstants.allKeys as! [String]
+let lengthCategories = FormulaModel.lengthConstants.allKeys as! [String]
+let forceCategories = FormulaModel.forceConstants.allKeys as! [String]
+let powerCategories = FormulaModel.powerConstants.allKeys as! [String]
+let densityCategories = FormulaModel.densityConstants.allKeys as! [String]
+let viscosityCategories = FormulaModel.viscosityConstants.allKeys as! [String]
+let torqueCategories = FormulaModel.torqueConstants.allKeys as! [String]
+let astronomyCategories = FormulaModel.astroConstants.allKeys as! [String]
+let angleCategories = FormulaModel.angleConstants.allKeys as! [String]
+
 let weightIcon = UIImage(named: "Weight")
 

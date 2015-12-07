@@ -10,9 +10,10 @@ import UIKit
 
 class ConverterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDelegate {
     
+    @IBOutlet weak var tblResults: UITableView!
     @IBOutlet weak var lblConvertFrom: UILabel!
     @IBOutlet weak var lblConvertTo: UILabel!
-
+    
     @IBOutlet weak var vwKeyboardView: UIView!
     @IBOutlet weak var constBottomOfKeyboard: NSLayoutConstraint!
     
@@ -26,32 +27,37 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     var catSelected: CategoryModel!
     
+    let convertController = FormulaController()
+    var myValues = [(String,String)]()
+    
+    
+    
     // VIEW DID LOAD
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = catSelected.name
-        
         setUpLabelTapGestrue()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         hideAndShowKeyboard()
+        
     }
     
     // TABLE VIEW FUNCTIONS
     
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catSelected.categories.count
+        return myValues.count
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! ConverterResultsCell
         
-        cell.lblCategory.text = catSelected.categories[indexPath.row]
-        cell.lblResults.text = "coming soon"
+        cell.lblCategory.text = myValues[indexPath.row].0
+        cell.lblResults.text = myValues[indexPath.row].1
         
         return cell
         
@@ -110,7 +116,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
                 self.view.layoutIfNeeded()
                 self.keyboardToggle = true
             }
-
+            
         } else {
             UIView.animateWithDuration(0.3) { () -> Void in
                 self.constBottomOfKeyboard.constant = -self.vwKeyboardView.bounds.height
@@ -143,7 +149,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             } else {
                 lblConvertFrom.text? += "\(btn.tag)"
             }
-
+            
         }
         
         manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
@@ -171,7 +177,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        
         hideAndShowKeyboard()
     }
     
@@ -179,18 +184,19 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
         lblConvertTo.text = Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
-//        return Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
+        myValues = convertController.findValue(lblConvertFrom.text!, formulaType: catSelected.name, currentValueType: catSelected.categories[leftPickerIndex])
+        tblResults.reloadData()
     }
     
     
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
