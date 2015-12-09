@@ -40,7 +40,7 @@ struct FormulaModel {
     
     static let volumeConstants: NSDictionary = ["ml":1000,"dL":10,"L":1,"cm3":1000,"m3":0.001,"in3":61.023744,"ft3":0.035315,"yd3":0.001308,"bbl":0.00629,"gal(UK)":0.219969,"gal(US)":0.264172,"qt (US)": 1.056688,"fl oz (US)": 33.814023]
     
-    static let temperatureConstants: NSDictionary = ["C":30,"F":86,"K":303.15,"R":545.67,"Re":24]
+    static let temperatureConstants: NSDictionary = ["C":30,"F":86,"K":303.15]
     
     static let timeConstants: NSDictionary = ["ms":3600000,"sec":3600,"min":60,"hour":1,"day":0.041667,"week":0.005952,"month":0.00137,"year":0.000114]
     
@@ -50,10 +50,7 @@ struct FormulaModel {
     
     
     
-    /*
-    C to K -> val * 303.15/30      K to C = 303.15/30 * val  K to C = 303.5/30 + (val - 303.5)
-*/
-    
+
     
     
 }
