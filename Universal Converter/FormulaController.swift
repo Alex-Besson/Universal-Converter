@@ -66,9 +66,8 @@ class FormulaController {
         case ("F","C"):
            return (val - 32) * 5/9
         default:
-            break
+            return val
         }
-        return 0
     }
 
     
