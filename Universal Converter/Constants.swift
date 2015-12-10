@@ -57,7 +57,7 @@ let angle = CategoryModel(name: "Angle", categories: angleCategories, categorySe
 
 let weightColor = UIColor(red: 124/255, green: 27/255, blue: 166/255, alpha: 1)
 let temperatureColor = UIColor(red: 2/255, green: 242/255, blue: 219/255, alpha: 1)
-let timeColor = UIColor(red: 1/255, green: 22/255, blue: 64/255, alpha: 1)
+let timeColor = UIColor(red: 51/255, green: 72/255, blue: 114/255, alpha: 1)
 let currencyColor = UIColor(red: 242/255, green: 231/255, blue: 68/255, alpha: 1)
 let speedColor = UIColor(red: 242/255, green: 184/255, blue: 75/255, alpha: 1)
 let areaColor = UIColor(red: 145/255, green: 39/255, blue: 72/255, alpha: 1)
@@ -68,11 +68,11 @@ let fuelColor = UIColor(red: 215/255, green: 172/255, blue: 131/255, alpha: 1)
 let pressureColor = UIColor(red: 140/255, green: 10/255, blue: 39/255, alpha: 1)
 let forceColor = UIColor(red: 244/255, green: 123/255, blue: 128/255, alpha: 1)
 let powerColor = UIColor(red: 200/255, green: 249/255, blue: 148/255, alpha: 1)
-let densityColor = UIColor.redColor()
-let viscosityColor = UIColor.redColor()
-let torqueColor = UIColor.redColor()
-let astronomyColor = UIColor.redColor()
-let angleColor = UIColor.redColor()
+let densityColor = UIColor(red: 148/255, green: 175/255, blue: 194/255, alpha: 1)
+let viscosityColor = UIColor(red: 232/255, green: 134/255, blue: 194/255, alpha: 1)
+let torqueColor = UIColor(red: 16/255, green: 117/255, blue: 49/255, alpha: 1)
+let astronomyColor = UIColor(red: 134/255, green: 235/255, blue: 149/255, alpha: 1)
+let angleColor = UIColor(red: 255/255, green: 240/255, blue: 13/255, alpha: 1)
 
 
 

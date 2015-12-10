@@ -21,6 +21,10 @@
 		FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF321C016EDA00EACD26 /* CategoryCell.swift */; };
 		FA52FF351C01978600EACD26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF341C01978600EACD26 /* Constants.swift */; };
 		FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52FF361C01987500EACD26 /* ConverterViewController.swift */; };
+		FA8FDF5A1C1A29030047C647 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDF591C1A29030047C647 /* ClearButton.swift */; };
+		FA8FDF5C1C1A2D4E0047C647 /* CorrectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDF5B1C1A2D4E0047C647 /* CorrectButton.swift */; };
+		FA8FDF5E1C1A2EA90047C647 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDF5D1C1A2EA90047C647 /* DoneButton.swift */; };
+		FA8FDF601C1A2FC70047C647 /* FlipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */; };
 		FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */; };
 		FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E51C069BD300CAD232 /* FloatingView.swift */; };
 		FA9AF4E91C069F1800CAD232 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E81C069F1800CAD232 /* Weight.swift */; };
@@ -65,6 +69,10 @@
 		FA52FF321C016EDA00EACD26 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FA52FF341C01978600EACD26 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA52FF361C01987500EACD26 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		FA8FDF591C1A29030047C647 /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		FA8FDF5B1C1A2D4E0047C647 /* CorrectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectButton.swift; sourceTree = "<group>"; };
+		FA8FDF5D1C1A2EA90047C647 /* DoneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipButton.swift; sourceTree = "<group>"; };
 		FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterResultsCell.swift; sourceTree = "<group>"; };
 		FA9AF4E51C069BD300CAD232 /* FloatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
 		FA9AF4E81C069F1800CAD232 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
@@ -159,6 +167,17 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		FA8FDF581C1A28C40047C647 /* SpecialKeyboardButtons */ = {
+			isa = PBXGroup;
+			children = (
+				FA8FDF591C1A29030047C647 /* ClearButton.swift */,
+				FA8FDF5B1C1A2D4E0047C647 /* CorrectButton.swift */,
+				FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */,
+				FA8FDF5D1C1A2EA90047C647 /* DoneButton.swift */,
+			);
+			name = SpecialKeyboardButtons;
+			sourceTree = "<group>";
+		};
 		FA9AF4E71C069EF400CAD232 /* ConverterModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +192,7 @@
 			children = (
 				FA52FF321C016EDA00EACD26 /* CategoryCell.swift */,
 				FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */,
+				FA8FDF581C1A28C40047C647 /* SpecialKeyboardButtons */,
 				FA9AF4E51C069BD300CAD232 /* FloatingView.swift */,
 				FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */,
 			);
@@ -331,7 +351,9 @@
 			files = (
 				E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */,
 				FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */,
+				FA8FDF601C1A2FC70047C647 /* FlipButton.swift in Sources */,
 				FA52FF031C01640000EACD26 /* AppDelegate.swift in Sources */,
+				FA8FDF5C1C1A2D4E0047C647 /* CorrectButton.swift in Sources */,
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
 				FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */,
@@ -341,7 +363,9 @@
 				E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */,
 				FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */,
 				E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */,
+				FA8FDF5E1C1A2EA90047C647 /* DoneButton.swift in Sources */,
 				FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */,
+				FA8FDF5A1C1A29030047C647 /* ClearButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
