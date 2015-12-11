@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -20,7 +21,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        setUpAduioPlayer()
     }
     
     // TABLE VIEW FUNCTIONS
@@ -47,6 +48,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         animateSelectedCell(tableView, indexPath: indexPath)
+        playAudio()
     }
     
     func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
@@ -94,6 +96,25 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
     }
+    
+    // AUDIO PLAYER SET UP
+    
+    var audioPlayer = AVAudioPlayer()
+    let soundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("CategoryButton", ofType: "mp3")!)
+    
+    func setUpAduioPlayer() {
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: soundURL)
+            audioPlayer.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playAudio() {
+        audioPlayer.play()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
