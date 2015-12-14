@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E86E82321C1E5FD60029BB55 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E82311C1E5FD60029BB55 /* AEXML.swift */; };
 		E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */; };
 		E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */; };
 		E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E86E82311C1E5FD60029BB55 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 		E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
 		E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingNumExtension.swift; sourceTree = "<group>"; };
@@ -108,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E86E82331C1E613C0029BB55 /* Libraries and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E86E82311C1E5FD60029BB55 /* AEXML.swift */,
+				E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */,
+			);
+			name = "Libraries and Extensions";
+			sourceTree = "<group>";
+		};
 		FA52FEF61C01640000EACD26 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +144,7 @@
 			children = (
 				FA57A1411C1B266D00651A39 /* Resources */,
 				FA52FF021C01640000EACD26 /* AppDelegate.swift */,
-				E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */,
+				E86E82331C1E613C0029BB55 /* Libraries and Extensions */,
 				FA77F8A61C10ACCF009C60B5 /* Utilities */,
 				FAEEBF9E1C054B4B001EA57A /* Model */,
 				FAEEBF9A1C0531FD001EA57A /* View */,
@@ -206,9 +217,9 @@
 			children = (
 				FA52FF321C016EDA00EACD26 /* CategoryCell.swift */,
 				FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */,
-				FA8FDF581C1A28C40047C647 /* SpecialKeyboardButtons */,
 				FA9AF4E51C069BD300CAD232 /* FloatingView.swift */,
 				FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */,
+				FA8FDF581C1A28C40047C647 /* SpecialKeyboardButtons */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -372,6 +383,7 @@
 				FA8FDF5C1C1A2D4E0047C647 /* CorrectButton.swift in Sources */,
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
+				E86E82321C1E5FD60029BB55 /* AEXML.swift in Sources */,
 				FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */,
 				FA9AF4E91C069F1800CAD232 /* Weight.swift in Sources */,
 				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,

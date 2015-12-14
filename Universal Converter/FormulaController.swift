@@ -9,6 +9,7 @@
 import UIKit
 
 class FormulaController {
+    var myDict: Dictionary<String,Double> = [:]
     
     let myFormulas:NSDictionary = ["Pressure":FormulaModel.pressureConstants,"Force":FormulaModel.forceConstants,"Fensity":FormulaModel.densityConstants,"Voltage":FormulaModel.voltageConstants,"Work":FormulaModel.workConstants,"Power":FormulaModel.powerConstants,"Torque":FormulaModel.torqueConstants,"Flow":FormulaModel.flowConstants,"Viscosity":FormulaModel.viscosityConstants,"Current":FormulaModel.currConstants,"Astronomy":FormulaModel.astroConstants,"Length":FormulaModel.lengthConstants,"Area":FormulaModel.areaConstants,"Weight":FormulaModel.weightConstants,"Volume":FormulaModel.volumeConstants,"Temperature":FormulaModel.temperatureConstants,"Time":FormulaModel.timeConstants,"Speed":FormulaModel.speedConstants]
     
@@ -32,6 +33,10 @@ class FormulaController {
                 
            let valConv = String((self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundTo5))
              calcValues.append(convType,valConv)
+                
+            } else if formulaType == "Currency" {
+                
+            
                 
             } else {
             let valConv = String((val! * (convertConstant / currentConstant)).roundTo5)
@@ -70,7 +75,42 @@ class FormulaController {
         }
     }
 
-    
+    func getCurrencies() -> Dictionary<String,Double> {
+        
+        let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
+        let data = NSData(contentsOfURL: url!)
+        do {
+            let xmlDoc = try AEXMLDocument(xmlData: data!)
+            
+            
+            if let val = xmlDoc.root["resources"]["resource"].all {
+                
+                
+                //Adding currency conversion rate from USD and currencyISO to an array
+                
+                for values in val {
+                    
+                    let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
+                    
+                    guard let exchangeRate = Double(values.children[1].stringValue) else {
+                        return myDict
+                    }
+                    
+                    myDict[countryISO] = exchangeRate
+                    
+                    
+                    
+                    
+                }
+                
+                
+            }
+        }catch {
+            
+        }
+        return myDict
+    }
+
  
     
 }
