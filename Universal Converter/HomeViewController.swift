@@ -10,31 +10,21 @@ import UIKit
 import AVFoundation
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
-    var xmlParser: NSXMLParser!
     var categories: [CategoryModel] = [
         weight, temperature, time, currency, speed, area, volume, length, data, fuel, pressure, force, power, density, viscosity, torque, astronomy, angle ]
     
     var categorySelected: CategoryModel?
-    func callMyCurrencies(){
-        let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
-        let request = NSURLRequest(URL: url!)
-        let queue = NSOperationQueue()
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
-            self.xmlParser = NSXMLParser(data: data!)
-            self.xmlParser.delegate = self
-            self.xmlParser.parse()
-        }
-        
-    }
+    
+    
+    
     
     // VIEW DID LOAD
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpAduioPlayer()
     }
-   
+    
     // TABLE VIEW FUNCTIONS
     
     var cell = CategoryCell()
@@ -43,7 +33,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return categories.count
     }
     
-    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {        
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
         
         cell.lblCategory.text = categories[indexPath.row].name
@@ -75,7 +65,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
-
+    
     func animateSelectedCell(tableView: UITableView, indexPath: NSIndexPath) {
         let selectedCell: CategoryCell = tableView.cellForRowAtIndexPath(indexPath) as! CategoryCell
         
@@ -125,7 +115,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func playAudio() {
         audioPlayer.play()
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -142,5 +132,5 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-
+    
 }
