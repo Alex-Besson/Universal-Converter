@@ -49,7 +49,7 @@ class FormulaController {
     }
     
     func calcTempConvert(val: Double,currentType:String,convertType:String) -> Double{
-        var valueType:(String,String) = (currentType,convertType)
+        let valueType:(String,String) = (currentType,convertType)
         
         let currentConstant = myFormulas["Temperature"]?[currentType] as? Double ?? 0
         let convertConstant = myFormulas["Temperature"]?[convertType] as? Double ?? 0
