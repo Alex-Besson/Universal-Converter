@@ -8,21 +8,32 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
+    var xmlParser: NSXMLParser!
     var categories: [CategoryModel] = [
         weight, temperature, time, currency, speed, area, volume, length, data, fuel, pressure, force, power, density, viscosity, torque, astronomy, angle ]
     
     var categorySelected: CategoryModel?
+    func callMyCurrencies(){
+        let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
+        let request = NSURLRequest(URL: url!)
+        let queue = NSOperationQueue()
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue) { (response, data, error) -> Void in
+            self.xmlParser = NSXMLParser(data: data!)
+            self.xmlParser.delegate = self
+            self.xmlParser.parse()
+        }
+        
+    }
     
     // VIEW DID LOAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
-    
+   
     // TABLE VIEW FUNCTIONS
     
     var cell = CategoryCell()
