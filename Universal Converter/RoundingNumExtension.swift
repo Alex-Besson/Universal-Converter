@@ -23,4 +23,18 @@ extension Double {
         }
         return 0
     }
+    var roundTo2:Double {
+        let converter = NSNumberFormatter()
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.NoStyle
+        formatter.minimumFractionDigits = 2
+        formatter.roundingMode = .RoundDown
+        formatter.maximumFractionDigits = 2
+        if let stringFromDouble =  formatter.stringFromNumber(self) {
+            if let doubleFromString = converter.numberFromString( stringFromDouble ) as? Double {
+                return doubleFromString
+            }
+        }
+        return 0
+    }
 }

@@ -37,7 +37,7 @@ enum CategorySwitch: Int {
 let weight = CategoryModel(name: "Weight", categories: weightCategories, categorySelected: .Weight, color: weightColor, icon: weightIcon!)
 let temperature = CategoryModel(name: "Temperature", categories: tempCategories, categorySelected: .Temperature, color: temperatureColor, icon: UIImage(named: "Temperature")!)
 let time = CategoryModel(name: "Time", categories: timeCategories, categorySelected: .Time, color: timeColor, icon: UIImage(named: "Time")!)
-let currency = CategoryModel(name: "Currency", categories: [], categorySelected: .Currency, color: currencyColor, icon: UIImage(named: "Currency")!)
+let currency = CategoryModel(name: "Currency", categories: currencyCategories, categorySelected: .Currency, color: currencyColor, icon: UIImage(named: "Currency")!)
 let speed = CategoryModel(name: "Speed", categories: speedCategories, categorySelected: .Speed, color: speedColor, icon: UIImage(named: "Speed")!)
 let area = CategoryModel(name: "Area", categories: areaCategories, categorySelected: .Area, color: areaColor, icon: UIImage(named: "Area")!)
 let volume = CategoryModel(name: "Volume", categories: volumeCategories, categorySelected: .Volume, color: volumeColor, icon: UIImage(named: "Volume")!)
@@ -97,6 +97,6 @@ let viscosityCategories = FormulaModel.viscosityConstants.allKeys as! [String]
 let torqueCategories = FormulaModel.torqueConstants.allKeys as! [String]
 let astronomyCategories = FormulaModel.astroConstants.allKeys as! [String]
 let angleCategories = FormulaModel.angleConstants.allKeys as! [String]
-
+let currencyCategories = FormulaModel.currencyConstants.allKeys as! [String]
 let weightIcon = UIImage(named: "Weight")
 
