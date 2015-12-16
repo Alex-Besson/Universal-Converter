@@ -30,7 +30,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     let convertController = FormulaController()
     var myValues = [(String,String)]()
     
-    
+    var rightLabelString = ""
     
     // VIEW DID LOAD
     
@@ -40,6 +40,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         self.title = catSelected.name
         setUpLabelTapGestrue()
         
+        manageEquation(catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: 0, rightPick: 0)
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -58,6 +60,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         cell.lblCategory.text = myValues[indexPath.row].0
         cell.lblResults.text = myValues[indexPath.row].1
+        
+        lblConvertTo.text = myValues[rightPickerIndex].1
         
         return cell
         
@@ -183,9 +187,13 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     // EQUATION FUNCTION
     
     func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
-        lblConvertTo.text = Weight.handleEquation(leftLabelValue, convertFrom: leftPick, convertTo: rightPick)
+        
         myValues = convertController.findValue(lblConvertFrom.text!, formulaType: catSelected.name, currentValueType: catSelected.categories[leftPickerIndex])
         tblResults.reloadData()
+        
+        let indexPath = NSIndexPath()
+        
+//        lblConvertTo.text = 
     }
     
     
