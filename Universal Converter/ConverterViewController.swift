@@ -23,14 +23,12 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     var leftPickerIndex = 0
     var rightPickerIndex = 0
     
-    var catSwitch: CategorySwitch?
-    
     var catSelected: CategoryModel!
     
     let convertController = FormulaController()
-    var myValues = [(String,String)]()
     
-    var rightLabelString = ""
+    // THE RESULTS OF ALL CONVERSIONS -- USED TO POPULATE RESULTS TABLE
+    var conversionData = [(String,String)]()
     
     // VIEW DID LOAD
     
@@ -41,7 +39,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         setUpLabelTapGestrue()
         
         manageEquation(catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: 0, rightPick: 0)
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -52,16 +50,16 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     // TABLE VIEW FUNCTIONS
     
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myValues.count
+        return conversionData.count
     }
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ResultsCell", forIndexPath: indexPath) as! ConverterResultsCell
         
-        cell.lblCategory.text = myValues[indexPath.row].0
-        cell.lblResults.text = myValues[indexPath.row].1
+        cell.lblCategory.text = conversionData[indexPath.row].0
+        cell.lblResults.text = conversionData[indexPath.row].1
         
-        lblConvertTo.text = myValues[rightPickerIndex].1
+        lblConvertTo.text = conversionData[rightPickerIndex].1
         
         return cell
         
@@ -95,11 +93,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             rightPickerIndex = row
             manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: leftPickerIndex, rightPick: rightPickerIndex)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // KEYBOARD SHOW AND HIDE FUNCTIONS
@@ -166,7 +159,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
     }
     
-    
     @IBAction func correctButtonPressed(sender: AnyObject) {
         
         if lblConvertFrom.text?.characters.count <= 1 {
@@ -188,23 +180,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
         
-        myValues = convertController.findValue(lblConvertFrom.text!, formulaType: catSelected.name, currentValueType: catSelected.categories[leftPickerIndex])
+        conversionData = convertController.findValue(lblConvertFrom.text!, formulaType: catSelected.name, currentValueType: catSelected.categories[leftPickerIndex])
         tblResults.reloadData()
         
-        let indexPath = NSIndexPath()
-        
-//        lblConvertTo.text = 
     }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

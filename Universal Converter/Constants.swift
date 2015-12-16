@@ -11,28 +11,29 @@ import UIKit
 
 // ENUM FOR CATEGORY OF CONVERSION
 
-enum CategorySwitch: Int {
-    case Weight = 1
-    case Temperature = 2
-    case Time = 3
-    case Currency = 4
-    case Speed = 5
-    case Area = 6
-    case Volume = 7
-    case Length = 8
-    case Data = 9
-    case Fuel = 10
-    case Pressure = 11
-    case Force = 12
-    case Power = 13
-    case Density = 14
-    case Viscosity = 15
-    case Torque = 16
-    case Astronomy = 17
-    case Angle = 18
+enum CategorySwitch {
+    case Weight
+    case Temperature
+    case Time
+    case Currency
+    case Speed
+    case Area
+    case Volume
+    case Length
+    case Data
+    case Fuel
+    case Pressure
+    case Force
+    case Power
+    case Density
+    case Viscosity
+    case Torque
+    case Astronomy
+    case Angle
+    case Custom
 }
 
-// CATEGORY MODEL ITEMS
+// CATEGORY MODEL ITEMS FOR MAIN DATA ARRAY
 
 let weight = CategoryModel(name: "Weight", categories: weightCategories, categorySelected: .Weight, color: weightColor, icon: weightIcon!)
 let temperature = CategoryModel(name: "Temperature", categories: tempCategories, categorySelected: .Temperature, color: temperatureColor, icon: UIImage(named: "Temperature")!)
@@ -74,13 +75,11 @@ let torqueColor = UIColor(red: 16/255, green: 117/255, blue: 49/255, alpha: 1)
 let astronomyColor = UIColor(red: 134/255, green: 235/255, blue: 149/255, alpha: 1)
 let angleColor = UIColor(red: 255/255, green: 240/255, blue: 13/255, alpha: 1)
 
-
-
 // CATEGORY ICONS
 
+let weightIcon = UIImage(named: "Weight")
 
-
-// WEIGHT CATEGORIES
+// SPECIFIC FORMULA CATEGORIES FOR THE MAIN CATEGORIES
 
 let weightCategories = FormulaModel.weightConstants.allKeys as! [String]
 let tempCategories = FormulaModel.temperatureConstants.allKeys as! [String]
@@ -98,5 +97,5 @@ let torqueCategories = FormulaModel.torqueConstants.allKeys as! [String]
 let astronomyCategories = FormulaModel.astroConstants.allKeys as! [String]
 let angleCategories = FormulaModel.angleConstants.allKeys as! [String]
 let currencyCategories = FormulaModel.currencyConstants.allKeys as! [String]
-let weightIcon = UIImage(named: "Weight")
+
 

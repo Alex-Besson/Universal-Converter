@@ -8,6 +8,8 @@
 
 import Foundation
 
+// CONSTANT VALUES FOR DIFFERENT CATEGORIES
+
 struct FormulaModel {
     
     static let pressureConstants: NSDictionary = ["atm":1,"Pa":101325,"hPa":1013.25,"kPa":101.325,"MPa":0.101325,"bar":1.01325,"kgf/cm2":1.033227,"kgf/m2":10332.274528,"psi":14.695949,"ksi":0.014696,"mmHg":760.0021,"cmHg":76.00021,"inchHg":29.921261,"mmH2O":10332.274528,"cmH2O":1033.227453,"inchH2O":406.782462,"ft/H2O":33.898538,"kN/m2":101.325,"kN/mm2":0.000101,"kips/in2":0.014696,"megaN/m2":0.101325,"mH2O":10.332275,"mmbars":1013.25,"N/cm2":10.1325,"N/m2":101325,"N/mm2":0.101325,"lbs/ft2":2116.22807,"poundals/ft2":69968.097448,"tons(UK)force/ft2":0.944746,"tons(UK)force/in2":0.006561,"tons(US)force/ft2":1.058114,"tons(US)force/in2":0.007348]

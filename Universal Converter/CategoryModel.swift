@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MODEL TO PASS CATEGORY INFORMATION FROM CATEGORIES VC TO CONVERTER VC
+
 struct CategoryModel {
     var name: String
     var categories: [String]

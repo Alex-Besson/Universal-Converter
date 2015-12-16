@@ -19,12 +19,4 @@ class FloatingView: UIView {
         self.layer.shadowOpacity = 1
     }
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }

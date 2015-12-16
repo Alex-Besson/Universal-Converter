@@ -10,13 +10,11 @@ import UIKit
 import AVFoundation
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
+    
     var categories: [CategoryModel] = [
         weight, temperature, time, currency, speed, area, volume, length, data, fuel, pressure, force, power, density, viscosity, torque, astronomy, angle ]
     
     var categorySelected: CategoryModel?
-
-    
-    
     
     // VIEW DID LOAD
     
@@ -115,12 +113,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func playAudio() {
         audioPlayer.play()
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // PREPARE FOR SEGUE

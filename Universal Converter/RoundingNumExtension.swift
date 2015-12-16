@@ -8,6 +8,8 @@
 
 import Foundation
 
+// EXTENTION TO ROUND THE RESULT VALUES (DOUBLES)
+
 extension Double {
     var roundTo5:Double {
         let converter = NSNumberFormatter()

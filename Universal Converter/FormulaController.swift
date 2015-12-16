@@ -9,11 +9,16 @@
 import UIKit
 
 class FormulaController {
-    var myDict: Dictionary<String,Double> = [:]
+    
+    var currencyDict: Dictionary<String,Double> = [:]
+    
+    // DICTIONARY FOR FORMULA CONSTANTS TAKEN FROM FORMULA MODEL
     
     let myFormulas:NSDictionary = ["Pressure":FormulaModel.pressureConstants,"Force":FormulaModel.forceConstants,"Fensity":FormulaModel.densityConstants,"Voltage":FormulaModel.voltageConstants,"Work":FormulaModel.workConstants,"Power":FormulaModel.powerConstants,"Torque":FormulaModel.torqueConstants,"Flow":FormulaModel.flowConstants,"Viscosity":FormulaModel.viscosityConstants,"Current":FormulaModel.currConstants,"Astronomy":FormulaModel.astroConstants,"Length/Distance":FormulaModel.lengthConstants,"Area":FormulaModel.areaConstants,"Weight":FormulaModel.weightConstants,"Volume":FormulaModel.volumeConstants,"Temperature":FormulaModel.temperatureConstants,"Time":FormulaModel.timeConstants,"Speed":FormulaModel.speedConstants,"Currency":FormulaModel.currencyConstants]
     
-    func findValue(myValue:String,formulaType:String,currentValueType:String) -> [(String,String)]{
+    // RETURNS AN ARRAY OF TUPLE VALUES WITH CONVERTED TYPES AND VALUES
+    
+    func findValue(myValue:String, formulaType:String, currentValueType:String) -> [(String,String)]{
         
         var currentConstant: Double!
         var convertConstant: Double!
@@ -46,11 +51,11 @@ class FormulaController {
                 calcValues.append(convType,valConv)
             }
         }
+        
         return calcValues
-        
-        
-        
     }
+    
+    // CALCULATE TEMPERATURE CONVERSION
     
     func calcTempConvert(val: Double,currentType:String,convertType:String) -> Double{
         let valueType:(String,String) = (currentType,convertType)
@@ -73,15 +78,21 @@ class FormulaController {
             return val
         }
     }
+    
+    // CALCULATE CURRENCY CONVERSION
+    
     func convCurrency(val:Double,currentType:String,convType:String) -> String{
         
-        let currentConstant = myDict[currentType] ?? 0
-        let convertConstant = myDict[convType] ?? 0
+        let currentConstant = currencyDict[currentType] ?? 0
+        let convertConstant = currencyDict[convType] ?? 0
         
         let valConv = String((val * convertConstant / currentConstant).roundTo2)
         
         return valConv
     }
+    
+    // GET CURRENCIES FROM YAHOO (XML DATA)
+    
     func getCurrencies() -> Dictionary<String,Double> {
         
         let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
@@ -100,23 +111,19 @@ class FormulaController {
                     let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
                     
                     guard let exchangeRate = Double(values.children[1].stringValue) else {
-                        return myDict
+                        return currencyDict
                     }
                     
-                    myDict[countryISO] = exchangeRate
-                    
-                    
-                    
+                    currencyDict[countryISO] = exchangeRate
                     
                 }
-                
-                
             }
-        }catch {
+            
+        } catch {
             
         }
-       
-        return myDict
+        
+        return currencyDict
     }
     
     
