@@ -26,12 +26,13 @@ class FormulaController {
         
         if formulaType == "Currency" {
             getCurrencies()
+           
         }
         
         let formlType = myFormulas[formulaType]
         let convertValType = formlType?.allKeys as! [String]
         
-        for convType in convertValType {
+        for convType in convertValType.sort(<) {
             currentConstant = formlType?[currentValueType] as? Double ?? 0
             convertConstant = formlType?[convType] as? Double ?? 0
             let val = NSNumberFormatter().numberFromString(myValue)?.doubleValue

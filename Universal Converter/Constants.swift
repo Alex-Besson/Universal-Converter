@@ -81,21 +81,21 @@ let weightIcon = UIImage(named: "Weight")
 
 // SPECIFIC FORMULA CATEGORIES FOR THE MAIN CATEGORIES
 
-let weightCategories = FormulaModel.weightConstants.allKeys as! [String]
-let tempCategories = FormulaModel.temperatureConstants.allKeys as! [String]
-let pressureCategories = FormulaModel.pressureConstants.allKeys as! [String]
-let timeCategories = FormulaModel.timeConstants.allKeys as! [String]
-let speedCategories = FormulaModel.speedConstants.allKeys as! [String]
-let areaCategories = FormulaModel.areaConstants.allKeys as! [String]
-let volumeCategories = FormulaModel.volumeConstants.allKeys as! [String]
-let lengthCategories = FormulaModel.lengthConstants.allKeys as! [String]
-let forceCategories = FormulaModel.forceConstants.allKeys as! [String]
-let powerCategories = FormulaModel.powerConstants.allKeys as! [String]
-let densityCategories = FormulaModel.densityConstants.allKeys as! [String]
-let viscosityCategories = FormulaModel.viscosityConstants.allKeys as! [String]
-let torqueCategories = FormulaModel.torqueConstants.allKeys as! [String]
-let astronomyCategories = FormulaModel.astroConstants.allKeys as! [String]
-let angleCategories = FormulaModel.angleConstants.allKeys as! [String]
-let currencyCategories = FormulaModel.currencyConstants.allKeys as! [String]
+let weightCategories = (FormulaModel.weightConstants.allKeys as! [String]).sort(<)
+let tempCategories = (FormulaModel.temperatureConstants.allKeys as! [String]).sort(<)
+let pressureCategories = (FormulaModel.pressureConstants.allKeys as! [String]).sort(<)
+let timeCategories = (FormulaModel.timeConstants.allKeys as! [String]).sort(<)
+let speedCategories = (FormulaModel.speedConstants.allKeys as! [String]).sort(<)
+let areaCategories = (FormulaModel.areaConstants.allKeys as! [String]).sort(<)
+let volumeCategories = (FormulaModel.volumeConstants.allKeys as! [String]).sort(<)
+let lengthCategories = (FormulaModel.lengthConstants.allKeys as! [String]).sort(<)
+let forceCategories = (FormulaModel.forceConstants.allKeys as! [String]).sort(<)
+let powerCategories = (FormulaModel.powerConstants.allKeys as! [String]).sort(<)
+let densityCategories = (FormulaModel.densityConstants.allKeys as! [String]).sort(<)
+let viscosityCategories = (FormulaModel.viscosityConstants.allKeys as! [String]).sort(<)
+let torqueCategories = (FormulaModel.torqueConstants.allKeys as! [String]).sort(<)
+let astronomyCategories = (FormulaModel.astroConstants.allKeys as! [String]).sort(<)
+let angleCategories = (FormulaModel.angleConstants.allKeys as! [String]).sort(<)
+let currencyCategories = (FormulaModel.currencyConstants.allKeys as! [String]).sort(<)
 
 
