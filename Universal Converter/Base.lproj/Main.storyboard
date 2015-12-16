@@ -311,7 +311,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-7j-Bv1" userLabel="KeyboardView">
-                                <rect key="frame" x="0.0" y="536" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="336" width="600" height="200"/>
                                 <subviews>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="145" height="45"/>
@@ -399,15 +399,8 @@
                                         <state key="normal" title="FLIP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-5m-YJf" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
-                                        <rect key="frame" x="302" y="151" width="145" height="45"/>
-                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title=".">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
                                         <connections>
-                                            <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="b5R-mo-okY"/>
+                                            <action selector="flipButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="OAe-g1-cTy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-ID-jkW" customClass="DoneButton" customModule="Universal_Converter" customModuleProvider="target">
@@ -430,16 +423,6 @@
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="7ZM-SI-Q86"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-gf-rCm" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="151" width="294" height="45"/>
-                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="0">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="CZR-aW-6KC"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-vU-Lx8" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="102" width="145" height="45"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,6 +443,36 @@
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="Kac-Q9-XrH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-5m-YJf" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                        <rect key="frame" x="153" y="151" width="145" height="45"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="b5R-mo-okY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-gf-rCm" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="151" width="145" height="45"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="CZR-aW-6KC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqr-Ge-Ouv" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
+                                        <rect key="frame" x="302" y="151" width="145" height="45"/>
+                                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="skW-M9-1T1"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -467,20 +480,19 @@
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="centerX" secondItem="npV-ty-W0U" secondAttribute="centerX" id="1Md-Of-t41"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="leading" secondItem="8Vj-ps-o71" secondAttribute="trailing" constant="4" id="1kF-Xp-Zrj"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="leading" secondItem="npV-ty-W0U" secondAttribute="trailing" constant="4" id="354-kf-Iba"/>
-                                    <constraint firstItem="MDT-gf-rCm" firstAttribute="leading" secondItem="QCO-7j-Bv1" secondAttribute="leading" constant="4" id="3MP-be-j5S"/>
                                     <constraint firstAttribute="trailing" secondItem="ID0-m9-NAF" secondAttribute="trailing" constant="4" id="5IH-77-3W8"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="leading" secondItem="ZtN-V8-4kQ" secondAttribute="trailing" constant="4" id="5Ml-9t-L6B"/>
                                     <constraint firstItem="ID0-m9-NAF" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="5Sh-tZ-bAZ"/>
-                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="top" secondItem="8Vj-ps-o71" secondAttribute="bottom" constant="4" id="5TX-hz-dj9"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="5wQ-GX-JEF"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="6En-g7-tpJ"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="centerX" secondItem="rDc-JO-ebV" secondAttribute="centerX" id="7DK-SY-HXU"/>
-                                    <constraint firstItem="b0v-ID-jkW" firstAttribute="leading" secondItem="xL1-5m-YJf" secondAttribute="trailing" constant="4" id="8CQ-g1-dTu"/>
+                                    <constraint firstItem="Wqr-Ge-Ouv" firstAttribute="width" secondItem="MDT-gf-rCm" secondAttribute="width" id="8ms-tm-oFW"/>
+                                    <constraint firstItem="MDT-gf-rCm" firstAttribute="top" secondItem="yGz-vU-Lx8" secondAttribute="bottom" constant="4" id="94f-VI-adw"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="9T2-pc-dRL"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="leading" secondItem="yGz-vU-Lx8" secondAttribute="trailing" constant="4" id="AT4-Xd-xOs"/>
                                     <constraint firstItem="ID0-m9-NAF" firstAttribute="centerY" secondItem="npV-ty-W0U" secondAttribute="centerY" id="AeF-ic-lER"/>
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="AtW-GP-mPA"/>
-                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="leading" secondItem="MDT-gf-rCm" secondAttribute="trailing" constant="4" id="B3G-u1-2QT"/>
+                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="width" secondItem="MDT-gf-rCm" secondAttribute="width" id="Cn9-kR-1TT"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="top" secondItem="rDc-JO-ebV" secondAttribute="bottom" constant="4" id="CzP-a5-S4U"/>
                                     <constraint firstItem="yYe-q2-QZV" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="D1m-X1-6ha"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="DYc-nM-yid"/>
@@ -488,15 +500,18 @@
                                     <constraint firstItem="yGz-vU-Lx8" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="DsQ-dM-Vkx"/>
                                     <constraint firstItem="yGz-vU-Lx8" firstAttribute="top" secondItem="ZtN-V8-4kQ" secondAttribute="bottom" constant="4" id="ENO-VD-Jtu"/>
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="top" secondItem="yYe-q2-QZV" secondAttribute="bottom" constant="4" id="Eyp-KX-3zH"/>
+                                    <constraint firstItem="Wqr-Ge-Ouv" firstAttribute="height" secondItem="MDT-gf-rCm" secondAttribute="height" id="H5Q-39-3A0"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="top" secondItem="7qv-hU-D37" secondAttribute="bottom" constant="4" id="HYY-0m-ZVt"/>
+                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="top" secondItem="maA-qc-eDm" secondAttribute="bottom" constant="4" id="Ix4-aw-Wjr"/>
                                     <constraint firstItem="yGz-vU-Lx8" firstAttribute="leading" secondItem="QCO-7j-Bv1" secondAttribute="leading" constant="4" id="Keg-PV-4HR"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="leading" secondItem="7qv-hU-D37" secondAttribute="trailing" constant="4" id="ONF-ts-k37"/>
+                                    <constraint firstItem="MDT-gf-rCm" firstAttribute="leading" secondItem="QCO-7j-Bv1" secondAttribute="leading" constant="4" id="Pbs-2M-241"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="centerY" secondItem="yGz-vU-Lx8" secondAttribute="centerY" id="Pyk-Hu-cKW"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="centerY" secondItem="ZtN-V8-4kQ" secondAttribute="centerY" id="Q2M-Mv-jAJ"/>
                                     <constraint firstItem="yGz-vU-Lx8" firstAttribute="centerX" secondItem="npV-ty-W0U" secondAttribute="centerX" id="Rqd-D7-Dh9"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="centerX" secondItem="ID0-m9-NAF" secondAttribute="centerX" id="STK-8e-UkL"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="TO4-Gx-T3X"/>
-                                    <constraint firstItem="b0v-ID-jkW" firstAttribute="height" secondItem="xL1-5m-YJf" secondAttribute="height" id="Uke-in-fMN"/>
+                                    <constraint firstAttribute="bottom" secondItem="MDT-gf-rCm" secondAttribute="bottom" constant="4" id="Uea-07-WiV"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="centerY" secondItem="ZtN-V8-4kQ" secondAttribute="centerY" id="Unu-sj-phl"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="VfW-JW-8wh"/>
                                     <constraint firstAttribute="trailing" secondItem="b0v-ID-jkW" secondAttribute="trailing" constant="4" id="W0y-4v-8gN"/>
@@ -508,11 +523,11 @@
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="centerX" secondItem="yYe-q2-QZV" secondAttribute="centerX" id="amB-xa-e6u"/>
                                     <constraint firstAttribute="height" constant="200" id="bCH-r6-h7N"/>
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="leading" secondItem="AXz-j6-2sZ" secondAttribute="trailing" constant="4" id="bMn-Wk-0kp"/>
+                                    <constraint firstItem="Wqr-Ge-Ouv" firstAttribute="leading" secondItem="xL1-5m-YJf" secondAttribute="trailing" constant="4" id="baV-lI-de1"/>
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="centerY" secondItem="ZtN-V8-4kQ" secondAttribute="centerY" id="by4-WU-YPF"/>
                                     <constraint firstItem="npV-ty-W0U" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="top" constant="4" id="cR5-ym-mIy"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="cRa-OL-kp6"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="leading" secondItem="QCO-7j-Bv1" secondAttribute="leading" constant="4" id="ca9-0q-7JO"/>
-                                    <constraint firstItem="b0v-ID-jkW" firstAttribute="width" secondItem="xL1-5m-YJf" secondAttribute="width" id="cig-NW-8tv"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="dN4-SS-Pyr"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="dZh-V3-xhd"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="centerX" secondItem="ID0-m9-NAF" secondAttribute="centerX" id="egv-mr-OHg"/>
@@ -523,27 +538,30 @@
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="centerX" secondItem="rDc-JO-ebV" secondAttribute="centerX" id="hfI-nb-E8S"/>
                                     <constraint firstItem="ID0-m9-NAF" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="top" constant="4" id="hji-m1-XSC"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="centerY" secondItem="npV-ty-W0U" secondAttribute="centerY" id="iFT-zK-0J7"/>
+                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="leading" secondItem="MDT-gf-rCm" secondAttribute="trailing" constant="4" id="iZn-xi-4Mm"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="jvi-9A-p4u"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="centerY" secondItem="yGz-vU-Lx8" secondAttribute="centerY" id="lTq-TM-cNZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wqr-Ge-Ouv" secondAttribute="bottom" constant="4" id="nT4-jk-WNo"/>
                                     <constraint firstItem="yGz-vU-Lx8" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="oIr-f1-tP5"/>
                                     <constraint firstItem="yYe-q2-QZV" firstAttribute="leading" secondItem="rDc-JO-ebV" secondAttribute="trailing" constant="4" id="omx-Gt-9TT"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="leading" secondItem="maA-qc-eDm" secondAttribute="trailing" constant="4" id="q1a-Ob-8ZF"/>
+                                    <constraint firstAttribute="bottom" secondItem="xL1-5m-YJf" secondAttribute="bottom" constant="4" id="rPe-40-I67"/>
                                     <constraint firstItem="yYe-q2-QZV" firstAttribute="centerY" secondItem="npV-ty-W0U" secondAttribute="centerY" id="s7R-5e-kSV"/>
-                                    <constraint firstItem="MDT-gf-rCm" firstAttribute="top" secondItem="yGz-vU-Lx8" secondAttribute="bottom" constant="4" id="sL9-OE-CAi"/>
                                     <constraint firstItem="ID0-m9-NAF" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="t1q-Wf-Ib1"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="tcS-Zd-w07"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="uQf-UU-N4e"/>
-                                    <constraint firstAttribute="bottom" secondItem="MDT-gf-rCm" secondAttribute="bottom" constant="4" id="ufl-bR-iMk"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="centerY" secondItem="yGz-vU-Lx8" secondAttribute="centerY" id="ukt-jP-d9w"/>
                                     <constraint firstItem="b0v-ID-jkW" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="ut6-im-fEe"/>
                                     <constraint firstItem="yYe-q2-QZV" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="vVn-fY-MGG"/>
                                     <constraint firstItem="7qv-hU-D37" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="vcY-9z-863"/>
                                     <constraint firstItem="8Vj-ps-o71" firstAttribute="centerX" secondItem="yYe-q2-QZV" secondAttribute="centerX" id="vvk-uW-Vo1"/>
-                                    <constraint firstAttribute="bottom" secondItem="xL1-5m-YJf" secondAttribute="bottom" constant="4" id="wAC-Xz-Ch2"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="top" secondItem="AXz-j6-2sZ" secondAttribute="bottom" constant="4" id="wBu-8t-GHv"/>
+                                    <constraint firstItem="Wqr-Ge-Ouv" firstAttribute="top" secondItem="8Vj-ps-o71" secondAttribute="bottom" constant="4" id="xao-he-Dn9"/>
                                     <constraint firstItem="b0v-ID-jkW" firstAttribute="centerX" secondItem="ID0-m9-NAF" secondAttribute="centerX" id="xuh-08-ArP"/>
+                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="height" secondItem="MDT-gf-rCm" secondAttribute="height" id="ynj-nR-F7K"/>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="z9a-aR-obS"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="top" secondItem="Rxa-il-OcN" secondAttribute="bottom" constant="4" id="zBc-Pd-2WW"/>
+                                    <constraint firstItem="b0v-ID-jkW" firstAttribute="leading" secondItem="Wqr-Ge-Ouv" secondAttribute="trailing" constant="4" id="zIP-V4-7zN"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="top" constant="4" id="zlv-zD-sVI"/>
                                 </constraints>
                             </view>
@@ -560,7 +578,7 @@
                             <constraint firstItem="s6f-vk-e7E" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" constant="8" id="Y0R-2c-e3u"/>
                             <constraint firstItem="qh5-Jh-zd0" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="eew-Ku-ZaS"/>
                             <constraint firstAttribute="trailing" secondItem="qh5-Jh-zd0" secondAttribute="trailing" id="oV6-D0-Kdx"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" constant="-200" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
+                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
                         </constraints>
                     </view>
                     <connections>

@@ -176,6 +176,16 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         hideAndShowKeyboard()
     }
     
+    @IBAction func flipButtonPressed(sender: AnyObject) {
+        pickerRight.selectRow(leftPickerIndex, inComponent: 0, animated: true)
+        pickerLeft.selectRow(rightPickerIndex, inComponent: 0, animated: true)
+        
+        let tempPickerIndex = leftPickerIndex
+        leftPickerIndex = rightPickerIndex
+        rightPickerIndex = tempPickerIndex
+        
+        manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
+    }
     // EQUATION FUNCTION
     
     func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
