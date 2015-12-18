@@ -59,6 +59,12 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         cell.lblCategory.text = conversionData[indexPath.row].0
         cell.lblResults.text = conversionData[indexPath.row].1
         
+        if catSelected.name == "Currency" {
+            let flagImages = (FormulaModel.currencyConstants.allKeys as! [String]).sort(<)
+            cell.imgFlag.image = UIImage(named:flagImages[indexPath.row] )
+        }
+        
+        
         lblConvertTo.text = conversionData[rightPickerIndex].1
         
         return cell

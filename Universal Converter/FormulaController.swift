@@ -110,6 +110,7 @@ class FormulaController {
                 for values in val {
                     
                     let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
+                   
                     
                     guard let exchangeRate = Double(values.children[1].stringValue) else {
                         return currencyDict
