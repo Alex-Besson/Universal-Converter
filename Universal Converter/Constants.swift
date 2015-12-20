@@ -43,8 +43,8 @@ let speed = CategoryModel(name: "Speed", categories: speedCategories, categorySe
 let area = CategoryModel(name: "Area", categories: areaCategories, categorySelected: .Area, color: areaColor, icon: UIImage(named: "Area")!)
 let volume = CategoryModel(name: "Volume", categories: volumeCategories, categorySelected: .Volume, color: volumeColor, icon: UIImage(named: "Volume")!)
 let length = CategoryModel(name: "Length/Distance", categories: lengthCategories, categorySelected: .Length, color: lengthColor, icon: UIImage(named: "Length")!)
-let data = CategoryModel(name: "Data", categories: [], categorySelected: .Data, color: dataColor, icon: UIImage(named: "Data")!)
-let fuel = CategoryModel(name: "Fuel", categories: [], categorySelected: .Fuel, color: fuelColor, icon: UIImage(named: "Fuel")!)
+let data = CategoryModel(name: "Data", categories: dataCategories, categorySelected: .Data, color: dataColor, icon: UIImage(named: "Data")!)
+let fuel = CategoryModel(name: "Fuel", categories: fuelCategories, categorySelected: .Fuel, color: fuelColor, icon: UIImage(named: "Fuel")!)
 let pressure = CategoryModel(name: "Pressure", categories: pressureCategories, categorySelected: .Pressure, color: pressureColor, icon: UIImage(named: "Pressure")!)
 let force = CategoryModel(name: "Force", categories: forceCategories, categorySelected: .Force, color: forceColor, icon: UIImage(named: "Force")!)
 let power = CategoryModel(name: "Power", categories: powerCategories, categorySelected: .Power, color: powerColor, icon: UIImage(named: "Power")!)
@@ -97,5 +97,7 @@ let torqueCategories = (FormulaModel.torqueConstants.allKeys as! [String]).sort(
 let astronomyCategories = (FormulaModel.astroConstants.allKeys as! [String]).sort(<)
 let angleCategories = (FormulaModel.angleConstants.allKeys as! [String]).sort(<)
 let currencyCategories = (FormulaModel.currencyConstants.allKeys as! [String]).sort(<)
+let fuelCategories = (FormulaModel.fuelConstants.allKeys as! [String]).sort(<)
+let dataCategories = (FormulaModel.dataConstants.allKeys as! [String]).sort(<)
 
 
