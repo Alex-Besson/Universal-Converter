@@ -11,10 +11,13 @@ import UIKit
 class FormulaController {
     
     var currencyDict: Dictionary<String,Double> = [:]
-    
+    var currentTime: NSDate?
+    var updateTime: NSDate?
     // DICTIONARY FOR FORMULA CONSTANTS TAKEN FROM FORMULA MODEL
     
     let myFormulas:NSDictionary = ["Pressure":FormulaModel.pressureConstants,"Force":FormulaModel.forceConstants,"Fensity":FormulaModel.densityConstants,"Voltage":FormulaModel.voltageConstants,"Work":FormulaModel.workConstants,"Power":FormulaModel.powerConstants,"Torque":FormulaModel.torqueConstants,"Flow":FormulaModel.flowConstants,"Viscosity":FormulaModel.viscosityConstants,"Current":FormulaModel.currConstants,"Astronomy":FormulaModel.astroConstants,"Length/Distance":FormulaModel.lengthConstants,"Area":FormulaModel.areaConstants,"Weight":FormulaModel.weightConstants,"Volume":FormulaModel.volumeConstants,"Temperature":FormulaModel.temperatureConstants,"Time":FormulaModel.timeConstants,"Speed":FormulaModel.speedConstants,"Currency":FormulaModel.currencyConstants,"Fuel":FormulaModel.fuelConstants,"Data":FormulaModel.dataConstants,"Angle":FormulaModel.angleConstants,"Density":FormulaModel.densityConstants]
+    
+    
     
     // RETURNS AN ARRAY OF TUPLE VALUES WITH CONVERTED TYPES AND VALUES
     
@@ -24,10 +27,6 @@ class FormulaController {
         var convertConstant: Double!
         var calcValues = [(String,String)]()
         
-        if formulaType == "Currency" {
-            getCurrencies()
-           
-        }
         
         let formlType = myFormulas[formulaType]
         let convertValType = formlType?.allKeys as! [String]
@@ -92,42 +91,69 @@ class FormulaController {
         return valConv
     }
     
+    
+    
+    
     // GET CURRENCIES FROM YAHOO (XML DATA)
     
     func getCurrencies() -> Dictionary<String,Double> {
         
-        let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
-        let data = NSData(contentsOfURL: url!)
-        do {
-            let xmlDoc = try AEXMLDocument(xmlData: data!)
-            
-            
-            if let val = xmlDoc.root["resources"]["resource"].all {
-                
-                
-                //Adding currency conversion rate from USD and currencyISO to an array
-                
-                for values in val {
-                    
-                    let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
-                   
-                    
-                    guard let exchangeRate = Double(values.children[1].stringValue) else {
-                        return currencyDict
-                    }
-                    
-                    currencyDict[countryISO] = exchangeRate
-                    
-                }
-            }
-            
-        } catch {
-            
+        
+        currentTime = NSDate()
+        
+        if let prevTime = NSUserDefaults.standardUserDefaults().objectForKey("updateTime")  {
+            updateTime = prevTime as! NSDate
+        } else {
+            updateTime = currentTime
         }
         
-        return currencyDict
+        var diffDate = NSCalendar.currentCalendar().components([NSCalendarUnit.Year,NSCalendarUnit.Month, NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: updateTime!, toDate: currentTime!, options: NSCalendarOptions.init(rawValue: 0))
+        
+        
+        
+        if (((diffDate.minute * 60) + diffDate.second > 60) || ((diffDate.minute * 60) + diffDate.second <= 0)) && Reachability.isConnectedToNetwork() {
+            
+            let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
+            let data = NSData(contentsOfURL: url!)
+            do {
+                print("new data")
+                let xmlDoc = try AEXMLDocument(xmlData: data!)
+                
+                if let val = xmlDoc.root["resources"]["resource"].all {
+                    
+                    
+                    //Adding currency conversion rate from USD and currencyISO to an array
+                    
+                    for values in val {
+                        
+                        let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
+                        
+                        
+                        guard let exchangeRate = Double(values.children[1].stringValue) else {
+                            return currencyDict
+                        }
+                        
+                        currencyDict[countryISO] = exchangeRate
+                        
+                    }
+                }
+                
+            } catch {
+
+            }
+            updateTime = NSDate()
+            NSUserDefaults.standardUserDefaults().setObject(updateTime, forKey: "updateTime")
+            NSUserDefaults.standardUserDefaults().setObject(currencyDict, forKey: "currencyDict")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            return currencyDict
+        } else {
+ print("old data")
+            currencyDict = (NSUserDefaults.standardUserDefaults().objectForKey("currencyDict") as? Dictionary<String,Double>)!
+            
+            return currencyDict
+        
+        }
     }
-    
-    
     
 }

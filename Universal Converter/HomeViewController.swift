@@ -59,8 +59,35 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         categorySelected = categories[indexPath.row]
-        
+        if categorySelected?.name == "Currency" {
+            if (Reachability.isConnectedToNetwork()){
+               performSegueWithIdentifier("toConverterFromHome", sender: nil)
+            } else if (NSUserDefaults.standardUserDefaults().objectForKey("currencyDict") != nil ){
+                let alertController = UIAlertController(title: "No Internet Connection", message: "Would you like to use last used data?", preferredStyle: .Alert)
+                let okayAction = UIAlertAction(title: "Ok", style: .Default, handler: { (action) -> Void in
+                    self.performSegueWithIdentifier("toConverterFromHome", sender: nil)
+                })
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+                alertController.addAction(cancelAction)
+                alertController.addAction(okayAction)
+                
+                
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            } else {
+                
+                let alertController = UIAlertController(title: "No Internet Connection", message: "Please connect to the internet and try again.", preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+                
+            }
+
+        } else {
         performSegueWithIdentifier("toConverterFromHome", sender: nil)
+        }
     }
     
     // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
@@ -124,6 +151,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
+    
+    
     
     
 }

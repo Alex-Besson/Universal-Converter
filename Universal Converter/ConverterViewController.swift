@@ -34,7 +34,11 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if catSelected.name == "Currency" {
+            
+            convertController.getCurrencies()
+            
+        }
         self.title = catSelected.name
         setUpLabelTapGestrue()
         

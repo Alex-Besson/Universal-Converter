@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82FA5AA1C2B53AA006B5EB2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */; };
 		E86E82321C1E5FD60029BB55 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E82311C1E5FD60029BB55 /* AEXML.swift */; };
 		E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */; };
 		E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../Reachability.swift; sourceTree = "<group>"; };
 		E86E82311C1E5FD60029BB55 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
 		E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		FA77F8A61C10ACCF009C60B5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */,
 				FA52FF341C01978600EACD26 /* Constants.swift */,
 				E86E82311C1E5FD60029BB55 /* AEXML.swift */,
 				E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */,
@@ -379,6 +382,7 @@
 				E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */,
 				FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */,
 				E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */,
+				E82FA5AA1C2B53AA006B5EB2 /* Reachability.swift in Sources */,
 				FA8FDF5E1C1A2EA90047C647 /* DoneButton.swift in Sources */,
 				FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */,
 				FA8FDF5A1C1A29030047C647 /* ClearButton.swift in Sources */,
