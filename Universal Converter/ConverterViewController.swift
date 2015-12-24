@@ -137,24 +137,34 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBAction func numberButtonPressed(btn: UIButton!) {
         
-        if lblConvertFrom.text == "0" {
+        if btn.tag != 10 && btn.tag != 11 {
             
-            if btn.tag == 10 {
-                lblConvertFrom.text = "0"
+            if lblConvertFrom.text == "0" {
+                lblConvertFrom.text = "\(btn.tag)"
+            } else if lblConvertFrom.text == "-0" {
+                lblConvertFrom.text = "-" + "\(btn.tag)"
             } else {
-                lblConvertFrom.text = ""
-                lblConvertFrom.text? += "\(btn.tag)"
+                lblConvertFrom.text! += "\(btn.tag)"
             }
             
-        } else {
-            if btn.tag == 10 {
-                
-                if lblConvertFrom.text?.rangeOfString(".") == nil {
-                    lblConvertFrom.text? += "."
-                }
-                
+        } else if btn.tag == 10 {
+            
+            if lblConvertFrom.text == "0" {
+                lblConvertFrom.text = "0."
+            } else if lblConvertFrom.text?.rangeOfString(".") == nil {
+                lblConvertFrom.text! += "."
             } else {
-                lblConvertFrom.text? += "\(btn.tag)"
+                
+            }
+            
+        } else if btn.tag == 11 {
+            
+            if lblConvertFrom.text == "0" {
+                lblConvertFrom.text = "-0"
+            } else if lblConvertFrom.text?.rangeOfString("-") == nil {
+                lblConvertFrom.text = "-" + lblConvertFrom.text!
+            } else if lblConvertFrom.text?.rangeOfString("-") != nil {
+                lblConvertFrom.text = lblConvertFrom.text?.stringByReplacingOccurrencesOfString("-", withString: "")
             }
             
         }
