@@ -277,10 +277,19 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sne-8B-Ep1">
+                                                            <rect key="frame" x="0.0" y="21" width="22" height="22"/>
+                                                            <connections>
+                                                                <action selector="infoShow:" destination="xUt-4e-jqu" eventType="touchUpInside" id="ff6-6C-6dR"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="sne-8B-Ep1" secondAttribute="leading" constant="8" id="0oc-KU-CIG"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="top" secondItem="PIE-6r-wJC" secondAttribute="topMargin" constant="3" id="1CH-bB-G5D"/>
+                                                        <constraint firstItem="sne-8B-Ep1" firstAttribute="top" secondItem="PIE-6r-wJC" secondAttribute="topMargin" constant="13" id="IJw-5T-8Er"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="leading" secondItem="08n-C2-w37" secondAttribute="trailing" constant="8" id="J1I-dw-l13"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="sne-8B-Ep1" secondAttribute="bottom" constant="-7.5" id="JvJ-gD-1fq"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="leading" secondItem="08n-C2-w37" secondAttribute="trailing" constant="8" id="L77-Dy-IMJ"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="vgt-wF-vXg" secondAttribute="bottom" constant="3.5" id="MhK-dk-zNh"/>
                                                         <constraint firstItem="08n-C2-w37" firstAttribute="leading" secondItem="Kxf-ow-OOK" secondAttribute="trailing" constant="8" id="Qqg-FA-y2t"/>

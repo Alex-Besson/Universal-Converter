@@ -10,6 +10,7 @@ import UIKit
 
 class ConverterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIPickerViewDelegate {
     
+    
     @IBOutlet weak var tblResults: UITableView!
     @IBOutlet weak var lblConvertFrom: UILabel!
     @IBOutlet weak var lblConvertTo: UILabel!
@@ -22,13 +23,20 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     var leftPickerIndex = 0
     var rightPickerIndex = 0
-    
+    var isHidden: Bool = false
     var catSelected: CategoryModel!
     
     let convertController = FormulaController()
     
     // THE RESULTS OF ALL CONVERSIONS -- USED TO POPULATE RESULTS TABLE
     var conversionData = [(String,String)]()
+    
+    // Button to show or hide information
+    @IBAction func infoShow(sender: AnyObject) {
+       
+        isHidden = !isHidden
+       tblResults.reloadData()
+    }
     
     // VIEW DID LOAD
     
@@ -40,10 +48,13 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             
         }
         self.title = catSelected.name
+        
         setUpLabelTapGestrue()
         
         manageEquation(catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: 0, rightPick: 0)
-        
+        if NSUserDefaults.standardUserDefaults().objectForKey("isHidden") != nil {
+            isHidden = NSUserDefaults.standardUserDefaults().objectForKey("isHidden") as! Bool
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -75,8 +86,12 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
                 return cell
             }
             cell.lblDescription.text = unitFullName[indexPath.row]
+            
         }
         
+      cell.lblDescription.hidden = isHidden
+        NSUserDefaults.standardUserDefaults().setValue(isHidden, forKey: "isHidden")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         lblConvertTo.text = conversionData[rightPickerIndex].1
         

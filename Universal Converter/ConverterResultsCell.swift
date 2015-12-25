@@ -14,6 +14,7 @@ class ConverterResultsCell: UITableViewCell {
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblResults: UILabel!
     
+
     @IBOutlet weak var lblDescription: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
