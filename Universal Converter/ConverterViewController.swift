@@ -48,7 +48,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidAppear(animated: Bool) {
         hideAndShowKeyboard()
-        
+      
     }
     
     // TABLE VIEW FUNCTIONS
@@ -65,7 +65,16 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         if catSelected.name == "Currency" {
             let flagImages = (FormulaModel.currencyConstants.allKeys as! [String]).sort(<)
-            cell.imgFlag.image = UIImage(named:flagImages[indexPath.row] )
+            
+            cell.imgFlag.image = UIImage(named:flagImages[indexPath.row])
+            
+            cell.lblDescription.text = FormulaModel.currencyConstants.valueForKey(flagImages[indexPath.row]) as? String
+           
+        } else {
+            guard let unitFullName = FormulaModel.unitFullName.valueForKeyPath(catSelected.name) as? [String] else {
+                return cell
+            }
+            cell.lblDescription.text = unitFullName[indexPath.row]
         }
         
         
@@ -214,5 +223,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         tblResults.reloadData()
         
     }
+    
+    
     
 }
