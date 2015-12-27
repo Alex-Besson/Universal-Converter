@@ -48,11 +48,11 @@ let fuel = CategoryModel(name: "Fuel", categories: fuelCategories, categorySelec
 let pressure = CategoryModel(name: "Pressure", categories: pressureCategories, categorySelected: .Pressure, color: pressureColor, icon: UIImage(named: "Pressure")!)
 let force = CategoryModel(name: "Force", categories: forceCategories, categorySelected: .Force, color: forceColor, icon: UIImage(named: "Force")!)
 let power = CategoryModel(name: "Power", categories: powerCategories, categorySelected: .Power, color: powerColor, icon: UIImage(named: "Power")!)
-let density = CategoryModel(name: "Density", categories: densityCategories, categorySelected: .Density, color: densityColor, icon: UIImage(named: "Weight")!)
-let viscosity = CategoryModel(name: "Viscosity", categories: viscosityCategories, categorySelected: .Viscosity, color: viscosityColor, icon: UIImage(named: "Weight")!)
-let torque = CategoryModel(name: "Torque", categories: torqueCategories, categorySelected: .Torque, color: torqueColor, icon: UIImage(named: "Weight")!)
-let astronomy = CategoryModel(name: "Astronomy", categories: astronomyCategories, categorySelected: .Astronomy, color: astronomyColor, icon: UIImage(named: "Weight")!)
-let angle = CategoryModel(name: "Angle", categories: angleCategories, categorySelected: .Angle, color: angleColor, icon: UIImage(named: "Weight")!)
+let density = CategoryModel(name: "Density", categories: densityCategories, categorySelected: .Density, color: densityColor, icon: densityIcon!)
+let viscosity = CategoryModel(name: "Viscosity", categories: viscosityCategories, categorySelected: .Viscosity, color: viscosityColor, icon: viscosityIcon!)
+let torque = CategoryModel(name: "Torque", categories: torqueCategories, categorySelected: .Torque, color: torqueColor, icon: torqueIcon!)
+let astronomy = CategoryModel(name: "Astronomy", categories: astronomyCategories, categorySelected: .Astronomy, color: astronomyColor, icon: astronomyIcon!)
+let angle = CategoryModel(name: "Angle", categories: angleCategories, categorySelected: .Angle, color: angleColor, icon: angleIcon!)
 
 // CATEGORY COLORS
 
@@ -78,6 +78,23 @@ let angleColor = UIColor(red: 255/255, green: 240/255, blue: 13/255, alpha: 1)
 // CATEGORY ICONS
 
 let weightIcon = UIImage(named: "Weight")
+let temperatureIcon = UIImage(named: "Temperature")
+let timeIcon = UIImage(named: "Time")
+let currencyIcon = UIImage(named: "Currency")
+let speedIcon = UIImage(named: "Speed")
+let areaIcon = UIImage(named: "Area")
+let volumeIcon = UIImage(named: "Volume")
+let lengthIcon = UIImage(named: "Length")
+let dataIcon = UIImage(named: "Data")
+let fuelIcon = UIImage(named: "Fuel")
+let pressureIcon = UIImage(named: "Pressure")
+let forceIcon = UIImage(named: "Force")
+let powerIcon = UIImage(named: "Power")
+let densityIcon = UIImage(named: "Density")
+let viscosityIcon = UIImage(named: "Viscosity")
+let torqueIcon = UIImage(named: "Torque")
+let astronomyIcon = UIImage(named: "Astronomy")
+let angleIcon = UIImage(named: "Angle")
 
 // SPECIFIC FORMULA CATEGORIES FOR THE MAIN CATEGORIES
 

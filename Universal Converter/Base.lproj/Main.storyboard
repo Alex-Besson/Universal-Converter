@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -329,7 +329,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-7j-Bv1" userLabel="KeyboardView">
-                                <rect key="frame" x="0.0" y="536" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="336" width="600" height="200"/>
                                 <subviews>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="145" height="45"/>
@@ -481,7 +481,7 @@
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="CZR-aW-6KC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqr-Ge-Ouv" customClass="MinusButton" customModule="Universal_Converter" customModuleProvider="target">
+                                    <button hidden="YES" opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqr-Ge-Ouv" customClass="MinusButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="302" y="151" width="145" height="45"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="-">
@@ -497,6 +497,7 @@
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="top" secondItem="ID0-m9-NAF" secondAttribute="bottom" constant="4" id="13B-ec-ESy"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="centerX" secondItem="npV-ty-W0U" secondAttribute="centerX" id="1Md-Of-t41"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="leading" secondItem="8Vj-ps-o71" secondAttribute="trailing" constant="4" id="1kF-Xp-Zrj"/>
+                                    <constraint firstItem="MDT-gf-rCm" firstAttribute="width" secondItem="yGz-vU-Lx8" secondAttribute="width" id="2qC-6A-1kR"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="leading" secondItem="npV-ty-W0U" secondAttribute="trailing" constant="4" id="354-kf-Iba"/>
                                     <constraint firstAttribute="trailing" secondItem="ID0-m9-NAF" secondAttribute="trailing" constant="4" id="5IH-77-3W8"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="leading" secondItem="ZtN-V8-4kQ" secondAttribute="trailing" constant="4" id="5Ml-9t-L6B"/>
@@ -504,6 +505,7 @@
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="5wQ-GX-JEF"/>
                                     <constraint firstItem="67W-2d-J9H" firstAttribute="width" secondItem="npV-ty-W0U" secondAttribute="width" id="6En-g7-tpJ"/>
                                     <constraint firstItem="AXz-j6-2sZ" firstAttribute="centerX" secondItem="rDc-JO-ebV" secondAttribute="centerX" id="7DK-SY-HXU"/>
+                                    <constraint firstItem="xL1-5m-YJf" firstAttribute="width" secondItem="MDT-gf-rCm" secondAttribute="width" id="7Mx-Yv-RYw"/>
                                     <constraint firstItem="Wqr-Ge-Ouv" firstAttribute="width" secondItem="MDT-gf-rCm" secondAttribute="width" id="8ms-tm-oFW"/>
                                     <constraint firstItem="MDT-gf-rCm" firstAttribute="top" secondItem="yGz-vU-Lx8" secondAttribute="bottom" constant="4" id="94f-VI-adw"/>
                                     <constraint firstItem="maA-qc-eDm" firstAttribute="height" secondItem="npV-ty-W0U" secondAttribute="height" id="9T2-pc-dRL"/>
@@ -582,6 +584,13 @@
                                     <constraint firstItem="b0v-ID-jkW" firstAttribute="leading" secondItem="Wqr-Ge-Ouv" secondAttribute="trailing" constant="4" id="zIP-V4-7zN"/>
                                     <constraint firstItem="rDc-JO-ebV" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="top" constant="4" id="zlv-zD-sVI"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Mx-Yv-RYw"/>
+                                        <exclude reference="Cn9-kR-1TT"/>
+                                        <exclude reference="ynj-nR-F7K"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -598,7 +607,7 @@
                             <constraint firstItem="NM9-Td-lKb" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="gpT-it-Nr9"/>
                             <constraint firstItem="QCO-7j-Bv1" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" constant="-200" id="sL0-Oj-NdS"/>
                             <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" id="vnm-Mb-U8J"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" constant="-200" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
+                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -608,7 +617,11 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btn7" destination="npV-ty-W0U" id="twy-y1-gKy"/>
+                        <outlet property="btnDot" destination="xL1-5m-YJf" id="r51-gc-jlC"/>
+                        <outlet property="btnMinus" destination="Wqr-Ge-Ouv" id="OGi-i5-gvK"/>
                         <outlet property="constBottomOfKeyboard" destination="y1s-CR-y4n" id="jna-qg-tZB"/>
+                        <outlet property="constMinusButtonLeading" destination="baV-lI-de1" id="Iq7-6J-52l"/>
                         <outlet property="lblConvertFrom" destination="7bq-hn-aER" id="a9o-Nd-H0R"/>
                         <outlet property="lblConvertTo" destination="c5o-aF-E1G" id="EVU-y5-ubx"/>
                         <outlet property="pickerLeft" destination="CEy-VR-eaS" id="m4t-Pg-yZd"/>
@@ -648,6 +661,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Volume" width="696" height="600"/>
+        <image name="Volume" width="1200" height="1200"/>
     </resources>
 </document>

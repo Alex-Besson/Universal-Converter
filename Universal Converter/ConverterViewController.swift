@@ -18,6 +18,11 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var vwKeyboardView: UIView!
     @IBOutlet weak var constBottomOfKeyboard: NSLayoutConstraint!
     
+    @IBOutlet weak var constMinusButtonLeading: NSLayoutConstraint!
+    @IBOutlet weak var btnMinus: MinusButton!
+    @IBOutlet weak var btnDot: DotButton!
+    @IBOutlet weak var btn7: KeyboardButton!
+    
     @IBOutlet weak var pickerLeft: UIPickerView!
     @IBOutlet weak var pickerRight: UIPickerView!
     
@@ -47,6 +52,17 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             convertController.getCurrencies()
             
         }
+        
+        if catSelected.categorySelected == CategorySwitch.Temperature {
+            btnMinus.hidden = false
+
+        } else {
+            btnMinus.hidden = true
+            
+            constMinusButtonLeading.constant = -((self.view.bounds.width - (4 * 5)) / 4)
+            btnDot.resetGradientLayer()
+        }
+        
         self.title = catSelected.name
         
         setUpLabelTapGestrue()
@@ -55,11 +71,19 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         if NSUserDefaults.standardUserDefaults().objectForKey("isHidden") != nil {
             isHidden = NSUserDefaults.standardUserDefaults().objectForKey("isHidden") as! Bool
         }
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        btnDot.resetGradientLayer()
+
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         hideAndShowKeyboard()
-      
+        
     }
     
     // TABLE VIEW FUNCTIONS

@@ -76,6 +76,12 @@ class KeyboardButton: UIButton {
         
     }
     
-//    http://www.freesfx.co.uk
+    func resetGradientLayer() {
+        
+        self.clipsToBounds = false
+        addGradientLayerColors(topColor, bottom: bottomColor)
+        self.clipsToBounds = true
+        layoutIfNeeded()
+    }
 
 }
