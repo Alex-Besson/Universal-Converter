@@ -189,8 +189,8 @@
 		FA77F8A61C10ACCF009C60B5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */,
 				FA52FF341C01978600EACD26 /* Constants.swift */,
+				E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */,
 				E86E82311C1E5FD60029BB55 /* AEXML.swift */,
 				E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */,
 			);
