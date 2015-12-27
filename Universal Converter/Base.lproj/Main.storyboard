@@ -121,9 +121,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundBlack" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-Jh-zd0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-vk-e7E" userLabel="FloatingView" customClass="FloatingView" customModule="Universal_Converter" customModuleProvider="target">
                                 <rect key="frame" x="8" y="8" width="584" height="520"/>
                                 <subviews>
@@ -316,7 +313,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-7j-Bv1" userLabel="KeyboardView">
-                                <rect key="frame" x="0.0" y="336" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="536" width="600" height="200"/>
                                 <subviews>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="145" height="45"/>
@@ -577,24 +574,20 @@
                             <constraint firstItem="NM9-Td-lKb" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="IWL-6l-8Po"/>
                             <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" constant="-200" id="MqP-XF-PJ8"/>
                             <constraint firstItem="s6f-vk-e7E" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" constant="8" id="Nht-pV-rDg"/>
-                            <constraint firstItem="qh5-Jh-zd0" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="NiJ-CM-yMT"/>
                             <constraint firstAttribute="trailing" secondItem="QCO-7j-Bv1" secondAttribute="trailing" id="Nqy-Bj-KbO"/>
                             <constraint firstItem="QCO-7j-Bv1" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="O0b-Rh-27b"/>
                             <constraint firstAttribute="trailing" secondItem="NM9-Td-lKb" secondAttribute="trailing" id="Pxs-I3-Fhv"/>
                             <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="s6f-vk-e7E" secondAttribute="bottom" constant="8" id="Tdy-98-PLJ"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="qh5-Jh-zd0" secondAttribute="bottom" id="WNf-6o-crT"/>
                             <constraint firstItem="s6f-vk-e7E" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" constant="8" id="Y0R-2c-e3u"/>
-                            <constraint firstItem="qh5-Jh-zd0" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="eew-Ku-ZaS"/>
                             <constraint firstItem="NM9-Td-lKb" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="gpT-it-Nr9"/>
-                            <constraint firstAttribute="trailing" secondItem="qh5-Jh-zd0" secondAttribute="trailing" id="oV6-D0-Kdx"/>
                             <constraint firstItem="QCO-7j-Bv1" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" constant="-200" id="sL0-Oj-NdS"/>
                             <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" id="vnm-Mb-U8J"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
+                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" constant="-200" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="sL0-Oj-NdS"/>
                                 <exclude reference="vnm-Mb-U8J"/>
+                                <exclude reference="sL0-Oj-NdS"/>
                             </mask>
                         </variation>
                     </view>
@@ -639,7 +632,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackgroundBlack" width="1086" height="1091"/>
         <image name="Volume" width="696" height="600"/>
     </resources>
 </document>
