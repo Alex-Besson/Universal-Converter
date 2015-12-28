@@ -22,7 +22,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var btnMinus: MinusButton!
     @IBOutlet weak var btnDot: DotButton!
     @IBOutlet weak var btn7: KeyboardButton!
-    
+    @IBOutlet weak var btnInfo: UIBarButtonItem!
     @IBOutlet weak var pickerLeft: UIPickerView!
     @IBOutlet weak var pickerRight: UIPickerView!
     
@@ -35,19 +35,30 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     // THE RESULTS OF ALL CONVERSIONS -- USED TO POPULATE RESULTS TABLE
     var conversionData = [(String,String)]()
+
     
-    // Button to show or hide information
-    @IBAction func infoShow(sender: AnyObject) {
-       
+    // function to show or hide information
+    func infoShow() {
+        
         isHidden = !isHidden
-       tblResults.reloadData()
+        tblResults.reloadData()
     }
+    // Configure bar button to show or hide details
+    func configInfoBtn() {
+        let myButtonIcon: String = "\u{24D8}"
+        
+    let myButton = UIBarButtonItem.init(title: myButtonIcon, style: UIBarButtonItemStyle.Plain, target: self, action: "infoShow")
+        self.navigationItem.rightBarButtonItem = myButton
+    }
+    
     
     // VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if catSelected.name == "Currency" {
+        configInfoBtn()
+        
+        if catSelected.categorySelected == CategorySwitch.Currency {
             
             convertController.getCurrencies()
             
@@ -55,7 +66,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         if catSelected.categorySelected == CategorySwitch.Temperature {
             btnMinus.hidden = false
-
+            
         } else {
             btnMinus.hidden = true
             
@@ -64,6 +75,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         self.title = catSelected.name
+        
         
         setUpLabelTapGestrue()
         
@@ -77,7 +89,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         btnDot.resetGradientLayer()
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,7 +116,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             cell.imgFlag.image = UIImage(named:flagImages[indexPath.row])
             
             cell.lblDescription.text = FormulaModel.currencyConstants.valueForKey(flagImages[indexPath.row]) as? String
-           
+            
         } else {
             guard let unitFullName = FormulaModel.unitFullName.valueForKeyPath(catSelected.name) as? [String] else {
                 return cell
@@ -113,7 +125,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             
         }
         
-      cell.lblDescription.hidden = isHidden
+        cell.lblDescription.hidden = isHidden
         NSUserDefaults.standardUserDefaults().setValue(isHidden, forKey: "isHidden")
         NSUserDefaults.standardUserDefaults().synchronize()
         

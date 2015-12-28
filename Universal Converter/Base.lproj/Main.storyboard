@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -96,7 +96,9 @@
                             <constraint firstItem="6eH-gn-sLr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nBl-MC-osk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" id="HJm-xp-crs"/>
+                    <navigationItem key="navigationItem" title="Categories" id="HJm-xp-crs">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VvP-BT-jCG"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="xUt-4e-jqu" kind="show" identifier="toConverterFromHome" id="Fz4-xH-lWB"/>
                     </connections>
@@ -261,7 +263,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-7I-2rX">
                                                             <rect key="frame" x="62" y="22" width="110" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="08n-C2-w37">
@@ -274,19 +276,10 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sne-8B-Ep1">
-                                                            <rect key="frame" x="0.0" y="21" width="22" height="22"/>
-                                                            <connections>
-                                                                <action selector="infoShow:" destination="xUt-4e-jqu" eventType="touchUpInside" id="ff6-6C-6dR"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="leadingMargin" secondItem="sne-8B-Ep1" secondAttribute="leading" constant="8" id="0oc-KU-CIG"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="top" secondItem="PIE-6r-wJC" secondAttribute="topMargin" constant="3" id="1CH-bB-G5D"/>
-                                                        <constraint firstItem="sne-8B-Ep1" firstAttribute="top" secondItem="PIE-6r-wJC" secondAttribute="topMargin" constant="13" id="IJw-5T-8Er"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="leading" secondItem="08n-C2-w37" secondAttribute="trailing" constant="8" id="J1I-dw-l13"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="sne-8B-Ep1" secondAttribute="bottom" constant="-7.5" id="JvJ-gD-1fq"/>
                                                         <constraint firstItem="vgt-wF-vXg" firstAttribute="leading" secondItem="08n-C2-w37" secondAttribute="trailing" constant="8" id="L77-Dy-IMJ"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="vgt-wF-vXg" secondAttribute="bottom" constant="3.5" id="MhK-dk-zNh"/>
                                                         <constraint firstItem="08n-C2-w37" firstAttribute="leading" secondItem="Kxf-ow-OOK" secondAttribute="trailing" constant="8" id="Qqg-FA-y2t"/>
@@ -611,8 +604,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="vnm-Mb-U8J"/>
                                 <exclude reference="sL0-Oj-NdS"/>
+                                <exclude reference="vnm-Mb-U8J"/>
                             </mask>
                         </variation>
                     </view>
