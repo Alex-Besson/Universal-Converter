@@ -43,21 +43,28 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         isHidden = !isHidden
         tblResults.reloadData()
     }
-    // Configure bar button to show or hide details
-    func configInfoBtn() {
-        let myButtonIcon: String = "\u{24D8}"
+
+    
+    func configBtnMoreInfo() {
+
+        // Configure bar button to show or hide details
         
-    let myButton = UIBarButtonItem.init(title: myButtonIcon, style: UIBarButtonItemStyle.Plain, target: self, action: "infoShow")
-        self.navigationItem.rightBarButtonItem = myButton
+        let infoImage: String = "\u{24D8}"
+        
+        let btnMoreInfo = UIBarButtonItem.init(title: infoImage, style: UIBarButtonItemStyle.Plain, target: self, action: "infoShow")
+            
+        self.navigationItem.rightBarButtonItem = btnMoreInfo
+        
+        
     }
     
+ 
     
     // VIEW DID LOAD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configInfoBtn()
-        
+   configBtnMoreInfo()
         if catSelected.categorySelected == CategorySwitch.Currency {
             
             convertController.getCurrencies()
