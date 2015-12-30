@@ -27,8 +27,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Segue to Donate view
     func donateToUs() {
         
-        
-        
+        self.performSegueWithIdentifier("showDonate", sender: nil)
     }
     
     
@@ -39,7 +38,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
       let btnDonate = UIButton()
-        btnDonate.frame = CGRectMake(0, 0, 90, 40)
+        btnDonate.frame = CGRectMake(0, 0, 80, 40)
         btnDonate.setBackgroundImage(UIImage(named: "donationBtn"), forState: .Normal)
         btnDonate.addTarget(self, action: "donateToUs", forControlEvents: .TouchUpInside)
         

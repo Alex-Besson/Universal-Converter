@@ -102,12 +102,12 @@ class FormulaController {
         currentTime = NSDate()
         
         if let prevTime = NSUserDefaults.standardUserDefaults().objectForKey("updateTime")  {
-            updateTime = prevTime as! NSDate
+            updateTime = prevTime as? NSDate
         } else {
             updateTime = currentTime
         }
         
-        var diffDate = NSCalendar.currentCalendar().components([NSCalendarUnit.Year,NSCalendarUnit.Month, NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: updateTime!, toDate: currentTime!, options: NSCalendarOptions.init(rawValue: 0))
+        let diffDate = NSCalendar.currentCalendar().components([NSCalendarUnit.Year,NSCalendarUnit.Month, NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: updateTime!, toDate: currentTime!, options: NSCalendarOptions.init(rawValue: 0))
         
         
         

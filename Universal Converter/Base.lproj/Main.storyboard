@@ -101,6 +101,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="xUt-4e-jqu" kind="show" identifier="toConverterFromHome" id="Fz4-xH-lWB"/>
+                        <segue destination="36o-d5-u81" kind="show" identifier="showDonate" id="Vbm-8B-ken"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -626,6 +627,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF6-qc-8WP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="353"/>
+        </scene>
+        <!--DonateVC-->
+        <scene sceneID="EtP-oz-E4W">
+            <objects>
+                <viewController id="36o-d5-u81" customClass="DonateVC" customModule="Universal_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ydC-pS-wVn"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Db-h4-935"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p1A-dW-dHf">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b7x-Nb-Fop">
+                                <rect key="frame" x="197" y="128" width="206" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xj5-6H-sFM">
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="280"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-A9-cfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="210"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Bj-wU-Ose">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="30"/>
+                                                        <color key="textColor" red="0.35331139360000002" green="0.97507698759999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFf-L5-8Jz">
+                                                        <rect key="frame" x="0.0" y="60" width="206" height="30"/>
+                                                        <color key="textColor" red="0.35331139360000002" green="0.97507698759999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="yIv-vA-If3">
+                                                        <rect key="frame" x="0.0" y="120" width="206" height="30"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-Hi-1PM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
+                                                                <color key="textColor" red="0.35331139360000002" green="0.97507698759999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOL-s3-PcC">
+                                                                <rect key="frame" x="138" y="0.0" width="68" height="30"/>
+                                                                <color key="textColor" red="0.35331139360000002" green="0.97507698759999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QiU-dK-KZO">
+                                                        <rect key="frame" x="0.0" y="180" width="206" height="30"/>
+                                                        <color key="textColor" red="0.35331139360000002" green="0.97507698759999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNl-LZ-H4X">
+                                                <rect key="frame" x="79" y="250" width="49" height="30"/>
+                                                <color key="backgroundColor" red="0.41644101236479159" green="0.9090948804624257" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Donate">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="donate:" destination="36o-d5-u81" eventType="touchUpInside" id="hv5-8L-MVB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b7x-Nb-Fop" firstAttribute="centerY" secondItem="p1A-dW-dHf" secondAttribute="centerY" id="O4L-pm-fj8"/>
+                            <constraint firstItem="b7x-Nb-Fop" firstAttribute="centerX" secondItem="p1A-dW-dHf" secondAttribute="centerX" id="kqb-EW-bnF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="QiU-dK-KZO" id="7T9-sC-AMg"/>
+                        <outlet property="cardNumberTextField" destination="gFf-L5-8Jz" id="GD7-fz-PyQ"/>
+                        <outlet property="cvcTextField" destination="wOL-s3-PcC" id="eB7-o0-B8Z"/>
+                        <outlet property="emailTextField" destination="6Bj-wU-Ose" id="azG-Te-gc3"/>
+                        <outlet property="expireDateTextField" destination="sZG-Hi-1PM" id="lve-ea-GjI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aA9-Ur-avF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="1039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oN1-Ov-3sK">
