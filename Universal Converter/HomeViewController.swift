@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // Segue to Donate view
     func donateToUs() {
+       
         
         self.performSegueWithIdentifier("showDonate", sender: nil)
     }
@@ -113,7 +114,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    // FUNCTION THAT EFFECTS CELL ANYMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
+    // FUNCTION THAT EFFECTS CELL ANIMATION WHEN HIGHLIGHTED AND UNHIGHLIGHTED
     
     func animateSelectedCell(tableView: UITableView, indexPath: NSIndexPath) {
         let selectedCell: CategoryCell = tableView.cellForRowAtIndexPath(indexPath) as! CategoryCell
