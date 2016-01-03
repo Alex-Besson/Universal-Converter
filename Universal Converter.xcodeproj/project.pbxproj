@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD7F1273C01980882FDD8E95 /* libPods-Universal Converter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8908C89B6BF182D1E31F27F6 /* libPods-Universal Converter.a */; };
 		E82FA5AA1C2B53AA006B5EB2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */; };
 		E86E82321C1E5FD60029BB55 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E82311C1E5FD60029BB55 /* AEXML.swift */; };
-		E89848E61C31F0C4001B5D66 /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89848E51C31F0C4001B5D66 /* DonateVC.swift */; };
 		E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */; };
 		E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */; };
 		E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */; };
 		E8D158561C3791E9005D5634 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D158551C3791E9005D5634 /* CustomTextField.swift */; };
-		E8D158581C379CDD005D5634 /* donateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D158571C379CDD005D5634 /* donateButton.swift */; };
 		FA018B911C30201D0096F4FB /* DotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA018B901C30201D0096F4FB /* DotButton.swift */; };
 		FA2A62B41C2BA341009B1D4C /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A62B31C2BA341009B1D4C /* GradientBackgroundView.swift */; };
 		FA2A62B61C2BB093009B1D4C /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A62B51C2BB093009B1D4C /* MinusButton.swift */; };
@@ -60,17 +57,12 @@
 
 /* Begin PBXFileReference section */
 		8908C89B6BF182D1E31F27F6 /* libPods-Universal Converter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Converter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF5EEEAA845D7B079176CA9E /* Pods-Universal Converter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Converter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Converter/Pods-Universal Converter.debug.xcconfig"; sourceTree = "<group>"; };
 		E82FA5A91C2B53AA006B5EB2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../Reachability.swift; sourceTree = "<group>"; };
 		E86E82311C1E5FD60029BB55 /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
-		E891CC9C1C344E9700F5824A /* UniConverter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UniConverter-Bridging-Header.h"; sourceTree = "<group>"; };
-		E89848E51C31F0C4001B5D66 /* DonateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
 		E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingNumExtension.swift; sourceTree = "<group>"; };
 		E8D158551C3791E9005D5634 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		E8D158571C379CDD005D5634 /* donateButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = donateButton.swift; sourceTree = "<group>"; };
-		EE996091A12E35D26ABB1B65 /* Pods-Universal Converter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Converter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Converter/Pods-Universal Converter.release.xcconfig"; sourceTree = "<group>"; };
 		FA018B901C30201D0096F4FB /* DotButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotButton.swift; sourceTree = "<group>"; };
 		FA2A62B31C2BA341009B1D4C /* GradientBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		FA2A62B51C2BB093009B1D4C /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
@@ -103,14 +95,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA52FEFC1C01640000EACD26 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD7F1273C01980882FDD8E95 /* libPods-Universal Converter.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FA52FF101C01640000EACD26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,12 +131,10 @@
 		FA52FEF61C01640000EACD26 = {
 			isa = PBXGroup;
 			children = (
-				E891CC9C1C344E9700F5824A /* UniConverter-Bridging-Header.h */,
 				FA52FF011C01640000EACD26 /* Universal Converter */,
 				FA52FF161C01640000EACD26 /* Universal ConverterTests */,
 				FA52FF211C01640000EACD26 /* Universal ConverterUITests */,
 				FA52FF001C01640000EACD26 /* Products */,
-				FFF021C21B502F07CF728DEF /* Pods */,
 				D64D7679ABBE62AA5E309E92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -226,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8FDF591C1A29030047C647 /* ClearButton.swift */,
-				E8D158571C379CDD005D5634 /* donateButton.swift */,
 				E8D158551C3791E9005D5634 /* CustomTextField.swift */,
 				FA8FDF5B1C1A2D4E0047C647 /* CorrectButton.swift */,
 				FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */,
@@ -254,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				FA52FF301C01647800EACD26 /* HomeViewController.swift */,
-				E89848E51C31F0C4001B5D66 /* DonateVC.swift */,
 				FA52FF361C01987500EACD26 /* ConverterViewController.swift */,
 			);
 			name = Controller;
@@ -270,15 +250,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FFF021C21B502F07CF728DEF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF5EEEAA845D7B079176CA9E /* Pods-Universal Converter.debug.xcconfig */,
-				EE996091A12E35D26ABB1B65 /* Pods-Universal Converter.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,11 +257,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA52FF271C01640000EACD26 /* Build configuration list for PBXNativeTarget "Universal Converter" */;
 			buildPhases = (
-				22C274935F91D8C0BBA42DBE /* Check Pods Manifest.lock */,
 				FA52FEFB1C01640000EACD26 /* Sources */,
-				FA52FEFC1C01640000EACD26 /* Frameworks */,
 				FA52FEFD1C01640000EACD26 /* Resources */,
-				393BBDB869ED7DB567CDA8CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,39 +377,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		22C274935F91D8C0BBA42DBE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		393BBDB869ED7DB567CDA8CC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Converter/Pods-Universal Converter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FA52FEFB1C01640000EACD26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -463,11 +398,9 @@
 				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,
 				FA52FF371C01987500EACD26 /* ConverterViewController.swift in Sources */,
 				E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */,
-				E89848E61C31F0C4001B5D66 /* DonateVC.swift in Sources */,
 				FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */,
 				E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */,
 				E82FA5AA1C2B53AA006B5EB2 /* Reachability.swift in Sources */,
-				E8D158581C379CDD005D5634 /* donateButton.swift in Sources */,
 				FA8FDF5E1C1A2EA90047C647 /* DoneButton.swift in Sources */,
 				FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */,
 				FA8FDF5A1C1A29030047C647 /* ClearButton.swift in Sources */,
@@ -608,27 +541,25 @@
 		};
 		FA52FF281C01640000EACD26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF5EEEAA845D7B079176CA9E /* Pods-Universal Converter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Universal Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "besson.Universal-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UniConverter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
 		FA52FF291C01640000EACD26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE996091A12E35D26ABB1B65 /* Pods-Universal Converter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Universal Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "besson.Universal-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "UniConverter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

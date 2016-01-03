@@ -21,31 +21,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAduioPlayer()
-   configDonateBtn()
+
     }
-    
-    // Segue to Donate view
-    func donateToUs() {
-       
-        
-        self.performSegueWithIdentifier("showDonate", sender: nil)
-    }
-    
-    
-    
-    
-    // Configure donate button
-    func configDonateBtn() {
-        
-        
-      let btnDonate = UIButton()
-        btnDonate.frame = CGRectMake(0, 0, 80, 40)
-        btnDonate.setBackgroundImage(UIImage(named: "donationBtn"), forState: .Normal)
-        btnDonate.addTarget(self, action: "donateToUs", forControlEvents: .TouchUpInside)
-        
-        let btnDonates = UIBarButtonItem.init(customView: btnDonate)
-        self.navigationItem.rightBarButtonItem = btnDonates
-    }
+   
     
     
     // TABLE VIEW FUNCTIONS
