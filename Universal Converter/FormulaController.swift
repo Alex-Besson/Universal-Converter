@@ -41,7 +41,12 @@ class FormulaController {
                 let valConv = String((self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundTo5))
                 calcValues.append(convType,valConv)
                 
-            } else if formulaType == "Currency" {
+            } else if formulaType == "Time" {
+                let valConv = String((val! * (convertConstant / currentConstant)).roundTo2)
+                calcValues.append(convType,valConv)
+            }
+            
+            else if formulaType == "Currency" {
                 
                 let valConv = self.convCurrency(val!, currentType: currentValueType, convType: convType)
                 calcValues.append(convType, valConv)
