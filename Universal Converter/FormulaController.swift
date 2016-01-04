@@ -109,9 +109,10 @@ class FormulaController {
         
         let diffDate = NSCalendar.currentCalendar().components([NSCalendarUnit.Year,NSCalendarUnit.Month, NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: updateTime!, toDate: currentTime!, options: NSCalendarOptions.init(rawValue: 0))
         
+        let dateDifference = diffDate.hour * 3600 + diffDate.minute * 60 + diffDate.second
         
         
-        if (((diffDate.minute * 60) + diffDate.second > 60) || ((diffDate.minute * 60) + diffDate.second <= 0)) && Reachability.isConnectedToNetwork() {
+        if ((diffDate.day > 0) || (dateDifference > 60) || ((diffDate.minute * 60) + diffDate.second <= 0)) && Reachability.isConnectedToNetwork() {
             
             let url = NSURL(string: "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote")
             let data = NSData(contentsOfURL: url!)
