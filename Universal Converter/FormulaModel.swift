@@ -34,7 +34,7 @@ struct FormulaModel {
     
     static let astroConstants: NSDictionary = ["km":1,"mile":0.621371,"lightyear":1.057e-13,"au":6.6846e-9,"parsec":3.2408e-14]
     
-    static let lengthConstants: NSDictionary = ["cm":1,"dm":0.1,"m":0.01,"km":0.00001,"inch":0.393701,"ft":0.032808,"yd":0.010936,"mile":0.000006,"nm":0.000005]
+    static let lengthConstants: NSDictionary = ["cm":1,"dm":0.1,"m":0.01,"km":0.00001,"inch":0.393700787,"ft":0.032808398,"yd":0.01093613298,"mile":0.0000062137,"nm":10000000]
     
     static let areaConstants: NSDictionary = ["mm²":4046856422.4,"cm²":40468564.224,"m²":4046.8564224,"ha":0.40468564224,"km²":0.0040468564224,"in²":6272640,"ft²":43560,"yd²":4840,"acre":1]
     
@@ -76,7 +76,7 @@ struct FormulaModel {
         
         "Volume":["Liter", "barrel dry", "Cubic centimeter", "Deciliter", "Fluid ounce (US)", "Cubic feet", "Gallon (UK)", "Gallon (US)", "Cubic inch", "Milliliter", "Cubic meter", "Quart (US)", "Cubic yard"],
         
-        "length":["nanometer", "Ceintimeter", "Decimeter", "Foot", "Inch", "Kilometer", "Meter", "Mile", "Yard"],
+        "Length/Distance":["Centimeter", "Decimeter", "Foot", "Inch", "Kilometer", "Meter", "Mile","nanometer", "Yard"],
         
         "Data":["Bit", "Block", "Byte", "Gigabit/s", "Gibibyte", "Kilobit/s", "Kibibyte", "Megabit", "Mibibyte", "Packet", "Pibibyte", "Tibibyte"],
         
