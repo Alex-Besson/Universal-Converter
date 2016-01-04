@@ -36,7 +36,7 @@ struct FormulaModel {
     
     static let lengthConstants: NSDictionary = ["cm":1,"dm":0.1,"m":0.01,"km":0.00001,"inch":0.393701,"ft":0.032808,"yd":0.010936,"mile":0.000006,"nm":0.000005]
     
-    static let areaConstants: NSDictionary = ["mm²":1000000,"cm²":10000,"m²":1,"ha":0.0001,"km²":0.000001,"in²":1550.0031,"ft²":10.76391,"ft²":10.76391,"yd²":1.19599,"acre":0.000247]
+    static let areaConstants: NSDictionary = ["mm²":4046856422.4,"cm²":40468564.224,"m²":4046.8564224,"ha":0.40468564224,"km²":0.0040468564224,"in²":6272640,"ft²":43560,"yd²":4840,"acre":1]
     
     static let weightConstants: NSDictionary = ["g":1000,"kg":1,"lb":2.2046244202,"oz":35.273990723,"mg":1000000,"(t) long":0.0009842073,"t (short)":0.0011023122,"car":5000,"t":0.001]
     
@@ -46,7 +46,7 @@ struct FormulaModel {
     
     static let timeConstants: NSDictionary = ["ms":3600000,"sec":3600,"min":60,"hour":1,"day":0.041667,"week":0.005952,"month":0.00137,"year":0.000114]
     
-    static let speedConstants: NSDictionary = ["m/min":16.666667,"ft/min":54.680665,"km/min":0.016667,"km/h":1,"mi/h":0.621371,"knot":0.539957,"mach":0.000817,"min/km":60,"min/mile":96.56064]
+    static let speedConstants: NSDictionary = ["m/min":16.666667,"ft/min":54.680665,"km/min":0.016667,"km/h":1,"mi/h":0.621371,"knot":0.539957,"mach":0.000817]
     
     static let angleConstants: NSDictionary = ["rad":0.523599,"deg":30,"min":1800,"sec":108000,"grad":33.333333,"circle":0.083333,"6400 mil":533.333333,"6000 mil":500]
     
@@ -70,7 +70,7 @@ struct FormulaModel {
         
         "Time":["Day", "Hour", "Minute", "Month", "Millisecond", "Second", "Week", "Year"],
         
-        "Speed":["Foot/minute", "Kilometer/hour", "Kilometer/minute", "Knot", "Meters/minute", "Mach", "Miles/hour", "Minute/kilometer", "Minute/mile"],
+        "Speed":["Foot/minute", "Kilometer/hour", "Kilometer/minute", "Knot", "Meters/minute", "Mach", "Miles/hour"],
         
         "Area":["Acre", "Square centimeter", "Square foot", "Hectare", "Square inch", "Square kilometer", "Square millimeter", "Square meter", "Square yard"],
         
