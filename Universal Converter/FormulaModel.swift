@@ -50,7 +50,7 @@ struct FormulaModel {
     
     static let angleConstants: NSDictionary = ["rad":0.523599,"deg":30,"min":1800,"sec":108000,"grad":33.333333,"circle":0.083333,"6400 mil":533.333333,"6000 mil":500]
     
-    static let dataConstants: NSDictionary = ["Bit":8,"Byte":1,"KiB":0.000977,"MiB":9.5367e-7,"GiB":9.3132e-10,"TiB":9.0949e-13,"PiB":8.8818e-16,"Kbit/s":0.008,"Mbit":0.000008,"Gbit/s":8e-9,"Packet":0.007812,"Block":0.001953]
+    static let dataConstants: NSDictionary = ["Bit":8,"Byte":1,"KiB":0.0009765625,"MiB":9.5367431640625e-7,"GiB":9.3132e-10,"TiB":9.0949470177293e-13,"PiB":8.8817841970013e-16,"Kbit":0.008,"Mbit":0.000008,"Gbit":8e-9]
     
     static let fuelConstants: NSDictionary = ["km/L":1,"mi/L":0.621371,"km/gal (US)":3.785412, "mi/gal (US)": 2.352146, "mi/gal (UK)": 2.824811]
     
@@ -78,7 +78,7 @@ struct FormulaModel {
         
         "Length/Distance":["Centimeter", "Decimeter", "Foot", "Inch", "Kilometer", "Meter", "Mile","nanometer", "Yard"],
         
-        "Data":["Bit", "Block", "Byte", "Gigabit/s", "Gibibyte", "Kilobit/s", "Kibibyte", "Megabit", "Mibibyte", "Packet", "Pibibyte", "Tibibyte"],
+        "Data":["Bit", "Byte", "Gigabit", "Gibibyte", "Kilobit", "Kibibyte", "Megabit", "Mebibyte", "Pebibyte", "Tebibyte"],
         
         "Fuel":["Kilometer/liter", "Kilometer/gallon (US)", "Miles/liter", "Miles/gallon (UK)", "Miles/gallon (US)"],
         
