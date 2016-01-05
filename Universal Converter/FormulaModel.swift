@@ -12,9 +12,9 @@ import Foundation
 
 struct FormulaModel {
     
-    static let pressureConstants: NSDictionary = ["atm":1,"Pa":101325,"hPa":1013.25,"kPa":101.325,"MPa":0.101325,"bar":1.01325,"kgf/cm²":1.033227,"kgf/m²":10332.274528,"psi":14.695949,"ksi":0.014696,"mmHg":760.0021,"cmHg":76.00021,"inchHg":29.921261,"mmH₂O":10332.274528,"cmH₂O":1033.227453,"inchH₂O":406.782462,"ft/H₂O":33.898538,"kN/m²":101.325,"kN/mm²":0.000101,"kipf/in²":0.014696,"megaN/m²":0.101325,"mH₂O":10.332275,"millibar":1013.25,"N/cm²":10.1325,"N/m²":101325,"N/mm²":0.101325,"lbf/ft²":2116.22807,"poundal/ft²":69968.097448,"tons(UK)force/ft²":0.944746,"tons(UK)force/in²":0.006561,"tons(US)force/ft²":1.058114,"tons(US)force/in²":0.007348, "Torr":760]
+    static let pressureConstants: NSDictionary = ["atm":1,"Pa":101325,"hPa":1013.25,"kPa":101.325,"MPa":0.101325,"bar":1.01325,"kgf/cm²":1.033227,"kgf/m²":10332.274528,"psi":14.695949,"ksi":0.014696,"mmHg":760.0021,"cmHg":76.00021,"inchHg":29.921261,"mmH₂O":10332.274528,"cmH₂O":1033.227453,"inchH₂O":406.782462,"ft/H₂O":33.898538,"kN/m²":101.325,"kN/mm²":0.000101,"kipf/in²":0.014696,"megaN/m²":0.101325,"mH₂O":10.332275,"millibar":1013.25,"N/cm²":10.1325,"N/m²":101325,"N/mm²":0.101325,"lbf/ft²":2116.22807,"poundal/ft²":68087.256406011,"tf(UK)/ft²":0.944746,"tf(UK)/in²":0.006561,"tf(US)/ft²":1.058114,"tf(US)/in²":0.007348, "Torr":760]
     
-    static let forceConstants: NSDictionary = ["N":1,"dyn":100000,"daN":0.1,"kN":0.001,"gf":101.971621,"kgf":0.101972,"lbf":0.224809,"kipf":0.000225,"MN":0.000001,"pdl":7.233011,"sn":0.001,"tonforce":0.000102]
+    static let forceConstants: NSDictionary = ["N":1,"dyn":100000,"daN":0.1,"kN":0.001,"gf":101.971621298,"kgf":0.101971621,"lbf":0.224808943,"kipf":0.000224809,"MN":0.000001,"pdl":7.233013851,"sn":0.001,"tf":0.000101972]
     
     static let densityConstants: NSDictionary = ["g/cm³":1,"kg/m³":1000,"lb/ft³":62.427961,"lb/gal(UK)":10.022413,"lb/gal(US)":8.345404,"gr/gal(UK)":70156,"gr/gal(US)":58418,"g/L":1000,"g/ml":1,"kg/L":1,"Mg/m³":1,"mg/ml":1000,"mg/L":1000000,"oz/in³":0.578037,"oz/gal(UK)":160.358613,"oz/gal(US)":133.526466,"lb/in³":0.036127,"slugs/ft³":1.94055,"tonnes/m³":1,"tons(UK)/yard³":0.75248,"tons(US)/yard³":0.842777]
     
@@ -22,9 +22,9 @@ struct FormulaModel {
     
     static let workConstants: NSDictionary = ["J":1,"kJ":0.001,"cal":0.239006,"kcal(Cal)":0.000239,"kWh":2.7778e-7,"kgfm":0.101972,"inlbf":8.850746,"ftlbg":0.737562,"BTU":0.000948]
     
-    static let powerConstants: NSDictionary = ["W":1,"kW":0.001,"MW":0.000001,"kcal/s":0.000239,"kcal/h":0.860421,"HP":0.001341,"ps":0.00136,"BTU/h":3.412141,"BTU/min":0.056869,"BTU/sec":0.000948,"TR":0.000285,"dBm":30,"cal/hr":860.42065,"cal/min":14.340344,"cal/sec":0.239006,"lbf * ft/min":44.253662,"lbf * ft/sec":0.737561,"joules/hr":3600,"joules/min":60,"joules/sec":1,"kCal/hr":0.860421,"kCal/min":0.01434,"kgfm/hr":367.107195,"kgfm/min":6.118304,"GigaW":0.000000001,"TeraW":0.000000000001,"PW":0.000000000000001]
+    static let powerConstants: NSDictionary = ["W":1,"kW":0.001,"MW":0.000001,"kcal/s":0.000239,"HP":0.001341,"ps":0.00136,"BTU/h":3.412141,"BTU/min":0.056869,"BTU/sec":0.000948,"TR":0.000285,"dBm":30,"cal/hr":860.420650096,"cal/min":14.340344168,"cal/sec":0.239005736,"lbf * ft/min":44.253662,"lbf * ft/sec":0.737561,"joules/hr":3600,"joules/min":60,"joules/sec":1,"kCal/hr":0.860421,"kCal/min":0.01434,"kgfm/hr":367.107195,"kgfm/min":6.118304,"GigaW":0.000000001,"TeraW":0.000000000001,"PW":0.000000000000001]
     
-    static let torqueConstants: NSDictionary = ["Nm":1000,"daNm":100,"kNm":1,"kgfm":101.971621,"ozfin":141611.933,"lbfin":8850.74579,"lbfft":737.562149]
+    static let torqueConstants: NSDictionary = ["Nm":1000,"daNm":100,"kNm":1,"kgf*m":101.971621,"ozf*in":141611.933,"lbf*in":8850.74579,"lbf*ft":737.562149]
     
     static let flowConstants: NSDictionary = ["l/sec":0.016667,"m³/sec":0.000017,"ft³/sec":0.000589,"l/min":1,"m³/min":0.001,"ft³/min":0.035315,"m³/hr":0.06,"ft³/hr":2.11888,"gal(UK)/min":0.219969,"gal(US)/min":0.264172]
     
@@ -58,11 +58,11 @@ struct FormulaModel {
     
     static let unitFullName: NSDictionary = [
         
-        "Pressure":["Millipascal", "Newton/square meter", "Newton/square millimeter", "Newton/square meter", "Pascal", "Standard atmosphere", "Bar", "Centimeter mercury (0 °C)", "Centimeter of water (4°C)", "Foot of water (4°C)", "Hectopascal", "Inch mercury (32 °F)", "Inch of water (4°C)", "Kilonewton/square millimeter", "Kilonetwon/square meter", "KiloPascal", "Kilogram-force/square centimeter", "Kilogram-force/square millimeter ", "Kip-force/square inch", "Ksi", "Pound-force/square foot", "Meters of water (4°C)", "megaN/m²", "millibar", "Millimeter mercury (0 °C)", "Millimeters of water (4°C)", "Pound-force/square foot", "Psi", "Tons(UK)force/square foot", "Tons(UK)force/square inch", "tons(US)force/square foot", "tons(US)force/square inch","Torr"],
+        "Pressure":["Megapascal", "Newton/square centimeter", "Newton/square millimeter", "Newton/square meter", "Pascal","Torr", "Standard atmosphere", "Bar", "Centimeter mercury (0 °C)", "Centimeter of water (4°C)", "Foot of water (4°C)", "Hectopascal", "Inch mercury (32 °F)", "Inch of water (4°C)", "Kilonewton/square millimeter", "Kilonetwon/square meter", "KiloPascal", "Kilogram-force/square centimeter", "Kilogram-force/square millimeter ", "Kip-force/square inch", "Ksi", "Pound-force/square foot", "Meters of water (4°C)", "megaN/m²", "millibar", "Millimeter mercury (0 °C)", "Millimeters of water (4°C)", "Poundal/square foot", "Psi", "Tons(UK)force/square foot", "Tons(UK)force/square inch", "tons(US)force/square foot", "tons(US)force/square inch"],
         
         "Force":["Meganewton", "Newton", "Dekanewton", "Dyne", "Gram-force", "Kilonewton", "Kilogram-force", "kip-force", "pound-force", "Poundal", "Sthène", "Ton-force"],
         
-        "Density":["Milligram/cubic meter", "Gram/liter", "Gram/cubic centimeter", "Gram/milliliter", "gr/gal(UK)", "Grain/gallon (US)", "Kilogram/liter", "Kilogram/cubic meter", "Pound/cubic feet", "Pound/gallon (UK)", "Pound/gal (US)", "Pound/cubic inch", "Milligram/liter", "Milligram/milliliter", "Ounce/gallon (UK)", "Ounce/gallon (US)", "Ounch/cubic inch", "Slug/cubic feet", "Tonnes/cubic meters", "Tons(UK)/cubic yard", "Tons(US)/cubic yard"],
+        "Density":["Megagram/cubic meter", "Gram/liter", "Gram/cubic centimeter", "Gram/milliliter", "Grain/gallon(UK)", "Grain/gallon (US)", "Kilogram/liter", "Kilogram/cubic meter", "Pound/cubic feet", "Pound/gallon (UK)", "Pound/gallon (US)", "Pound/cubic inch", "Milligram/liter", "Milligram/milliliter", "Ounce/gallon (UK)", "Ounce/gallon (US)", "Ounch/cubic inch", "Slug/cubic feet", "Tonnes/cubic meters", "Tons(UK)/cubic yard", "Tons(US)/cubic yard"],
         
         "Weight":["Long Ton","Carrat", "Gram", "Kilogram", "Pound","Milligram","Ounce", "Metric Ton",   "Short Ton"],
         
@@ -82,7 +82,7 @@ struct FormulaModel {
         
         "Fuel":["Kilometer/liter", "Kilometer/gallon (US)", "Miles/liter", "Miles/gallon (UK)", "Miles/gallon (US)"],
         
-        "Power":["BTU/hour", "BTU/minute", "BTU/seconds", "Gigawatt", "Horsepower", "Megawatt", "Petawatt", "Ton of Refrigiration", "Terawatt", "Watt", "Calorie/hour", "Calorie/minute", "Calorie/seconds", "Decibel-milliwatts", "footlbsforce/min", "Foot-pound-force/seconds", "Joules/hour", "Joules/minute", "Joules/seconds", "Kilocalorie/hour", "Kilocalorie/minute", "Kilowatt", "Kilocalorie/hour", "Kilocalorie/seconds", "Kilogram-force-meter/minute", "Kilogram-force-meter/hour", "Pferdestarke"],
+        "Power":["BTU/hour", "BTU/minute", "BTU/seconds", "Gigawatt", "Horsepower", "Megawatt", "Petawatt", "Ton of Refrigiration", "Terawatt", "Watt", "Calorie/hour", "Calorie/minute", "Calorie/seconds", "Decibel-milliwatts", "Joules/hour","Joules/minute", "Joules/seconds",   "Kilocalorie/hour", "Kilocalorie/minute", "Kilowatt",  "Kilocalorie/seconds", "Kilogram-force-meter/minute", "Kilogram-force-meter/hour","Foot-pound-force/min","Foot-pound-force/seconds", "Pferdestarke"],
         
         "Viscosity":["Poise", "Pascal-second", "Centipoise", "Dyne-second/square centimeter", "Kilogram/milliseconds", "Pound/foot/seconds", "Millipascal-second"],
         

@@ -130,6 +130,7 @@ class FormulaController {
                     
                     //Adding currency conversion rate from USD and currencyISO to an array
                     
+                   
                     for values in val {
                         
                         let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
