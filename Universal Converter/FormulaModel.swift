@@ -44,7 +44,7 @@ struct FormulaModel {
     
     static let temperatureConstants: NSDictionary = ["C":30,"F":86,"K":303.15]
     
-    static let timeConstants: NSDictionary = ["ms":3600000,"sec":3600,"min":60,"hour":1,"day":0.041667,"week":0.005952,"month":0.00137,"year":0.000114]
+    static let timeConstants: NSDictionary = ["ms":86_400_000,"sec":86400,"min":1440,"hour":24,"day":1,"week":0.14285714,"month":0.0328767,"year":0.0027378508]
     
     static let speedConstants: NSDictionary = ["m/min":16.666667,"ft/min":54.680665,"km/min":0.016667,"km/h":1,"mi/h":0.621371,"knot":0.539957,"mach":0.000817]
     
