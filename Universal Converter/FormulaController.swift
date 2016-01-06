@@ -154,7 +154,7 @@ class FormulaController {
             
             return currencyDict
         } else {
- print("old data")
+            print("old data")
             currencyDict = (NSUserDefaults.standardUserDefaults().objectForKey("currencyDict") as? Dictionary<String,Double>)!
             
             return currencyDict

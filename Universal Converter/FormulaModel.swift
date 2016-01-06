@@ -76,7 +76,7 @@ struct FormulaModel {
         
         "Volume":["Liter", "barrel dry", "Cubic centimeter", "Deciliter", "Fluid ounce (US)", "Cubic feet", "Gallon (UK)", "Gallon (US)", "Cubic inch", "Milliliter", "Cubic meter", "Quart (US)", "Cubic yard"],
         
-        "length":["nanometer", "Ceintimeter", "Decimeter", "Foot", "Inch", "Kilometer", "Meter", "Mile", "Yard"],
+        "Length/Distance":["nanometer", "Ceintimeter", "Decimeter", "Foot", "Inch", "Kilometer", "Meter", "Mile", "Yard"],
         
         "Data":["Bit", "Block", "Byte", "Gigabit/s", "Gibibyte", "Kilobit/s", "Kibibyte", "Megabit", "Mibibyte", "Packet", "Pibibyte", "Tibibyte"],
         

@@ -64,7 +64,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   configBtnMoreInfo()
+        configBtnMoreInfo()
+        
         if catSelected.categorySelected == CategorySwitch.Currency {
             
             convertController.getCurrencies()
@@ -273,6 +274,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: self.leftPickerIndex, rightPick: self.rightPickerIndex)
     }
+    
     // EQUATION FUNCTION
     
     func manageEquation(categorySelected: CategorySwitch, leftLabelValue: String, leftPick: Int, rightPick: Int) {
