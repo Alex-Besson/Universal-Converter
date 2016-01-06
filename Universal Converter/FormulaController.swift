@@ -38,11 +38,11 @@ class FormulaController {
             
             if formulaType == "Temperature" {
                 
-                let valConv = String((self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundTo5))
+                let valConv = String((self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundToDecimals(5)))
                 calcValues.append(convType,valConv)
                 
             } else if formulaType == "Time" {
-                let valConv = String((val! * (convertConstant / currentConstant)).roundTo2)
+                let valConv = String((val! * (convertConstant / currentConstant)).roundToDecimals(2))
                 calcValues.append(convType,valConv)
             }
             
@@ -52,7 +52,7 @@ class FormulaController {
                 calcValues.append(convType, valConv)
                 
             } else {
-                let valConv = String((val! * (convertConstant / currentConstant)).roundTo5)
+                let valConv = String((val! * (convertConstant / currentConstant)).roundToDecimals(5))
                 calcValues.append(convType,valConv)
             }
         }
@@ -91,7 +91,7 @@ class FormulaController {
         let currentConstant = currencyDict[currentType] ?? 0
         let convertConstant = currencyDict[convType] ?? 0
         
-        let valConv = String((val * convertConstant / currentConstant).roundTo2)
+        let valConv = String((val * convertConstant / currentConstant).roundToDecimals(2))
         
         return valConv
     }
@@ -130,6 +130,7 @@ class FormulaController {
                     
                     //Adding currency conversion rate from USD and currencyISO to an array
                     
+                   
                     for values in val {
                         
                         let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
