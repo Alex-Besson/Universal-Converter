@@ -108,6 +108,10 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     // TABLE VIEW FUNCTIONS
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
+    
     internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conversionData.count
     }
