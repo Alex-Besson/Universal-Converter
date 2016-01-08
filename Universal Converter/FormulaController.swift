@@ -149,9 +149,11 @@ class FormulaController {
 
             }
             updateTime = NSDate()
-            NSUserDefaults.standardUserDefaults().setObject(updateTime, forKey: "updateTime")
-            NSUserDefaults.standardUserDefaults().setObject(currencyDict, forKey: "currencyDict")
-            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+           defaults.setObject(updateTime, forKey: "updateTime")
+            defaults.setObject(currencyDict, forKey: "currencyDict")
+            defaults.synchronize()
             
             return currencyDict
         } else {
