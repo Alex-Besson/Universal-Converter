@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var categories: [CategoryModel] = [
         weight, temperature, time, currency, speed, area, volume, length, data, fuel, pressure, force, power, density, viscosity, torque, astronomy, angle ]

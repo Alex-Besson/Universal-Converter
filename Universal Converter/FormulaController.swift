@@ -13,6 +13,7 @@ class FormulaController {
     var currencyDict: Dictionary<String,Double> = [:]
     var currentTime: NSDate?
     var updateTime: NSDate?
+    var IsXMLStable = true
     // DICTIONARY FOR FORMULA CONSTANTS TAKEN FROM FORMULA MODEL
     
     let myFormulas:NSDictionary = ["Pressure":FormulaModel.pressureConstants,"Force":FormulaModel.forceConstants,"Fensity":FormulaModel.densityConstants,"Voltage":FormulaModel.voltageConstants,"Work":FormulaModel.workConstants,"Power":FormulaModel.powerConstants,"Torque":FormulaModel.torqueConstants,"Flow":FormulaModel.flowConstants,"Viscosity":FormulaModel.viscosityConstants,"Current":FormulaModel.currConstants,"Astronomy":FormulaModel.astroConstants,"Length/Distance":FormulaModel.lengthConstants,"Area":FormulaModel.areaConstants,"Weight":FormulaModel.weightConstants,"Volume":FormulaModel.volumeConstants,"Temperature":FormulaModel.temperatureConstants,"Time":FormulaModel.timeConstants,"Speed":FormulaModel.speedConstants,"Currency":FormulaModel.currencyConstants,"Fuel":FormulaModel.fuelConstants,"Data":FormulaModel.dataConstants,"Angle":FormulaModel.angleConstants,"Density":FormulaModel.densityConstants]
@@ -45,7 +46,7 @@ class FormulaController {
                 let valConv = String((val! * (convertConstant / currentConstant)).roundToDecimals(2))
                 calcValues.append(convType,valConv)
             }
-            
+                
             else if formulaType == "Currency" {
                 
                 let valConv = self.convCurrency(val!, currentType: currentValueType, convType: convType)
@@ -105,9 +106,13 @@ class FormulaController {
         
         
         currentTime = NSDate()
-        
-        if let prevTime = NSUserDefaults.standardUserDefaults().objectForKey("updateTime")  {
-            updateTime = prevTime as? NSDate
+        if (IsXMLStable) {
+            if let prevTime = NSUserDefaults.standardUserDefaults().objectForKey("updateTime")  {
+                
+                updateTime = prevTime as? NSDate
+            } else {
+                updateTime = currentTime
+            }
         } else {
             updateTime = currentTime
         }
@@ -125,33 +130,47 @@ class FormulaController {
                 print("new data")
                 let xmlDoc = try AEXMLDocument(xmlData: data!)
                 
-                if let val = xmlDoc.root["resources"]["resource"].all {
+                if (xmlDoc.root["resources"]["resource"].all?.map({$0.children[0].stringValue.containsString("USD/")})[0].boolValue == true) {
                     
-                    
-                    //Adding currency conversion rate from USD and currencyISO to an array
-                    
-                   
-                    for values in val {
+                    if let val = xmlDoc.root["resources"]["resource"].all {
+                    IsXMLStable = true
                         
-                        let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
+                        //Adding currency conversion rate from USD and currencyISO to an array
                         
                         
-                        guard let exchangeRate = Double(values.children[1].stringValue) else {
-                            return currencyDict
+                        
+                        for values in val {
+                            
+                            
+                            let countryISO = values.children[0].stringValue.stringByReplacingOccurrencesOfString("USD/", withString: "")
+                            
+                            
+                            guard let exchangeRate = Double(values.children[1].stringValue) else {
+                                return currencyDict
+                            }
+                            
+                            currencyDict[countryISO] = exchangeRate
+                            
+                            
                         }
-                        
-                        currencyDict[countryISO] = exchangeRate
-                        
                     }
+                    
+                } else {
+                    print("reloading currency")
+                    
+                   IsXMLStable = false
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.getCurrencies()
+                    })
+                    
                 }
-                
             } catch {
-
+                
             }
             updateTime = NSDate()
             
             let defaults = NSUserDefaults.standardUserDefaults()
-           defaults.setObject(updateTime, forKey: "updateTime")
+            defaults.setObject(updateTime, forKey: "updateTime")
             defaults.setObject(currencyDict, forKey: "currencyDict")
             defaults.synchronize()
             
@@ -161,7 +180,7 @@ class FormulaController {
             currencyDict = (NSUserDefaults.standardUserDefaults().objectForKey("currencyDict") as? Dictionary<String,Double>)!
             
             return currencyDict
-        
+            
         }
     }
     
