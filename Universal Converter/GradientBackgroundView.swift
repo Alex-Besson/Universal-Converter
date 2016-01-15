@@ -12,8 +12,8 @@ class GradientBackgroundView: UIView {
     
     let gradientLayer = CAGradientLayer()
     
-    let darkGrayColor = UIColor(red: 32/255, green: 33/255, blue: 35/255, alpha: 1).CGColor
-    let lightGrayColor = UIColor(red: 57/255, green: 59/255, blue: 59/255, alpha: 1).CGColor
+    let darkGrayColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1).CGColor
+    let lightGrayColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1).CGColor
 
     override func awakeFromNib() {
         super.awakeFromNib()

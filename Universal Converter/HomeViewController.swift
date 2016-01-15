@@ -21,7 +21,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAduioPlayer()
-
+        
+        navigationController?.navigationBar.titleTextAttributes = HomeViewController.setUpNavigationController()
+        
     }
    
     
@@ -154,7 +156,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
+    static func setUpNavigationController() -> [String: AnyObject] {
+       
+        let textAttributes = [NSForegroundColorAttributeName: UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1), NSFontAttributeName: UIFont(name: "Avenir", size: 27)!]
+        
+        return textAttributes
+    }
     
     
 }

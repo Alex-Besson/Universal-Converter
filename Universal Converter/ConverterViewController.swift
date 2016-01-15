@@ -66,6 +66,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         configBtnMoreInfo()
         
+        navigationController?.navigationBar.tintColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1)
+        
         if catSelected.categorySelected == CategorySwitch.Currency {
             
             convertController.getCurrencies()
@@ -161,11 +163,11 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         return catSelected.categories[row]
     }
     
-    internal func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        
-        let attributedTitle = NSAttributedString(string: catSelected.categories[row], attributes: [NSForegroundColorAttributeName: UIColor(red: 250, green: 250, blue: 250, alpha: 1)])
-        return attributedTitle
-    }
+//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        
+//        let attributedTitle = NSAttributedString(string: catSelected.categories[row], attributes: [NSForegroundColorAttributeName: UIColor(red: 250, green: 250, blue: 250, alpha: 1), NSFontAttributeName: UIFont(name: "Avenir", size: 17)!])
+//        return attributedTitle
+//    }
     
     internal func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == pickerLeft {
@@ -175,6 +177,19 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             rightPickerIndex = row
             manageEquation(self.catSelected.categorySelected, leftLabelValue: lblConvertFrom.text!, leftPick: leftPickerIndex, rightPick: rightPickerIndex)
         }
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        
+        let label = UILabel()
+        label.font = UIFont(name: "Avenir", size: 17)
+        label.textAlignment = NSTextAlignment.Center
+        label.textColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1)
+        label.backgroundColor = UIColor(red: 136/255, green: 14/255, blue: 79/255, alpha: 1)
+        
+        label.text = catSelected.categories[row]
+        
+        return label
     }
     
     // KEYBOARD SHOW AND HIDE FUNCTIONS
