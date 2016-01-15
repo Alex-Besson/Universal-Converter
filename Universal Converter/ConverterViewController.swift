@@ -185,7 +185,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         label.font = UIFont(name: "Avenir", size: 17)
         label.textAlignment = NSTextAlignment.Center
         label.textColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1)
-        label.backgroundColor = UIColor(red: 136/255, green: 14/255, blue: 79/255, alpha: 1)
         
         label.text = catSelected.categories[row]
         
