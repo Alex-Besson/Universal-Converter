@@ -257,8 +257,8 @@
                                                                 </mask>
                                                             </variation>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-7I-2rX">
-                                                            <rect key="frame" x="62" y="28.5" width="348" height="29"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-7I-2rX">
+                                                            <rect key="frame" x="62" y="28.5" width="364" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="29" id="cAW-6a-9rg"/>
                                                             </constraints>
@@ -511,7 +511,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.054901960784313725" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="top" secondItem="ID0-m9-NAF" secondAttribute="bottom" constant="4" id="13B-ec-ESy"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="centerX" secondItem="npV-ty-W0U" secondAttribute="centerX" id="1Md-Of-t41"/>

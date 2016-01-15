@@ -11,8 +11,11 @@ import AVFoundation
 
 class KeyboardButton: UIButton {
     
-    var topColor = UIColor(red: 50/255, green: 50/255, blue: 52/255, alpha: 1).CGColor
-    var bottomColor = UIColor(red: 31/255, green: 33/255, blue: 36/255, alpha: 1).CGColor
+//    var topColor = UIColor(red: 50/255, green: 50/255, blue: 52/255, alpha: 1).CGColor
+//    var bottomColor = UIColor(red: 31/255, green: 33/255, blue: 36/255, alpha: 1).CGColor
+    
+    var topColor = UIColor(red: 233/255, green: 30/255, blue: 99/255, alpha: 1).CGColor
+    var bottomColor = UIColor(red: 233/255, green: 30/255, blue: 99/255, alpha: 1).CGColor
     
     let gradientLayer = CAGradientLayer()
     
