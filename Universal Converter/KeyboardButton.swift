@@ -24,7 +24,7 @@ class KeyboardButton: UIButton {
     override func awakeFromNib() {
         self.layer.cornerRadius = 2
         self.clipsToBounds = true
-        
+                
         addGradientLayerColors(topColor, bottom: bottomColor)
         
         self.addTarget(ConverterViewController(), action: "buttonPressed:", forControlEvents: UIControlEvents.TouchDown)

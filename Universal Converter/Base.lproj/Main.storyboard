@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -119,18 +119,14 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM9-Td-lKb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
-                                <color key="backgroundColor" red="0.53333333333333333" green="0.054901960784313725" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-vk-e7E" userLabel="FloatingView" customClass="FloatingView" customModule="Universal_Converter" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="584" height="520"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-vk-e7E" userLabel="FloatingView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zW-yU-YVf" userLabel="ConverterView">
-                                        <rect key="frame" x="0.0" y="0.0" width="584" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzY-It-yUw">
-                                                <rect key="frame" x="292" y="45" width="292" height="75"/>
+                                                <rect key="frame" x="300" y="45" width="300" height="75"/>
                                                 <color key="backgroundColor" red="0.9137254901960784" green="0.11764705882352941" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="hJQ-pQ-Epb"/>
@@ -145,7 +141,7 @@
                                                 </connections>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLQ-Ix-XxM">
-                                                <rect key="frame" x="279" y="10" width="26.5" height="23.5"/>
+                                                <rect key="frame" x="287" y="10" width="26.5" height="23.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="26.5" id="f8R-vL-KRF"/>
                                                     <constraint firstAttribute="height" constant="23.5" id="jI6-3o-p7W"/>
@@ -155,7 +151,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-hn-aER">
-                                                <rect key="frame" x="8" y="8" width="263" height="29"/>
+                                                <rect key="frame" x="8" y="8" width="271" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="ZYr-D3-6aI"/>
@@ -165,7 +161,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-aF-E1G">
-                                                <rect key="frame" x="313" y="8" width="262.5" height="29"/>
+                                                <rect key="frame" x="321" y="8" width="270.5" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="dBU-ua-pG2"/>
@@ -175,7 +171,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEy-VR-eaS">
-                                                <rect key="frame" x="0.0" y="45" width="292" height="75"/>
+                                                <rect key="frame" x="0.0" y="45" width="300" height="75"/>
                                                 <color key="backgroundColor" red="0.9137254901960784" green="0.11764705882352941" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="bCL-fI-QwJ"/>
@@ -228,14 +224,14 @@
                                         </variation>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yP4-Hj-fsy">
-                                        <rect key="frame" x="0.0" y="120" width="584" height="400"/>
+                                        <rect key="frame" x="0.0" y="120" width="600" height="416"/>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.89411764709999997" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsCell" rowHeight="60" id="kI9-NG-a82" customClass="ConverterResultsCell" customModule="Universal_Converter" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="584" height="60"/>
+                                                <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kI9-NG-a82" id="PIE-6r-wJC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="59.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-ow-OOK">
@@ -245,7 +241,7 @@
                                                                 <constraint firstAttribute="width" constant="46" id="fFE-BC-W5U"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-wF-vXg">
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-wF-vXg">
                                                             <rect key="frame" x="418" y="11" width="150" height="37"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
@@ -261,7 +257,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-7I-2rX">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-7I-2rX">
                                                             <rect key="frame" x="62" y="28.5" width="348" height="29"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="29" id="cAW-6a-9rg"/>
@@ -336,14 +332,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-7j-Bv1" userLabel="KeyboardView">
-                                <rect key="frame" x="0.0" y="336" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="536" width="600" height="200"/>
                                 <subviews>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npV-ty-W0U" customClass="KeyboardButton" customModule="Universal_Converter" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="145" height="45"/>
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="llf-uu-UV4"/>
@@ -354,7 +350,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="xo2-MP-M3x"/>
@@ -365,7 +361,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="CLEAR">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="clearButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="qSs-oO-bPE"/>
@@ -376,7 +372,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="rlZ-kh-b2E"/>
@@ -387,7 +383,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="d6B-Ec-WbZ"/>
@@ -398,7 +394,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="CORR">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="correctButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="8mS-od-S6t"/>
@@ -409,7 +405,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="xdN-YS-oyM"/>
@@ -420,7 +416,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="hOW-t9-feK"/>
@@ -431,7 +427,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="FLIP">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="flipButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="OAe-g1-cTy"/>
@@ -442,7 +438,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="DONE">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="doneButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="PmS-X6-DMx"/>
@@ -453,7 +449,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="7ZM-SI-Q86"/>
@@ -464,7 +460,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="vme-Ro-Kcc"/>
@@ -475,7 +471,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="Kac-Q9-XrH"/>
@@ -486,7 +482,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title=".">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="b5R-mo-okY"/>
@@ -497,7 +493,7 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="0">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="CZR-aW-6KC"/>
@@ -508,14 +504,14 @@
                                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.9882352941176471" green="0.89411764705882346" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="numberButtonPressed:" destination="xUt-4e-jqu" eventType="touchUpInside" id="skW-M9-1T1"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Rxa-il-OcN" firstAttribute="top" secondItem="ID0-m9-NAF" secondAttribute="bottom" constant="4" id="13B-ec-ESy"/>
                                     <constraint firstItem="ZtN-V8-4kQ" firstAttribute="centerX" secondItem="npV-ty-W0U" secondAttribute="centerX" id="1Md-Of-t41"/>
@@ -618,26 +614,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="s6f-vk-e7E" secondAttribute="trailing" constant="8" id="6CT-fP-XIg"/>
-                            <constraint firstItem="NM9-Td-lKb" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="IWL-6l-8Po"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" constant="-200" id="MqP-XF-PJ8"/>
-                            <constraint firstItem="s6f-vk-e7E" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" constant="8" id="Nht-pV-rDg"/>
+                            <constraint firstAttribute="trailing" secondItem="s6f-vk-e7E" secondAttribute="trailing" id="6CT-fP-XIg"/>
+                            <constraint firstItem="s6f-vk-e7E" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="Nht-pV-rDg"/>
                             <constraint firstAttribute="trailing" secondItem="QCO-7j-Bv1" secondAttribute="trailing" id="Nqy-Bj-KbO"/>
                             <constraint firstItem="QCO-7j-Bv1" firstAttribute="leading" secondItem="Ijg-Qm-o2x" secondAttribute="leading" id="O0b-Rh-27b"/>
-                            <constraint firstAttribute="trailing" secondItem="NM9-Td-lKb" secondAttribute="trailing" id="Pxs-I3-Fhv"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="s6f-vk-e7E" secondAttribute="bottom" constant="8" id="Tdy-98-PLJ"/>
-                            <constraint firstItem="s6f-vk-e7E" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" constant="8" id="Y0R-2c-e3u"/>
-                            <constraint firstItem="NM9-Td-lKb" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="gpT-it-Nr9"/>
-                            <constraint firstItem="QCO-7j-Bv1" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" constant="-200" id="sL0-Oj-NdS"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="NM9-Td-lKb" secondAttribute="bottom" id="vnm-Mb-U8J"/>
-                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
+                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="s6f-vk-e7E" secondAttribute="bottom" id="Tdy-98-PLJ"/>
+                            <constraint firstItem="s6f-vk-e7E" firstAttribute="top" secondItem="TTh-UE-dBO" secondAttribute="bottom" id="Y0R-2c-e3u"/>
+                            <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" constant="-200" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="sL0-Oj-NdS"/>
-                                <exclude reference="vnm-Mb-U8J"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="btn7" destination="npV-ty-W0U" id="twy-y1-gKy"/>
