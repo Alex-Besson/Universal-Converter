@@ -12,8 +12,8 @@ class ClearButton: KeyboardButton {
     
 //    var clearTopColor = UIColor(red: 163/255, green: 27/255, blue: 16/255, alpha: 1).CGColor
     
-    var clearTopColor = UIColor(red: 144/255, green: 10/255, blue: 2/255, alpha: 1).CGColor
-    var clearBottomColor = UIColor(red: 144/255, green: 10/255, blue: 2/255, alpha: 1).CGColor
+    var clearTopColor = UIColor(red: 211/255, green: 47/255, blue: 47/255, alpha: 1).CGColor
+    var clearBottomColor = UIColor(red: 211/255, green: 47/255, blue: 47/255, alpha: 1).CGColor
     
     override var topColor: CGColor {
         get {
