@@ -129,6 +129,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             
             cell.imgFlag.image = UIImage(named:flagImages[indexPath.row])
             
+            
+            
+            
             cell.lblDescription.text = FormulaModel.currencyConstants.valueForKey(flagImages[indexPath.row]) as? String
             
         } else {

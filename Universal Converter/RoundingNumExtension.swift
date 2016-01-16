@@ -14,6 +14,7 @@ extension Double {
     
     func roundToDecimals(decimalPlaces:Int) -> Double {
         let multiplier = pow(10.0, Double(decimalPlaces))
+        
         return round(multiplier * self) / multiplier
     }
 }

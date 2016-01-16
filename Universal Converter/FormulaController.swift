@@ -37,24 +37,37 @@ class FormulaController {
             convertConstant = formlType?[convType] as? Double ?? 0
             let val = NSNumberFormatter().numberFromString(myValue)?.doubleValue
             
+            
             if formulaType == "Temperature" {
                 
-                let valConv = String((self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundToDecimals(5)))
-                calcValues.append(convType,valConv)
+                let valConv = (self.calcTempConvert(val!, currentType: currentValueType, convertType: convType).roundToDecimals(5))
+                
+                let valString = NSNumberFormatter.localizedStringFromNumber(valConv, numberStyle: .DecimalStyle)
+                
+                calcValues.append(convType,valString)
                 
             } else if formulaType == "Time" {
-                let valConv = String((val! * (convertConstant / currentConstant)).roundToDecimals(2))
-                calcValues.append(convType,valConv)
+                let valConv = (val! * (convertConstant / currentConstant)).roundToDecimals(2)
+                
+                let valString = NSNumberFormatter.localizedStringFromNumber(valConv, numberStyle: .DecimalStyle)
+                
+                calcValues.append(convType,valString)
             }
                 
             else if formulaType == "Currency" {
                 
-                let valConv = self.convCurrency(val!, currentType: currentValueType, convType: convType)
-                calcValues.append(convType, valConv)
+                let valString = self.convCurrency(val!, currentType: currentValueType, convType: convType)
+                
+              
+                
+                calcValues.append(convType, valString)
                 
             } else {
-                let valConv = String((val! * (convertConstant / currentConstant)).roundToDecimals(5))
-                calcValues.append(convType,valConv)
+                let valConv = (val! * (convertConstant / currentConstant)).roundToDecimals(5)
+                
+                let valString = NSNumberFormatter.localizedStringFromNumber(valConv, numberStyle: .DecimalStyle)
+                
+                calcValues.append(convType,valString)
             }
         }
         
@@ -92,9 +105,11 @@ class FormulaController {
         let currentConstant = currencyDict[currentType] ?? 0
         let convertConstant = currencyDict[convType] ?? 0
         
-        let valConv = String((val * convertConstant / currentConstant).roundToDecimals(2))
+        let valConv = (val * convertConstant / currentConstant).roundToDecimals(2)
         
-        return valConv
+        let valString = NSNumberFormatter.localizedStringFromNumber(valConv, numberStyle: .DecimalStyle)
+        
+        return valString
     }
     
     
