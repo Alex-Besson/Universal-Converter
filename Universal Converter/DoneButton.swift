@@ -10,8 +10,10 @@ import UIKit
 
 class DoneButton: KeyboardButton {
 
-    var clearTopColor = UIColor(red: 66/255, green: 76/255, blue: 89/255, alpha: 1).CGColor
-    var clearBottomColor = UIColor(red: 47/255, green: 59/255, blue: 75/255, alpha: 1).CGColor
+//    var clearTopColor = UIColor(red: 55/255, green: 71/255, blue: 79/255, alpha: 1).CGColor
+    
+    var clearTopColor = UIColor(red: 38/255, green: 50/255, blue: 56/255, alpha: 1).CGColor
+    var clearBottomColor = UIColor(red: 38/255, green: 50/255, blue: 56/255, alpha: 1).CGColor
     
     override var topColor: CGColor {
         get {
@@ -29,6 +31,12 @@ class DoneButton: KeyboardButton {
         set {
             
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 15)
     }
 
 }

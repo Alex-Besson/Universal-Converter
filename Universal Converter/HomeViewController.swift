@@ -23,7 +23,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         setUpAduioPlayer()
         
         navigationController?.navigationBar.titleTextAttributes = HomeViewController.setUpNavigationController()
-        
+        navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!], forState: UIControlState.Normal)
+
+        navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 20)!], forState: .Normal)
     }
    
     

@@ -12,7 +12,6 @@
 		E8CEB90D1C162E6F00BFBB63 /* FormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */; };
 		E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */; };
 		E8CEB9111C162E8400BFBB63 /* RoundingNumExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */; };
-		E8D158561C3791E9005D5634 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D158551C3791E9005D5634 /* CustomTextField.swift */; };
 		FA018B911C30201D0096F4FB /* DotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA018B901C30201D0096F4FB /* DotButton.swift */; };
 		FA2A62B41C2BA341009B1D4C /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A62B31C2BA341009B1D4C /* GradientBackgroundView.swift */; };
 		FA2A62B61C2BB093009B1D4C /* MinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A62B51C2BB093009B1D4C /* MinusButton.swift */; };
@@ -62,7 +61,6 @@
 		E8CEB90C1C162E6F00BFBB63 /* FormulaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModel.swift; sourceTree = "<group>"; };
 		E8CEB90E1C162E7A00BFBB63 /* FormulaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaController.swift; sourceTree = "<group>"; };
 		E8CEB9101C162E8400BFBB63 /* RoundingNumExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingNumExtension.swift; sourceTree = "<group>"; };
-		E8D158551C3791E9005D5634 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FA018B901C30201D0096F4FB /* DotButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotButton.swift; sourceTree = "<group>"; };
 		FA2A62B31C2BA341009B1D4C /* GradientBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		FA2A62B51C2BB093009B1D4C /* MinusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusButton.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8FDF591C1A29030047C647 /* ClearButton.swift */,
-				E8D158551C3791E9005D5634 /* CustomTextField.swift */,
 				FA8FDF5B1C1A2D4E0047C647 /* CorrectButton.swift */,
 				FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */,
 				FA8FDF5D1C1A2EA90047C647 /* DoneButton.swift */,
@@ -386,7 +383,6 @@
 				FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */,
 				FA8FDF601C1A2FC70047C647 /* FlipButton.swift in Sources */,
 				FA52FF031C01640000EACD26 /* AppDelegate.swift in Sources */,
-				E8D158561C3791E9005D5634 /* CustomTextField.swift in Sources */,
 				FA018B911C30201D0096F4FB /* DotButton.swift in Sources */,
 				FA8FDF5C1C1A2D4E0047C647 /* CorrectButton.swift in Sources */,
 				FA52FF311C01647800EACD26 /* HomeViewController.swift in Sources */,

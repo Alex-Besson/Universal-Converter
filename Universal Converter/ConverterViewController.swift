@@ -94,6 +94,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             isHidden = NSUserDefaults.standardUserDefaults().objectForKey("isHidden") as! Bool
         }
         
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 20)!], forState: .Normal)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
