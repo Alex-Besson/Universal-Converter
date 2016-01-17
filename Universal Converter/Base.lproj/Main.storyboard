@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qbm-bo-iYL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -100,6 +100,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="eKe-Gt-fdc"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnNavLeft" destination="eKe-Gt-fdc" id="fbY-1a-uQO"/>
                         <segue destination="xUt-4e-jqu" kind="show" identifier="toConverterFromHome" id="Fz4-xH-lWB"/>
                     </connections>
                 </viewController>
@@ -150,16 +151,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-hn-aER">
-                                                <rect key="frame" x="8" y="8" width="267" height="29"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="ZYr-D3-6aI"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-aF-E1G">
                                                 <rect key="frame" x="317" y="8" width="266.5" height="29"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -185,6 +176,16 @@
                                                     <outlet property="delegate" destination="xUt-4e-jqu" id="DEk-vM-aG9"/>
                                                 </connections>
                                             </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-hn-aER">
+                                                <rect key="frame" x="8" y="8" width="267" height="29"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="29" id="ZYr-D3-6aI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.89411764709999997" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -646,7 +647,9 @@
                             <constraint firstItem="6Ig-Sg-I7T" firstAttribute="top" secondItem="QCO-7j-Bv1" secondAttribute="bottom" id="y1s-CR-y4n" userLabel="bottomKeyboardConstraint"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="dp7-NP-Ik1"/>
+                    <navigationItem key="navigationItem" title="Title" id="dp7-NP-Ik1">
+                        <barButtonItem key="backBarButtonItem" title="LOT" id="xd3-g1-R3c"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btn7" destination="npV-ty-W0U" id="twy-y1-gKy"/>
                         <outlet property="btnDot" destination="xL1-5m-YJf" id="r51-gc-jlC"/>

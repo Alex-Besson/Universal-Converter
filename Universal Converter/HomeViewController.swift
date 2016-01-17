@@ -14,6 +14,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var categories: [CategoryModel] = [
         weight, temperature, time, currency, speed, area, volume, length, data, fuel, pressure, force, power, density, viscosity, torque, astronomy, angle ]
     
+    
+    @IBOutlet weak var btnNavLeft: UIBarButtonItem!
+    
+    
+    
     var categorySelected: CategoryModel?
     
     // VIEW DID LOAD
@@ -21,6 +26,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAduioPlayer()
+        
+        btnNavLeft.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 19)!], forState: .Normal)
         
         navigationController?.navigationBar.titleTextAttributes = HomeViewController.setUpNavigationController()
         navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!], forState: UIControlState.Normal)
