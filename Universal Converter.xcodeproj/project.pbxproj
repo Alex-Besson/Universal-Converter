@@ -34,6 +34,7 @@
 		FA8FDF601C1A2FC70047C647 /* FlipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */; };
 		FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */; };
 		FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E51C069BD300CAD232 /* FloatingView.swift */; };
+		FA9C527C1CAC29C800BC0434 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C527B1CAC29C800BC0434 /* CustomNavigationController.swift */; };
 		FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		FA8FDF5F1C1A2FC70047C647 /* FlipButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipButton.swift; sourceTree = "<group>"; };
 		FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterResultsCell.swift; sourceTree = "<group>"; };
 		FA9AF4E51C069BD300CAD232 /* FloatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
+		FA9C527B1CAC29C800BC0434 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +233,7 @@
 		FAEEBF9D1C054B22001EA57A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA9C527B1CAC29C800BC0434 /* CustomNavigationController.swift */,
 				FA52FF301C01647800EACD26 /* HomeViewController.swift */,
 				FA52FF361C01987500EACD26 /* ConverterViewController.swift */,
 			);
@@ -314,6 +317,7 @@
 				TargetAttributes = {
 					FA52FEFE1C01640000EACD26 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = C4BYKFZW4J;
 					};
 					FA52FF121C01640000EACD26 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -379,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9C527C1CAC29C800BC0434 /* CustomNavigationController.swift in Sources */,
 				E8CEB90F1C162E7A00BFBB63 /* FormulaController.swift in Sources */,
 				FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */,
 				FA8FDF601C1A2FC70047C647 /* FlipButton.swift in Sources */,
@@ -539,10 +544,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Universal Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "besson.Universal-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
@@ -551,10 +559,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Universal Converter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "besson.Universal-Converter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;

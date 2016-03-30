@@ -2,15 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Time.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Time Icon.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Time Icon-1.png",
       "scale" : "3x"
     }
   ],

@@ -56,7 +56,7 @@ let angle = CategoryModel(name: "Angle", categories: angleCategories, categorySe
 
 // CATEGORY COLORS
 
-let defaultColor = UIColor(red: 216/255, green: 27/255, blue: 96/255, alpha: 1)
+let defaultColor = UIColor(red: 230/255, green: 74/255, blue: 25/255, alpha: 1)
 
 let weightColor = UIColor(red: 124/255, green: 27/255, blue: 166/255, alpha: 1)
 let temperatureColor = UIColor(red: 2/255, green: 242/255, blue: 219/255, alpha: 1)

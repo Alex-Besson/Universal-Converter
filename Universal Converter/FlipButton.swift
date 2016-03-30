@@ -17,24 +17,7 @@ class FlipButton: KeyboardButton {
     
     //    -19 -17 -14
     
-    override var topColor: CGColor {
-        get {
-            return clearTopColor
-        }
-        set {
-            
-        }
-    }
-    
-    override var bottomColor: CGColor {
-        get {
-            return clearBottomColor
-        }
-        set {
-            
-        }
-    }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         

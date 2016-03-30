@@ -15,24 +15,7 @@ class CorrectButton: KeyboardButton {
     var clearTopColor = UIColor(red: 236/255, green: 181/255, blue: 47/255, alpha: 1).CGColor
     var clearBottomColor = UIColor(red: 236/255, green: 181/255, blue: 47/255, alpha: 1).CGColor
     
-    override var topColor: CGColor {
-        get {
-            return clearTopColor
-        }
-        set {
-            
-        }
-    }
-    
-    override var bottomColor: CGColor {
-        get {
-            return clearBottomColor
-        }
-        set {
-            
-        }
-    }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         

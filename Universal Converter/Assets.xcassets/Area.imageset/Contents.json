@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Area.png",
+      "filename" : "AreaIcon-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "AreaIcon-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "AreaIcon.png",
       "scale" : "3x"
     }
   ],

@@ -17,22 +17,5 @@ class MinusButton: KeyboardButton {
     
     let newColor = UIColor(red: 251/255, green: 71/255, blue: 82/255, alpha: 1).CGColor
         
-    override var topColor: CGColor {
-        get {
-            return minusTopColor
-        }
-        set {
-            
-        }
-    }
     
-    override var bottomColor: CGColor {
-        get {
-            return minusBottomColor
-        }
-        set {
-            
-        }
-    }
-
 }

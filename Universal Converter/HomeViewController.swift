@@ -17,8 +17,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var btnNavLeft: UIBarButtonItem!
     
-    
-    
     var categorySelected: CategoryModel?
     
     // VIEW DID LOAD
@@ -27,12 +25,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         setUpAduioPlayer()
         
-        btnNavLeft.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 19)!], forState: .Normal)
+        btnNavLeft.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Futura", size: 20)!], forState: .Normal)
         
         navigationController?.navigationBar.titleTextAttributes = HomeViewController.setUpNavigationController()
-        navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir-Heavy", size: 20)!], forState: UIControlState.Normal)
-
-        navigationController?.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 20)!], forState: .Normal)
+        navigationItem.title = self.title?.uppercaseString
+        
     }
    
     
@@ -49,14 +46,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as! CategoryCell
         
         cell.lblCategory.text = categories[indexPath.row].name
-        cell.vwButtonBackground.backgroundColor = categories[indexPath.row].color
         cell.imgIcon.image = categories[indexPath.row].icon
         
         return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.view.frame.height / 7
+        return (self.view.frame.height - 8) / 8
     }
     
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
@@ -95,11 +91,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 alertController.addAction(cancelAction)
                 self.presentViewController(alertController, animated: true, completion: nil)
                 
-                
             }
 
         } else {
-        performSegueWithIdentifier("toConverterFromHome", sender: nil)
+            
+            performSegueWithIdentifier("toConverterFromHome", sender: nil)
+            
         }
     }
     
@@ -140,6 +137,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // AUDIO PLAYER SET UP
     
     var audioPlayer = AVAudioPlayer()
+    
     let soundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("CategoryButton", ofType: "mp3")!)
     
     func setUpAduioPlayer() {
@@ -167,7 +165,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     static func setUpNavigationController() -> [String: AnyObject] {
        
-        let textAttributes = [NSForegroundColorAttributeName: UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1), NSFontAttributeName: UIFont(name: "Avenir", size: 27)!]
+        let textAttributes = [NSForegroundColorAttributeName: UIColor(white: 245/255, alpha: 1), NSFontAttributeName: UIFont(name: "Futura", size: 20)!]
         
         return textAttributes
     }

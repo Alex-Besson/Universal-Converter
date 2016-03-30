@@ -19,8 +19,8 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var constBottomOfKeyboard: NSLayoutConstraint!
     
     @IBOutlet weak var constMinusButtonLeading: NSLayoutConstraint!
-    @IBOutlet weak var btnMinus: MinusButton!
-    @IBOutlet weak var btnDot: DotButton!
+    @IBOutlet weak var btnMinus: KeyboardButton!
+    @IBOutlet weak var btnDot: KeyboardButton!
     @IBOutlet weak var btn7: KeyboardButton!
     @IBOutlet weak var btnInfo: UIBarButtonItem!
     @IBOutlet weak var pickerLeft: UIPickerView!
@@ -51,10 +51,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         
         let infoImage: String = "\u{24D8}"
         
-        let btnMoreInfo = UIBarButtonItem.init(title: infoImage, style: UIBarButtonItemStyle.Plain, target: self, action: "infoShow")
+        let btnMoreInfo = UIBarButtonItem.init(title: infoImage, style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ConverterViewController.infoShow))
             
         self.navigationItem.rightBarButtonItem = btnMoreInfo
-        
         
     }
     
@@ -66,7 +65,7 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         configBtnMoreInfo()
         
-        navigationController?.navigationBar.tintColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1)
+        navigationController?.navigationBar.tintColor = UIColor(white: 245/255, alpha: 1)
         
         if catSelected.categorySelected == CategorySwitch.Currency {
             
@@ -81,10 +80,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
             btnMinus.hidden = true
             
             constMinusButtonLeading.constant = -((self.view.bounds.width - (4 * 5)) / 4)
-            btnDot.resetGradientLayer()
         }
         
-        self.title = catSelected.name
+        self.title = catSelected.name.uppercaseString
         
         
         setUpLabelTapGestrue()
@@ -100,7 +98,6 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        btnDot.resetGradientLayer()
         
     }
     

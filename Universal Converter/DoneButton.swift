@@ -15,24 +15,7 @@ class DoneButton: KeyboardButton {
     var clearTopColor = UIColor(red: 38/255, green: 50/255, blue: 56/255, alpha: 1).CGColor
     var clearBottomColor = UIColor(red: 38/255, green: 50/255, blue: 56/255, alpha: 1).CGColor
     
-    override var topColor: CGColor {
-        get {
-            return clearTopColor
-        }
-        set {
-            
-        }
-    }
-    
-    override var bottomColor: CGColor {
-        get {
-            return clearBottomColor
-        }
-        set {
-            
-        }
-    }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         

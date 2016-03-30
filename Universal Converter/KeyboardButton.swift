@@ -11,33 +11,32 @@ import AVFoundation
 
 class KeyboardButton: UIButton {
     
-//    var topColor = UIColor(red: 50/255, green: 50/255, blue: 52/255, alpha: 1).CGColor
-//    var bottomColor = UIColor(red: 31/255, green: 33/255, blue: 36/255, alpha: 1).CGColor
-    
-//    var topColor = UIColor(red: 233/255, green: 30/255, blue: 99/255, alpha: 1).CGColor
-    
-    var topColor = UIColor(red: 216/255, green: 27/255, blue: 96/255, alpha: 1).CGColor
-    var bottomColor = UIColor(red: 216/255, green: 27/255, blue: 96/255, alpha: 1).CGColor
-    
-    let gradientLayer = CAGradientLayer()
-    
     var audioPlayer = AVAudioPlayer()
     let soundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("KeyboardButton", ofType: "mp3")!)
     
     // AWAKE FROM NIB
     
     override func awakeFromNib() {
+        
+        configureButton()
+        
+        self.addTarget(ConverterViewController(), action: #selector(KeyboardButton.buttonPressed(_:)), forControlEvents: UIControlEvents.TouchDown)
+        self.addTarget(ConverterViewController(), action: #selector(KeyboardButton.buttonReleased(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+//        setUpButtonAudio()
+    }
+    
+    func configureButton() {
+        
+        self.titleLabel?.font = UIFont(name: "Futura", size: 15)
+        self.titleLabel?.textColor = UIColor(white: 245/255, alpha: 1)
+        self.titleLabel?.tintColor = UIColor(white: 245/255, alpha: 1)
+        
         self.layer.cornerRadius = 2
+        self.layer.borderColor = UIColor(white: 245/255, alpha: 1).CGColor
+        self.layer.borderWidth = 1
         self.clipsToBounds = true
         
-        self.titleLabel?.font = UIFont(name: "Avenir", size: 20)
-                
-        addGradientLayerColors(topColor, bottom: bottomColor)
-        
-        self.addTarget(ConverterViewController(), action: "buttonPressed:", forControlEvents: UIControlEvents.TouchDown)
-        self.addTarget(ConverterViewController(), action: "buttonReleased:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        setUpButtonAudio()
     }
     
     // AUDIO PLAYER SET UP
@@ -58,37 +57,15 @@ class KeyboardButton: UIButton {
     // ON BUTTON PRESS AND RELEASE
     
     func buttonPressed(sender: KeyboardButton) {
-        addGradientLayerColors(bottomColor, bottom: bottomColor)
         self.center.x++
         self.center.y++
-        playAudio()
+//        playAudio()
     }
     
     func buttonReleased(sender: KeyboardButton) {
-        addGradientLayerColors(topColor, bottom: bottomColor)
         self.center.x--
         self.center.y--
-        playAudio()
+//        playAudio()
     }
     
-    // CONFIGURING GRADIENT LAYER
-    
-    func addGradientLayerColors(top: CGColor, bottom: CGColor) {
-            
-        self.layer.insertSublayer(gradientLayer, atIndex: 0)
-        gradientLayer.frame.size = self.bounds.size
-            
-        gradientLayer.colors = [top, bottom]
-        gradientLayer.locations = [0.3, 0.4]
-        
-    }
-    
-    func resetGradientLayer() {
-        
-        self.clipsToBounds = false
-        addGradientLayerColors(topColor, bottom: bottomColor)
-        self.clipsToBounds = true
-        layoutIfNeeded()
-    }
-
 }

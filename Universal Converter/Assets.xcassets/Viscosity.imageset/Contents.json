@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Viscosity.png",
+      "filename" : "Viscosity Icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Viscosity Icon-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Viscosity Icon-2.png",
       "scale" : "3x"
     }
   ],
