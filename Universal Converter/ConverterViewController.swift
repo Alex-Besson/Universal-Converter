@@ -184,10 +184,9 @@ class ConverterViewController: UIViewController, UITableViewDataSource, UITableV
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         
         let label = UILabel()
-        label.font = UIFont(name: "Avenir", size: 17)
+        label.font = UIFont(name: "Futura", size: 17)
         label.textAlignment = NSTextAlignment.Center
-        label.textColor = UIColor(red: 252/255, green: 228/255, blue: 236/255, alpha: 1)
-        
+        label.textColor = UIColor(white: 245/255, alpha: 1)
         label.text = catSelected.categories[row]
         
         return label

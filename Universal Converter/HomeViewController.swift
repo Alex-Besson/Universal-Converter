@@ -25,10 +25,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         setUpAduioPlayer()
         
-        btnNavLeft.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Futura", size: 20)!], forState: .Normal)
-        
         navigationController?.navigationBar.titleTextAttributes = HomeViewController.setUpNavigationController()
         navigationItem.title = self.title?.uppercaseString
+        btnNavLeft.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Futura", size: 15)!], forState: .Normal)
         
     }
    
@@ -114,7 +113,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 
                 // HIDE SHADOWS ANIMATION
                 selectedCell.vwButtonBackground.layer.shadowRadius = 0
-                selectedCell.vwButtonBackground.layer.shadowOffset = CGSizeMake(2, 2)
                 
             }
             
@@ -126,8 +124,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 selectedCell.center.y = selectedCell.center.y - 2
                 
                 // SHOW SHADOWS ANIMATION
-                selectedCell.vwButtonBackground.layer.shadowOffset = CGSizeMake(2, 2)
-                selectedCell.vwButtonBackground.layer.shadowRadius = 4
+                selectedCell.vwButtonBackground.layer.shadowRadius = 2
                 
             })
         }

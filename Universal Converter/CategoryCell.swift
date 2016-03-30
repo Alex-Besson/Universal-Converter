@@ -15,8 +15,6 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var lblCategory: UILabel!
     
-    let gradientLayer = CAGradientLayer()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,10 +34,6 @@ class CategoryCell: UITableViewCell {
     func hideShadow() {
         vwButtonBackground.layer.shadowRadius = 0
         vwButtonBackground.layer.shadowOffset = CGSizeMake(0, 0)
-    }
-    
-    func setUpGradientLayer() {
-        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

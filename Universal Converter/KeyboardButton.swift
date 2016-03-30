@@ -57,15 +57,17 @@ class KeyboardButton: UIButton {
     // ON BUTTON PRESS AND RELEASE
     
     func buttonPressed(sender: KeyboardButton) {
-        self.center.x++
-        self.center.y++
-//        playAudio()
+        self.backgroundColor = CustomColors.offWhiteColor()
+        self.titleLabel?.textColor = CustomColors.backgroundColor()
+        self.setTitleColor(CustomColors.backgroundColor(), forState: UIControlState.Normal)
+        
     }
     
     func buttonReleased(sender: KeyboardButton) {
-        self.center.x--
-        self.center.y--
-//        playAudio()
+        self.backgroundColor = CustomColors.backgroundColor()
+        self.titleLabel?.textColor = CustomColors.offWhiteColor()
+        self.setTitleColor(CustomColors.offWhiteColor(), forState: UIControlState.Normal)
+        
     }
     
 }
