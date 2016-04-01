@@ -36,6 +36,7 @@
 		FA9AF4E41C069BAD00CAD232 /* ConverterResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */; };
 		FA9AF4E61C069BD300CAD232 /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9AF4E51C069BD300CAD232 /* FloatingView.swift */; };
 		FA9C527C1CAC29C800BC0434 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C527B1CAC29C800BC0434 /* CustomNavigationController.swift */; };
+		FAC7714A1CAE3FD900099CD6 /* AnswerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC771491CAE3FD900099CD6 /* AnswerLabelView.swift */; };
 		FAEEBF9C1C053225001EA57A /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterResultsCell.swift; sourceTree = "<group>"; };
 		FA9AF4E51C069BD300CAD232 /* FloatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
 		FA9C527B1CAC29C800BC0434 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		FAC771491CAE3FD900099CD6 /* AnswerLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerLabelView.swift; sourceTree = "<group>"; };
 		FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +230,7 @@
 				FAEEBF9B1C053225001EA57A /* KeyboardButton.swift */,
 				FA9AF4E51C069BD300CAD232 /* FloatingView.swift */,
 				FA9AF4E31C069BAD00CAD232 /* ConverterResultsCell.swift */,
+				FAC771491CAE3FD900099CD6 /* AnswerLabelView.swift */,
 				FA8FDF581C1A28C40047C647 /* SpecialKeyboardButtons */,
 			);
 			name = View;
@@ -397,6 +400,7 @@
 				FA52FF331C016EDA00EACD26 /* CategoryCell.swift in Sources */,
 				E86E82321C1E5FD60029BB55 /* AEXML.swift in Sources */,
 				FA2A62B61C2BB093009B1D4C /* MinusButton.swift in Sources */,
+				FAC7714A1CAE3FD900099CD6 /* AnswerLabelView.swift in Sources */,
 				FA2A62B41C2BA341009B1D4C /* GradientBackgroundView.swift in Sources */,
 				FA51E5A41C0577ED005460B0 /* CategoryModel.swift in Sources */,
 				FA52FF351C01978600EACD26 /* Constants.swift in Sources */,

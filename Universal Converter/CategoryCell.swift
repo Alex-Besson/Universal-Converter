@@ -23,7 +23,7 @@ class CategoryCell: UITableViewCell {
     }
     
     func configureCellElements() {
-        vwButtonBackground.layer.cornerRadius = 4
+        vwButtonBackground.layer.cornerRadius = 3
         
         vwButtonBackground.layer.shadowColor = UIColor.darkTextColor().CGColor
         vwButtonBackground.layer.shadowRadius = 2
